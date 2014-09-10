@@ -1,0 +1,35 @@
+{{define "serverInfoMem"}}
+<div class="box span4">
+	<div class="box-header well">
+		<h2> <i class="icon-th"></i>
+			内存
+		</h2>
+		<div class="box-icon">
+			<a class="btn btn-setting btn-round" href="#" id="refresh-mem"> <i class="icon-refresh"></i>
+			</a>
+			<a class="btn btn-minimize btn-round" href="#">
+				<i class="icon-chevron-up"></i>
+			</a>
+		</div>
+	</div>
+	<div class="box-content">
+		<div class="widget-content">
+			<div>
+				<span class="general-title">总数:</span>
+				<span id="mem-total"></span>MB
+			</div>
+			<div>
+				<span class="general-title">已使用:</span>
+				<span id="mem-used"></span>MB&nbsp;&nbsp;&nbsp;&nbsp;
+				<span id="mem-usedrate"></span>%
+			</div>
+			<div>
+				<span class="general-title">空闲:</span>
+				<span id="mem-free"></span>MB&nbsp;&nbsp;&nbsp;&nbsp;
+				<span id="mem-freerate"></span>%
+			</div>
+		</div>
+
+	</div>
+</div>
+{{end}}

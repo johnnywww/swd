@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312"?>
+  <swd>
+      <user>
+          <userName>admin</userName>
+          <password>111111</password>
+      </user>
+      <server>
+          <serverName>SIP服务器</serverName>
+          <address>http://192.168.128.24:2566</address>
+          <type>1</type>
+      </server>
+      <port>0</port>
+  </swd>

@@ -1,0 +1,15 @@
+/* @group iVideo */
+.general-title {font-weight: bold;}
+
+.general-info-item {
+	width: 48.7179%;
+	min-height: 18px;
+	margin-left: 0;
+	box-sizing: border-box;
+    display: block;
+    float: left;
+}
+
+.form-horizontal .control-group-bottom {
+    margin-bottom: 2px;
+}

@@ -1,0 +1,43 @@
+{{define "serverDialog"}}
+<div class="modal hide fade" style="margin: -200px 0 0 -300px;" id="serverDialog">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">×</button>
+		<h3>服务器</h3>
+	</div>
+	<div class="modal-body buttons" style="min-height: 100px">
+		<form class="form-horizontal">
+			<fieldset>
+				<div class="control-group-bottom">
+					<label class="control-label">名称：</label>
+					<div class="controls">
+						<input type="text" id="servername" class="input-xlarge">
+						<input type="hidden" id="oservername">
+					</div>
+				</div>
+				<div class="control-group-bottom">
+					<label class="control-label">类型：</label>
+					<div class="controls">
+						<select id="servertype">
+
+						</select>						
+					</div>
+				</div>
+				<div class="control-group-bottom">
+					<label class="control-label">地址：</label>
+					<div class="controls">
+						<input type="text" id="address" class="input-xlarge">
+					</div>					
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary" id="btnSaveServer"> <i class="icon-ok-sign"></i>
+			&nbsp;保存
+		</a>
+		<a href="#" class="btn" data-dismiss="modal"> <i class="icon-remove-sign"></i>
+			&nbsp;取消
+		</a>
+	</div>
+</div>
+{{end}}

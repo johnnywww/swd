@@ -1,0 +1,104 @@
+{{define "serverConfigSIPDialog"}}
+<div class="modal hide fade" style="margin: -200px 0 0 -200px;" id="sipServerConfigDialog">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">×</button>
+		<h3>
+			服务器-Sip服务器-
+			<span id="sipServerName"></span>
+		</h3>
+	</div>
+	<div class="box-content">
+		<form class="form-horizontal">
+			<fieldset>
+				<ul id="sipServerConfigTab" class="nav nav-tabs">
+					<li class="active">
+						<a href="#sipServerConfig-Basic">基本信息</a>
+					</li>
+					<li >
+						<a href="#sipServerConfig-CmsServer">中心管理服务器</a>
+					</li>					
+					<li >
+						<a href="#sipServerConfig-DbServer">缓存服务器</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="sipServerConfig-Basic">
+						<div class="control-group-bottom">
+							<label for="sipServerId" class="control-label">编号</label>
+							<div class="controls">
+								<input type="text" id="sipServerId" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="sipServerDomain" class="control-label">域名</label>
+							<div class="controls">
+								<input type="text" id="sipServerDomain" class="input-xlarge focused"></div>
+						</div>						
+						<div class="control-group-bottom">
+							<label for="sipPassword" class="control-label">密码</label>
+							<div class="controls">
+								<input type="password" id="sipPassword" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="sipPassword1" class="control-label">再次输入密码</label>
+							<div class="controls">
+								<input type="password" id="sipPassword1" class="input-xlarge focused"></div>
+						</div>						
+						<div class="control-group-bottom">
+							<label for="sipHeartInterval" class="control-label">心跳间隔</label>
+							<div class="controls">
+								<input type="text" id="sipHeartInterval" class="input-xlarge focused" input-int-min="1" input-int-max="3600">秒</div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="sipAddress" class="control-label">地址</label>
+							<div class="controls">
+								<input type="text" id="sipAddress" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="sipPort" class="control-label">端口</label>
+							<div class="controls">
+								<input type="text" id="sipPort" class="input-xlarge focused" input-int-min="1" input-int-max="65535"></div>
+						</div>
+					</div>
+					<div class="tab-pane" id="sipServerConfig-CmsServer">
+						<div class="control-group-bottom">
+							<label for="sipCmsServerAddress" class="control-label">地址</label>
+							<div class="controls">
+								<input type="text" id="sipCmsServerAddress" class="input-xlarge focused"></div>
+						</div>
+					</div>
+					<div class="tab-pane" id="sipServerConfig-DbServer">
+						<div class="control-group-bottom">
+							<label for="sipDbServerAddress" class="control-label">地址</label>
+							<div class="controls">
+								<input type="text" id="sipDbServerAddress" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="sipDbServerPort" class="control-label">端口</label>
+							<div class="controls">
+								<input type="text" id="sipDbServerPort" class="input-xlarge focused" input-int-min="1" input-int-max="65535"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="sipDbServerPassword" class="control-label">密码</label>
+							<div class="controls">
+								<input type="password" id="sipDbServerPassword" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="sipDbServerPassword1" class="control-label">再次输入密码</label>
+							<div class="controls">
+								<input type="password" id="sipDbServerPassword1" class="input-xlarge focused"></div>
+						</div>							
+					</div>					
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary" id="btnSIPSaveServer"> <i class="icon-ok-sign"></i>
+			&nbsp;保存
+		</a>
+		<a href="#" class="btn" data-dismiss="modal"> <i class="icon-remove-sign"></i>
+			&nbsp;取消
+		</a>
+	</div>
+</div>
+{{end}}

@@ -1,0 +1,38 @@
+{{define "userDialog"}}
+<div class="modal hide fade" style="margin: -200px 0 0 -300px;" id="userDialog">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">×</button>
+		<h3>用户</h3>
+	</div>
+	<div class="modal-body buttons" style="min-height: 100px">
+		<form class="form-horizontal">
+			<fieldset>
+				<div class="control-group-bottom">
+					<label for="username" class="control-label">用户名</label>
+					<div class="controls">
+						<input type="text" id="username" class="input-xlarge focused"></div>
+				</div>			
+				<div class="control-group-bottom">
+					<label for="password" class="control-label">密码</label>
+					<div class="controls">
+						<input type="password" id="password" class="input-xlarge"></div>
+				</div>					
+				<div class="control-group-bottom">
+					<label for="password1" class="control-label">再次输入密码</label>
+					<div class="controls">
+						<input type="password" id="password1" class="input-xlarge"></div>
+				</div>	
+				<input type="hidden" id="ousername">
+			</fieldset>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary" id="btnSaveUser"> <i class="icon-ok-sign"></i>
+			&nbsp;保存
+		</a>
+		<a href="#" class="btn" data-dismiss="modal"> <i class="icon-remove-sign"></i>
+			&nbsp;取消
+		</a>
+	</div>
+</div>
+{{end}}

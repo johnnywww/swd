@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312"?>
+  <swd>
+      <user>
+          <userName>admin</userName>
+          <password>11</password>
+      </user>
+      <user>
+          <userName>admint</userName>
+          <password>1</password>
+      </user>
+      <server>
+          <serverName>报警服务器1</serverName>
+          <address>/mnt/hgfs/Source/c++/iVideo/Source/APS/Bin/aps</address>
+          <type>3</type>
+      </server>
+      <server>
+          <serverName>SIP服务器1</serverName>
+          <address>/mnt/hgfs/Source/c++/iVideo/Source/SIPServer/build/sipserver2</address>
+          <type>1</type>
+      </server>
+      <server>
+          <serverName>中心管理服务器1</serverName>
+          <address>/home/pc01/source/java/apache-tomcat-7.0.53/webapps/cms</address>
+          <type>0</type>
+      </server>
+      <port>9500</port>
+  </swd>

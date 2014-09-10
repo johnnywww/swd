@@ -1,0 +1,114 @@
+{{define "serverConfigAPSDialog"}}
+<div class="modal hide fade" style="margin: -200px 0 0 -200px;" id="apsServerConfigDialog">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">×</button>
+		<h3>
+			服务器-报警服务器-
+			<span id="apsServerName"></span>
+		</h3>
+	</div>
+	<div class="box-content">
+		<form class="form-horizontal">
+			<fieldset>
+				<ul id="apsServerConfigTab" class="nav nav-tabs">
+					<li class="active">
+						<a href="#apsServerConfig-Basic">基本信息</a>
+					</li>
+					<li >
+						<a href="#apsServerConfig-SipServer">SIP服务器</a>
+					</li>
+					<li >
+						<a href="#apsServerConfig-CmsServer">中心管理服务器</a>
+					</li>					
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="apsServerConfig-Basic">
+						<div class="control-group-bottom">
+							<label for="apsServerId" class="control-label">编号</label>
+							<div class="controls">
+								<input type="text" id="apsServerId" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsPassword" class="control-label">密码</label>
+							<div class="controls">
+								<input type="password" id="apsPassword" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsPassword1" class="control-label">再次输入密码</label>
+							<div class="controls">
+								<input type="password" id="apsPassword1" class="input-xlarge focused"></div>
+						</div>						
+						<div class="control-group-bottom">
+							<label for="apsRegisterInterval" class="control-label">注册间隔</label>
+							<div class="controls">
+								<input type="text" id="apsRegisterInterval" class="input-xlarge focused" input-int-min="1" input-int-max="3600">秒</div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsHeartInterval" class="control-label">心跳间隔</label>
+							<div class="controls">
+								<input type="text" id="apsHeartInterval" class="input-xlarge focused " input-int-min="1" input-int-max="3600">秒</div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsAddress" class="control-label">地址</label>
+							<div class="controls">
+								<input type="text" id="apsAddress" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsPort" class="control-label">端口</label>
+							<div class="controls">
+								<input type="text" id="apsPort" class="input-xlarge focused" input-int-min="1" input-int-max="65535"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsLogSetupFile" class="control-label">日志配置文件</label>
+							<div class="controls">
+								<input type="text" id="apsLogSetupFile" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsLogFolder" class="control-label">日志目录</label>
+							<div class="controls">
+								<input type="text" id="apsLogFolder" class="input-xlarge focused"></div>
+						</div>
+					</div>
+					<div class="tab-pane" id="apsServerConfig-SipServer">
+						<div class="control-group-bottom">
+							<label for="apsSipServerId" class="control-label">编号</label>
+							<div class="controls">
+								<input type="text" id="apsSipServerId" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsSipServerDomain" class="control-label">域名</label>
+							<div class="controls">
+								<input type="text" id="apsSipServerDomain" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsSipServerAddress" class="control-label">地址</label>
+							<div class="controls">
+								<input type="text" id="apsSipServerAddress" class="input-xlarge focused"></div>
+						</div>
+						<div class="control-group-bottom">
+							<label for="apsSipServerPort" class="control-label">端口</label>
+							<div class="controls">
+								<input type="text" id="apsSipServerPort" class="input-xlarge focused" input-int-min="1" input-int-max="65535"></div>
+						</div>
+					</div>
+					<div class="tab-pane" id="apsServerConfig-CmsServer">
+						<div class="control-group-bottom">
+							<label for="apsCmsServerAddress" class="control-label">地址</label>
+							<div class="controls">
+								<input type="text" id="apsCmsServerAddress" class="input-xlarge focused"></div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary" id="btnAPSSaveServer"> <i class="icon-ok-sign"></i>
+			&nbsp;保存
+		</a>
+		<a href="#" class="btn" data-dismiss="modal"> <i class="icon-remove-sign"></i>
+			&nbsp;取消
+		</a>
+	</div>
+</div>
+{{end}}

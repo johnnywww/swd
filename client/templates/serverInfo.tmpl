@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{template "htmlHead"}}
+	<title>iVideo {{.serverName}} Admin</title>
+	<style type="text/css">
+		body {
+			padding-bottom: 40px;
+		}
+		.sidebar-nav {
+			padding: 9px 0;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="row-fluid">
+		<div class="box span12">
+			<div data-original-title="" class="box-header well">
+				<h2> <i class="icon-home"></i>
+					服务器
+					<span id="servernameId">{{.serverName}}</span>
+					&nbsp;
+				</h2>
+				<select id="refresh-interval">
+					<option value="5">5秒</option>
+					<option value="10">10秒</option>
+					<option value="15">15秒</option>
+				</select>
+				<div class="alert alert-info" id="error_info" {{if .errorInfo }}style="		display:block" {{else}} style="display:none" {{end}} >
+					错误信息
+					<span style="color: #bd4247">{{.errorInfo}}</span>
+				</div>	
+				<div class="box-icon">
+					<a class="btn btn-setting btn-round" href="#" id="refresh-all"> <i class="icon-refresh"></i>
+					</a>				
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid sortable ui-sortable">
+		{{template "serverInfoGeneral"}}
+		{{template "serverInfoCpu"}}
+		{{template "serverInfoMem"}}
+	</div>
+	<div class="row-fluid sortable ui-sortable">
+		{{template "serverInfoNet"}}
+		{{template "serverInfoProcess"}}	
+	</div>	
+	<div class="row-fluid sortable ui-sortable">
+		{{template "serverInfoStatus"}}	
+	</div>	
+	{{template "script"}}
+	<script src="js/ivideoServerInfo.js"></script>
+</body>
+</html>

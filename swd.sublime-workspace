@@ -1,0 +1,1241 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"show",
+				"showDialog"
+			],
+			[
+				"f",
+				"Form	url.Values ν"
+			],
+			[
+				"g",
+				"gotoSetupPage	 ƒ"
+			],
+			[
+				"uer",
+				"username"
+			],
+			[
+				"u",
+				"username"
+			],
+			[
+				"del",
+				"deleteServer"
+			],
+			[
+				"change",
+				"changeServerProfile"
+			],
+			[
+				"Server",
+				"serverTypeMap"
+			],
+			[
+				"G",
+				"GetServerIndexByServerName	int ƒ"
+			],
+			[
+				"serverType",
+				"servertypeList"
+			],
+			[
+				"serv",
+				"serverTypeMap"
+			],
+			[
+				"servert",
+				"servertype"
+			],
+			[
+				"server",
+				"serverInfo"
+			],
+			[
+				"confirm",
+				"confirmInfo"
+			],
+			[
+				"action",
+				"actionValue"
+			],
+			[
+				"Get",
+				"GetErrorDtoJson	string ƒ"
+			],
+			[
+				"set",
+				"SetupInfo	struct ʈ"
+			],
+			[
+				"no",
+				"notifyErrorMsg"
+			],
+			[
+				"ser",
+				"serverName	string ν"
+			],
+			[
+				"N",
+				"NewSetupHandle	model.SetupHandle ƒ"
+			],
+			[
+				"SERVER_TYPE_",
+				"SERVER_TYPE_APS	 Ɩ"
+			],
+			[
+				"conten",
+				"contents"
+			],
+			[
+				"them",
+				"theme_name"
+			],
+			[
+				"the",
+				"theme_name"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"H",
+				"HTML	string ʈ"
+			],
+			[
+				"getPag",
+				"getPageLiPageHref	string ƒ"
+			],
+			[
+				"Sp",
+				"Sprintf	string ƒ"
+			],
+			[
+				"SP",
+				"Sprintf	string ƒ"
+			],
+			[
+				"S",
+				"SERVER_STATE_ONLINE	 Ɩ"
+			],
+			[
+				"for",
+				"FormValue	string ƒ"
+			],
+			[
+				"p",
+				"ParseForm	error ƒ"
+			],
+			[
+				"Page",
+				"PageInfo	struct ʈ"
+			],
+			[
+				"user",
+				"userInfo	*model.UserInfo ν"
+			],
+			[
+				"User",
+				"UserInfo	struct ʈ"
+			],
+			[
+				"l",
+				"Logout	 ƒ"
+			],
+			[
+				"U",
+				"UserInfo	struct ʈ"
+			],
+			[
+				"st",
+				"LoginStatus	int ν"
+			],
+			[
+				"fo",
+				"format	string ν"
+			],
+			[
+				"Print",
+				"Println	 ƒ"
+			],
+			[
+				"w",
+				"writeLog	 ƒ"
+			],
+			[
+				"s",
+				"Stdout	*os.File ν"
+			],
+			[
+				"log",
+				"logger	*log.Logger ν"
+			],
+			[
+				"r",
+				"Replace	string ƒ"
+			],
+			[
+				"E",
+				"Exit	 ƒ"
+			],
+			[
+				"h",
+				"HasSuffix	bool ƒ"
+			],
+			[
+				"fu",
+				"func	Function"
+			],
+			[
+				"print",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"Ser",
+				"Serverslice	struct ʈ"
+			],
+			[
+				"I",
+				"INCLUDE"
+			],
+			[
+				"req",
+				"require.resolve(request);"
+			],
+			[
+				"wsdl",
+				"wsdlFiles	[]GSoapWSDLFile ν"
+			],
+			[
+				"get",
+				"getGetWSDLFiles	IGetWSDLFiles ƒ"
+			],
+			[
+				"ge",
+				"getFactory	IFactory ƒ"
+			],
+			[
+				"AH",
+				"AHrefPrefixTagCount	 Ɩ"
+			],
+			[
+				"n",
+				"NewWriter	*bufio.Writer ƒ"
+			],
+			[
+				"has",
+				"HasSuffix	bool ƒ"
+			],
+			[
+				"Op",
+				"Open	file *os.File, err error ƒ"
+			],
+			[
+				"O",
+				"O_RDONLY	 Ɩ"
+			],
+			[
+				"St",
+				"StubCFileSuffix	 Ɩ"
+			],
+			[
+				"dest",
+				"destWriter	*bufio.Writer ν"
+			],
+			[
+				"des",
+				"destWriter	*bufio.Writer ν"
+			],
+			[
+				"CR",
+				"O_CREATE	 Ɩ"
+			],
+			[
+				"co",
+				"copyFileToDestPath	 ƒ"
+			],
+			[
+				"RET",
+				"RET_CODE_NOT_EXIST	 Ɩ"
+			],
+			[
+				"run",
+				"runFlag	RunFlag ν"
+			],
+			[
+				"d",
+				"destPath	string ν"
+			],
+			[
+				"fil",
+				"fileExists	bool ƒ"
+			],
+			[
+				"P",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"io",
+				"ioutil	 package ρ"
+			],
+			[
+				"soap",
+				"soapcpp2ArgStr	string ν"
+			],
+			[
+				"ws",
+				"wsdl2hArgStr	string ν"
+			],
+			[
+				"gs",
+				"gosoapP	*string ν"
+			],
+			[
+				"O_",
+				"O_RDWR	 Ɩ"
+			],
+			[
+				"sp",
+				"Sprintln	string ƒ"
+			],
+			[
+				"STA",
+				"STATUS_ENABLE	 Ɩ"
+			],
+			[
+				"D",
+				"debugF	*int ν"
+			],
+			[
+				"m",
+				"m_GetRunFlag	GetRunFlagImpl ν"
+			],
+			[
+				"IC",
+				"ICreateStubFiles	interface ¡"
+			],
+			[
+				"A",
+				"Args	[]string ƒ"
+			],
+			[
+				"RET_",
+				"RET_CODE_SUCCESS	 Ɩ"
+			],
+			[
+				"pr",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"WS",
+				"WSDLSubFix	 Ɩ"
+			],
+			[
+				"R",
+				"Remove	error ƒ"
+			],
+			[
+				"temp",
+				"tempFileName	string ν"
+			],
+			[
+				"c",
+				"createStubFiles	 ƒ"
+			],
+			[
+				"Base",
+				"BaseTypeCount	 Ɩ"
+			],
+			[
+				"te",
+				"tempFileName	string ν"
+			],
+			[
+				"Str",
+				"strings	 package ρ"
+			],
+			[
+				"wsd",
+				"wsdlFiles	[]GSoapWSDLFile ν"
+			],
+			[
+				"src",
+				"srcReader	*bufio.Reader ν"
+			],
+			[
+				"readS",
+				"ReadString	line string, err error ƒ"
+			],
+			[
+				"Ope",
+				"OpenFile	file *os.File, err error ƒ"
+			],
+			[
+				"T",
+				"TempFile	f *os.File, err error ƒ"
+			],
+			[
+				"RET_CO",
+				"RET_CODE_NOT_EXIST	 Ɩ"
+			],
+			[
+				"file",
+				"fileName	string ν"
+			],
+			[
+				"prin",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"pri",
+				"Printf	n int, err error ƒ"
+			],
+			[
+				"sc",
+				"Scanf	n int, err error ƒ"
+			],
+			[
+				"func",
+				"func main	func main {...} ʂ"
+			],
+			[
+				"imp",
+				"import	import (...) ʂ"
+			],
+			[
+				"e",
+				"even	 package ρ"
+			],
+			[
+				"err",
+				"errors	 package ρ"
+			],
+			[
+				"call",
+				"callBackFunc	 ƒ"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Go Build/Go.sublime-build",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"pcip",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"c",
+				"Color Picker"
+			],
+			[
+				"co",
+				"Color Picker"
+			],
+			[
+				"pclp",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			],
+			[
+				"pc",
+				"Package Control: List Packages"
+			],
+			[
+				"pci",
+				"Package Control: List Packages"
+			],
+			[
+				"p",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Tag",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"ssj",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"convert",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: go func()"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"set syntax: mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"setting user",
+				"Preferences: Settings - User"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/http.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/route.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeLogin.go",
+		"/D/Program Files/go/src/race.bash",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeError.go",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/script.tmpl",
+		"/D/Program Files/go/src/pkg/net/sendfile_windows.go",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideoUser.js",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideo.js",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/confirmDialog.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/setup.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideoServer.js",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideoLogin.js",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/setupInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/server/setup.xml",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/serverList.tmpl",
+		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeUser.go",
+		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/E/Source/c++/iVideo/Source/swd/server/public/css/bootstrap-spacelab.css",
+		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 3/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServer.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeSetup.go",
+		"/D/Program Files/go/src/pkg/syscall/route_openbsd.go",
+		"/D/Program Files/go/src/pkg/syscall/route_netbsd.go",
+		"/D/Program Files/go/src/pkg/syscall/route_freebsd.go",
+		"/D/Program Files/go/src/pkg/syscall/route_dragonfly.go",
+		"/D/Program Files/go/src/pkg/syscall/route_darwin.go",
+		"/D/Program Files/go/src/pkg/syscall/route_bsd.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServerList.go",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/login.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/setupLogin.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/loginPageLast.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/loginPageFirst.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/htmlHead.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/userInfo.go",
+		"/D/Program Files/go/src/pkg/net/url/url.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/appTools.go",
+		"/D/Program Files/go/src/cmd/fix/hashsum_test.go",
+		"/D/Program Files/go/src/pkg/crypto/tls/handshake_messages_test.go",
+		"/D/Program Files/go/src/cmd/fix/htmlerr.go",
+		"/E/Source/web/charisma/php-version/header.php",
+		"/E/Source/web/charisma/ui.html",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/userDialog.tmpl",
+		"/D/Program Files/go/src/pkg/net/url/example_test.go",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/loginPage.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/common/common.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/appTools_test.go",
+		"/D/Program Files/go/src/all.bash",
+		"/D/Program Files/go/src/pkg/github.com/nsf/gocode/_testing/test.0004/cursor.1348",
+		"/D/Program Files/go/src/pkg/bytes/asm_386.s",
+		"/D/Program Files/go/src/pkg/archive/tar/common.go",
+		"/D/Program Files/go/src/cmd/gofmt/testdata/comments.golden",
+		"/D/Program Files/go/src/cmd/cc/com.c",
+		"/D/Program Files/go/src/pkg/net/cgo_openbsd.go",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/charisma.js",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/serverDialog.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/index.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/setupInfo_test.go",
+		"/D/Program Files/go/src/cmd/godoc/setup-godoc-app.bash",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/setup.xml",
+		"/D/Program Files/go/src/pkg/net/sock_cloexec.go",
+		"/D/Program Files/go/src/pkg/os/user/user.go",
+		"/E/Source/web/charisma/login.html",
+		"/E/Source/web/charisma/license.txt",
+		"/D/Program Files/go/src/pkg/github.com/nsf/gocode/_testing/test.0028/cursor.129",
+		"/D/Program Files/go/src/pkg/github.com/nsf/gocode/_testing/test.0006/cursor.286",
+		"/D/Program Files/go/src/pkg/image/png/testdata/pngsuite/basn0g02-29.sng",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeRoot.go",
+		"/E/Source/web/charisma/js/charisma.js",
+		"/D/Program Files/go/src/pkg/runtime/append_test.go",
+		"/E/Source/web/charisma/css/charisma-app.css",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/userInfo_test.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverPageInfo_test.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverPageInfo.go",
+		"/D/Program Files/go/src/cmd/fix/testdata/reflect.print.go.in",
+		"/D/Program Files/go/src/pkg/compress/testdata/Mark.Twain-Tom.Sawyer.txt",
+		"/D/Program Files/go/src/pkg/math/big/arith.go",
+		"/D/Program Files/go/src/pkg/encoding/asn1/marshal_test.go",
+		"/D/Program Files/go/src/pkg/math/mod_arm.s",
+		"/D/Program Files/go/src/pkg/math/mod_amd64.s",
+		"/D/Program Files/go/src/make.bash",
+		"/E/Source/web/charisma/js/jquery.js",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/jquery.js",
+		"/D/Program Files/go/src/pkg/net/server_test.go",
+		"/E/Source/web/charisma/js/jquery.noty.js",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/dataDto.go",
+		"/E/Source/web/charisma/js/jquery.history.js",
+		"/E/Source/web/charisma/js/jquery.cookie.js",
+		"/E/Source/web/charisma/css/jquery.noty.css",
+		"/E/Source/web/charisma/css/jquery.cleditor.css",
+		"/E/Source/web/charisma/js/bootstrap-alert.js",
+		"/E/Source/web/charisma/js/bootstrap-modal.js",
+		"/E/Source/web/charisma/js/bootstrap-toggle.js",
+		"/E/Source/web/charisma/js/bootstrap-tooltip.js",
+		"/E/Source/web/charisma/js/bootstrap-tab.js",
+		"/E/Source/web/charisma/js/bootstrap-scrollspy.js",
+		"/E/Source/web/charisma/js/bootstrap-popover.js",
+		"/E/Source/web/charisma/js/bootstrap-dropdown.js",
+		"/E/Source/web/charisma/js/bootstrap-collapse.js",
+		"/E/Source/web/charisma/js/bootstrap-carousel.js",
+		"/E/Source/web/charisma/js/bootstrap-button.js",
+		"/E/Source/web/charisma/css/bootstrap-united.css",
+		"/E/Source/web/charisma/css/bootstrap-spacelab.css",
+		"/E/Source/web/charisma/css/bootstrap-slate.css",
+		"/E/Source/web/charisma/css/bootstrap-simplex.css",
+		"/E/Source/web/charisma/css/bootstrap-responsive.css",
+		"/E/Source/web/charisma/css/bootstrap-redy.css",
+		"/E/Source/web/charisma/css/bootstrap-journal.css",
+		"/E/Source/web/charisma/css/bootstrap-cyborg.css",
+		"/E/Source/web/charisma/css/bootstrap-classic.css",
+		"/E/Source/web/charisma/css/bootstrap-cerulean.css",
+		"/D/Program Files/go/src/cmd/go/bootstrap.go",
+		"/D/Program Files/go/src/libbio/boffset.c",
+		"/E/Source/web/charisma/blank.html",
+		"/E/Source/web/charisma/js/jquery.chosen.min.js",
+		"/E/Source/web/charisma/js/jquery.colorbox.min.js",
+		"/E/Source/web/charisma/doc/js/jquery.scrollTo-1.4.2-min.js",
+		"/D/Program Files/go/src/lib9/jmp.c",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/http.go",
+		"/E/Source/c++/iVideo/Source/cmsv2/src/main/java/com/sysware/ivideo/cms/utils/AppCommon.java",
+		"/E/Source/web/charisma/php-version/chart.php",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/error.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/template_func.go",
+		"/E/Source/web/charisma/chart.html"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+			"E:\\Source\\c++\\iVideo\\Source\\swd\\server",
+			"D:\\Program Files\\go\\src,E:\\Source\\c++\\iVideo\\Source\\swd\\server",
+			"D:\\Program Files\\go\\src",
+			"E:\\Source\\c++\\iVideo\\Source\\swd\\server",
+			"D:\\Program Files\\go,E:\\Source\\go\\falcon-eye",
+			"D:\\Program Files\\go",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"editName",
+			"delName",
+			"value",
+			"bindTbEditDeleteBtn",
+			"name",
+			"getTrByTableName",
+			"getUserDialog",
+			"getServerPostData",
+			"checkSaveServer",
+			"bindClickFunc",
+			"bindTbEditDeleteBtn",
+			"showEditServerDlg",
+			"getServerPostData",
+			"getUserDialog",
+			"getServerDialog",
+			"showEditServerDlg",
+			"bindServerTypeListBtn",
+			"User",
+			"user",
+			"userDialog",
+			"bindTbEditDeleteBtn",
+			"bindClickFunc",
+			"bindTbEditDeleteBtn",
+			"showEditUserDlg",
+			"changeServerProfile",
+			"addUserTb",
+			"changeUserProfile",
+			"on",
+			"bind",
+			"on",
+			"bind",
+			"confirmDialogFunc",
+			"saveUser",
+			"showUserDialog",
+			"getPostData",
+			"showUserDialog",
+			"showEditUserDlg",
+			"showUserDialog",
+			"id",
+			"value",
+			"showDialogFunc",
+			"s",
+			"sdfds",
+			"theme",
+			"\"theme\": \"Default.sublime-theme\",",
+			"theme",
+			"ss",
+			"fd",
+			"ss",
+			"sdfds",
+			"sd",
+			"sdfds ss",
+			"ss",
+			"sdfas",
+			"margin",
+			"float",
+			"hover",
+			"showUserDialog",
+			"/setup",
+			"saveUser",
+			"\"\n",
+			"/setup/",
+			"Values",
+			"r",
+			"/js",
+			"/css",
+			"../js",
+			"\"/css/",
+			"\"css/",
+			"/css",
+			"../css",
+			"\"css/",
+			"\"js/",
+			"\"css/",
+			"\"js/",
+			"gotoLoginPage",
+			"admin",
+			"btn-primary",
+			"bindTbBtn",
+			"addUserTb",
+			"bindTbEditDeleteBtn",
+			"showEditServerDlg",
+			"btnAddServer",
+			"addUsertb",
+			"bindTbEditDeleteBtn",
+			"deleteUser",
+			"saveUser",
+			"isAdminUserName",
+			"isAdminUserName\nisAdminUserName",
+			"isAdminUserName",
+			"showUserDialog",
+			"hrefObj",
+			"parent",
+			"deleteServer",
+			"bindTbEditDeleteBtn",
+			"deleteServer",
+			"btnSaveServer",
+			"NewSetupHandle",
+			"GetSetupInfo",
+			"changeUserProfile",
+			"bindTbEditDeleteBtn",
+			"showEditUserDlg",
+			"showUserDialog",
+			"showServerDialog",
+			"showEditServerDlg",
+			"bindTbServerEditDeleteBtn",
+			"addServerTypeList",
+			"saveUser",
+			"btnSaveUser",
+			"bindTbServerDeleteBtn",
+			"parent",
+			"servername-value",
+			"bindTbServerEditDeleteBtn",
+			"changeUserProfile",
+			"hide",
+			"Server",
+			"server",
+			"changeServer",
+			"changeServerProfile",
+			"saveServer",
+			"showServerDialog",
+			"confirmDialogFunc",
+			"username",
+			"btn-primary",
+			"addServerTb",
+			"changeServerProfile",
+			"confirmDialogFunc",
+			"showServerDialog"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"js",
+			"css",
+			"/js",
+			"\"css/",
+			"\"/css/",
+			"css",
+			"/css",
+			"/css/",
+			"\"/css/",
+			"\"../css/",
+			"\"../js/",
+			"\"/css/",
+			"\"/js/",
+			"User",
+			"user",
+			"userName",
+			"pageInfo.PageNo",
+			"pageInfo.RecordCount",
+			"pageInfo.TotalPage",
+			".css\" rel",
+			"href=\"css/",
+			"rel=\"stylesheet\"/>",
+			"rel=\"stylesheet\"",
+			"rel=\"stylesheet\"/>",
+			"rel=\"stylesheet\"、>",
+			"../public/img/",
+			"../public/js/",
+			"../public/css/",
+			"",
+			"../public/js/",
+			"../public/img/",
+			"../public/css/",
+			"staticDirs",
+			"urlPath",
+			"ServerUpdate",
+			"",
+			">",
+			"<",
+			"accessUnit",
+			"AccessUnit",
+			"RTC",
+			"StubPrefix",
+			"WSDLSufffix",
+			"BlankStr",
+			"index",
+			"datas",
+			"Index"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GsDepends-output":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 103.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 124.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"routel",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeLogin.go"
+			],
+			[
+				"rout",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\route.go"
+			],
+			[
+				"ivid",
+				"server\\public\\js\\ivideo.js"
+			],
+			[
+				"ivideoser",
+				"server\\public\\js\\ivideoServer.js"
+			],
+			[
+				"setup",
+				"server\\templates\\setup.tmpl"
+			],
+			[
+				"route",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\route.go"
+			],
+			[
+				"routeset",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeSetup.go"
+			],
+			[
+				"routeser",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeServer.go"
+			],
+			[
+				"routeuser",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeUser.go"
+			],
+			[
+				"routelo",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeLogin.go"
+			],
+			[
+				"route.go",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\route.go"
+			],
+			[
+				"html",
+				"server\\templates\\htmlHead.tmpl"
+			],
+			[
+				"routesetup",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeSetup.go"
+			],
+			[
+				"",
+				"server\\templates\\setupLogin.tmpl"
+			],
+			[
+				"userinf",
+				"server\\src\\sysware.com\\ivideo\\model\\userInfo.go"
+			],
+			[
+				"uesrinfo",
+				"server\\src\\sysware.com\\ivideo\\model\\userInfo.go"
+			],
+			[
+				"routelogin",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeLogin.go"
+			],
+			[
+				"ivideou",
+				"server\\public\\js\\ivideoUser.js"
+			],
+			[
+				"ivi",
+				"server\\public\\js\\ivideo.js"
+			],
+			[
+				"apptoo",
+				"server\\src\\sysware.com\\ivideo\\utils\\appTools.go"
+			],
+			[
+				"ivideo",
+				"server\\public\\js\\ivideoServer.js"
+			],
+			[
+				"userinfo",
+				"server\\src\\sysware.com\\ivideo\\model\\userInfo.go"
+			],
+			[
+				"common",
+				"src\\pkg\\archive\\tar\\common.go"
+			],
+			[
+				"setupin",
+				"server\\src\\sysware.com\\ivideo\\model\\setupInfo.go"
+			],
+			[
+				"routelog",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeLogin.go"
+			],
+			[
+				"login",
+				"server\\templates\\login.tmpl"
+			],
+			[
+				"iv",
+				"server\\public\\js\\ivideo.js"
+			],
+			[
+				"scr",
+				"server\\templates\\script.tmpl"
+			],
+			[
+				"userin",
+				"server\\src\\sysware.com\\ivideo\\model\\userInfo.go"
+			],
+			[
+				"login.t",
+				"server\\templates\\login.tmpl"
+			],
+			[
+				"ivideo.js",
+				"server\\public\\js\\ivideo.js"
+			],
+			[
+				"routes",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeServerList.go"
+			],
+			[
+				"ivide",
+				"server\\public\\js\\ivideo.js"
+			],
+			[
+				"app",
+				"server\\src\\sysware.com\\ivideo\\utils\\appTools.go"
+			],
+			[
+				"setupinf",
+				"server\\src\\sysware.com\\ivideo\\model\\setupInfo.go"
+			],
+			[
+				"appto",
+				"server\\src\\sysware.com\\ivideo\\utils\\appTools_test.go"
+			],
+			[
+				"setupinfo",
+				"server\\src\\sysware.com\\ivideo\\model\\setupInfo.go"
+			],
+			[
+				"index.t",
+				"server\\templates\\index.tmpl"
+			],
+			[
+				"routeste",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeSetup.go"
+			],
+			[
+				"server",
+				"server\\templates\\serverList.tmpl"
+			],
+			[
+				"charis",
+				"charisma\\js\\charisma.js"
+			],
+			[
+				"serverin",
+				"server\\src\\sysware.com\\ivideo\\model\\serverInfo.go"
+			],
+			[
+				"jquery",
+				"charisma\\js\\jquery.js"
+			],
+			[
+				"jq",
+				"server\\public\\js\\jquery.js"
+			],
+			[
+				"routesetu",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeSetup.go"
+			],
+			[
+				"char",
+				"server\\public\\js\\charisma.js"
+			],
+			[
+				"bootst",
+				"charisma\\js\\bootstrap-modal.js"
+			],
+			[
+				"jquery.",
+				"server\\public\\js\\jquery.js"
+			],
+			[
+				"cha",
+				"server\\public\\js\\charisma.js"
+			],
+			[
+				"ui.h",
+				"charisma\\ui.html"
+			],
+			[
+				"ch",
+				"server\\public\\js\\charisma.js"
+			],
+			[
+				"routlo",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeLogin.go"
+			],
+			[
+				"routsre",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeServerList.go"
+			],
+			[
+				"serverl",
+				"server\\templates\\serverList.tmpl"
+			],
+			[
+				"charisma.js",
+				"charisma\\js\\charisma.js"
+			],
+			[
+				"routeserverlist",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeServerList.go"
+			],
+			[
+				"pagei",
+				"server\\src\\sysware.com\\ivideo\\model\\pageInfo.go"
+			],
+			[
+				"serverpage",
+				"server\\src\\sysware.com\\ivideo\\model\\serverPageInfo.go"
+			],
+			[
+				"routeserv",
+				"server\\src\\sysware.com\\ivideo\\server\\http\\routeServerList.go"
+			],
+			[
+				"index.tm",
+				"server\\templates\\index.tmpl"
+			],
+			[
+				"fal",
+				"falcon-eye/falcon-eye.sublime-project"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\Source\\c++\\iVideo\\Source\\swd\\server\\swdServer.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 444.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

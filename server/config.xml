@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+  <swd>
+      <user>
+          <userName>admin</userName>
+          <password>11</password>
+      </user>
+      <user>
+          <userName>5</userName>
+          <password>11</password>
+      </user>
+      <server>
+          <serverName>4</serverName>
+          <address>3</address>
+          <type>0</type>
+      </server>
+      <server>
+          <serverName>2</serverName>
+          <address>34234</address>
+          <type>3</type>
+      </server>
+      <port>9500</port>
+  </swd>

@@ -1,0 +1,68 @@
+{{define "serverInfoCpu"}}
+<div class="box span4">
+	<div class="box-header well">
+		<h2> <i class="icon-th"></i>
+			CPU
+		</h2>
+		<div class="box-icon">
+			<a class="btn btn-setting btn-round" href="#" id="refresh-cpu"> <i class="icon-refresh"></i>
+			</a>
+			<a class="btn btn-minimize btn-round" href="#">
+				<i class="icon-chevron-up"></i>
+			</a>
+		</div>
+	</div>
+	<div class="box-content">
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">Idle:</span>
+				<span id="cpu-idle"></span>
+			</div>
+			<div class="general-info-item">
+				<span class="general-title">Busy:</span>
+				<span id="cpu-busy"></span>
+			</div>
+		</div>
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">User:</span>
+				<span id="cpu-user"></span>
+			</div>
+			<div class="general-info-item">
+				<span class="general-title">Nice:</span>
+				<span id="cpu-nice"></span>
+			</div>
+		</div>
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">System:</span>
+				<span id="cpu-system"></span>
+			</div>
+			<div class="general-info-item">
+				<span class="general-title">IOWait:</span>
+				<span id="cpu-iowait"></span>
+			</div>
+		</div>	
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">IRQ:</span>
+				<span id="cpu-irq"></span>
+			</div>
+			<div class="general-info-item">
+				<span class="general-title">SoftIRQ:</span>
+				<span id="cpu-softirq"></span>
+			</div>
+		</div>
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">Steal:</span>
+				<span id="cpu-steal"></span>
+			</div>
+			<div class="general-info-item">
+				<span class="general-title">Guest:</span>
+				<span id="cpu-guest"></span>
+			</div>
+		</div>			
+	</div>
+</div>
+{{end}}

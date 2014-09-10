@@ -1,0 +1,44 @@
+{{define "serverInfoProcess"}}
+<div class="box span4">
+	<div class="box-header well">
+		<h2> <i class="icon-th"></i>
+			服务器&nbsp;{{.serverName}}
+		</h2>
+		<div class="box-icon">
+			<a class="btn btn-setting btn-round" href="#" id="refresh-process"> <i class="icon-refresh"></i>
+			</a>
+			<a class="btn btn-minimize btn-round" href="#">
+				<i class="icon-chevron-up"></i>
+			</a>
+		</div>
+	</div>
+	<div class="box-content">
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">CPU:</span>
+				<span id="process-cpu"></span>
+			</div>
+			<div class="general-info-item">
+				<span class="general-title">内存:</span>
+				<span id="process-mem"></span>
+			</div>
+		</div>
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">物理内存:</span>
+				<span id="process-realmem"></span>
+			</div>
+			<div class="general-info-item">
+				<span class="general-title">虚拟内存:</span>
+				<span id="process-virtualmem"></span>
+			</div>
+		</div>
+		<div class="widget-content">
+			<div class="general-info-item">
+				<span class="general-title">状态:</span>
+				<span id="process-state"></span>
+			</div>
+		</div>			
+	</div>
+</div>
+{{end}}

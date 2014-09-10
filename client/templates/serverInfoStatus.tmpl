@@ -1,0 +1,37 @@
+{{define "serverInfoStatus"}}
+<div class="box">
+	<div class="box-header well">
+		<h2> <i class="icon-th"></i>
+			信息 {{.serverName}}
+		</h2>
+		<div class="box-icon">
+			<a class="btn btn-setting btn-round" href="#" id="refresh-status"> <i class="icon-refresh"></i>
+			</a>
+			<a class="btn btn-minimize btn-round" href="#">
+				<i class="icon-chevron-up"></i>
+			</a>
+		</div>
+	</div>
+	<div class="box-content ">
+		<ul id="serverStatusTab" class="nav nav-tabs">
+			<li class="active"><a href="#status-Basic">Basic</a></li>
+		</ul>
+		<div class="tab-content" id="serverStatusTabContent">
+			<div class="tab-pane active" id="status-Basic">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>信息</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+{{end}}
