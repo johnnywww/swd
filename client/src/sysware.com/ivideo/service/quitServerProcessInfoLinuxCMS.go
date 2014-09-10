@@ -13,12 +13,9 @@ type quitServerProcessInfoLinuxCMS struct {
 type processTimerFuncHandleQuitCMSProc struct {
 }
 
-func (processTimerFuncHandleQuitCMSProc *processTimerFuncHandleQuitCMSProc) run(serverName string) error {
-	serverInfo, err := NewGetServerInfoByServerName().getInfo(serverName)
-	if nil != err {
-		return err
-	}
-	_, err = NewGetProcessInfoByServerInfo().GetInfo(serverInfo)
+func (processTimerFuncHandleQuitCMSProc *processTimerFuncHandleQuitCMSProc) run(param interface{}) error {
+	var serverInfo *model.ServerInfo = param.(*model.ServerInfo)
+	_, err := NewGetProcessInfoByServerInfo().GetInfo(serverInfo)
 	if nil != err {
 		return nil
 	}
@@ -42,12 +39,12 @@ func (quitServerProcessInfoLinuxCMS *quitServerProcessInfoLinuxCMS) Quit(serverI
 		return err
 	}
 	cmdLine := webPath + "/bin/shutdown.sh"
-	err = restartLinuxProc(cmdLine, webPath)
+	err = executeLinuxProc(cmdLine, webPath)
 	if nil != err {
 		return err
 	}
-	if !processHandleTimerFunc(serverInfo.ServerName, 15, &processTimerFuncHandleQuitCMSProc{}) {
-		return errors.New(fmt.Sprintf("无法停止服务器%s程序", serverInfo.ServerName))
+	if !processHandleTimerFunc(serverInfo, 30, &processTimerFuncHandleQuitCMSProc{}) {
+		return errors.New(fmt.Sprintf("无法停止中心管理服务器%s程序", serverInfo.ServerName))
 	}
 	return nil
 }

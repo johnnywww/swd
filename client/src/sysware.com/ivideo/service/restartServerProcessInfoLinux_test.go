@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test_RestartAPS(t *testing.T) {
+func Test_RestartAPSByServerName(t *testing.T) {
 	getInfo := &restartServerProcessInfoLinux{}
 	err := getInfo.Restart("报警服务器1")
 	if nil != err {
@@ -12,7 +12,7 @@ func Test_RestartAPS(t *testing.T) {
 	}
 }
 
-func Test_RestartSIP(t *testing.T) {
+func Test_RestartSIPByServerName(t *testing.T) {
 	getInfo := &restartServerProcessInfoLinux{}
 	err := getInfo.Restart("SIP服务器1")
 	if nil != err {
@@ -20,7 +20,7 @@ func Test_RestartSIP(t *testing.T) {
 	}
 }
 
-func Test_RestartCMS(t *testing.T) {
+func Test_RestartCMSByServerName(t *testing.T) {
 	getInfo := &restartServerProcessInfoLinux{}
 	err := getInfo.Restart("中心管理服务器1")
 	if nil != err {

@@ -14,7 +14,8 @@ type restartProcessByServerInfoLinuxCommon struct {
 type processTimerFuncHandleRestartProc struct {
 }
 
-func (processTimerFuncHandleRestartProc *processTimerFuncHandleRestartProc) run(cmdLine string) error {
+func (processTimerFuncHandleRestartProc *processTimerFuncHandleRestartProc) run(param interface{}) error {
+	var cmdLine string = param.(string)
 	_, err := NewGetProcessInfo().GetInfo(cmdLine)
 	return err
 }
@@ -24,7 +25,7 @@ func (restartProcessByServerInfoLinuxCommon *restartProcessByServerInfoLinuxComm
 		return errors.New("不支持的类型")
 	}
 	cmdLine := serverInfo.Address
-	err := restartLinuxProc(cmdLine, utils.GetFileDir(cmdLine))
+	err := executeLinuxProc(cmdLine, utils.GetFileDir(cmdLine))
 	if nil != err {
 		return err
 	}

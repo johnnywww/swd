@@ -7,6 +7,10 @@ import (
 	"sysware.com/ivideo/common"
 )
 
+const (
+	CMS_UNIX_DOMAIN_SOCKET = "/tmp/cmsserver.sock"
+)
+
 type getUnixSocketCommandXMLInfoImpl struct {
 }
 
@@ -15,7 +19,7 @@ func getAbstarctUnixSocketXMLInfo(serverId string, cmdType string, value interfa
 }
 
 func getCmsUnixSocketXMLInfo(cmdType string, value interface{}) error {
-	return (&getUnixSocketCommandXMLInfoImpl{}).GetInfo(cmdType, value, "/tmp/cmsserver.sock")
+	return (&getUnixSocketCommandXMLInfoImpl{}).GetInfo(cmdType, value, CMS_UNIX_DOMAIN_SOCKET)
 }
 
 func (getUnixSocketCommandXMLInfoImpl *getUnixSocketCommandXMLInfoImpl) GetInfo(cmdType string, value interface{}, sockeName string) error {

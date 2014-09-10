@@ -9,14 +9,14 @@ type restartServerProcessInfoLinux struct {
 }
 
 type processTimerFuncHandle interface {
-	run(cmdLine string) error
+	run(param interface{}) error
 }
 
-func processHandleTimerFunc(cmdLine string, intervalSec int, processTimerFuncHandle processTimerFuncHandle) bool {
+func processHandleTimerFunc(param interface{}, intervalSec int, processTimerFuncHandle processTimerFuncHandle) bool {
 	quitChan := make(chan int)
 	go func() {
 		for {
-			err := processTimerFuncHandle.run(cmdLine)
+			err := processTimerFuncHandle.run(param)
 			if nil == err {
 				quitChan <- common.RET_CODE_SUCCESS
 			}

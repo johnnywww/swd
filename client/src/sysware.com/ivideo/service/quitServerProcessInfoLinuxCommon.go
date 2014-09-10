@@ -14,7 +14,8 @@ type quitServerProcessInfoLinuxCommon struct {
 type processTimerFuncHandleQuitProc struct {
 }
 
-func (processTimerFuncHandleQuitProc *processTimerFuncHandleQuitProc) run(cmdLine string) error {
+func (processTimerFuncHandleQuitProc *processTimerFuncHandleQuitProc) run(param interface{}) error {
+	var cmdLine string = param.(string)
 	_, err := NewGetProcessInfo().GetInfo(cmdLine)
 	if nil == err {
 		return errors.New("找到了进程")

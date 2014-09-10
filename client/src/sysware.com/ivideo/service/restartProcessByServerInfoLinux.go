@@ -10,7 +10,7 @@ import (
 type restartProcessByServerInfoLinux struct {
 }
 
-func restartLinuxProc(cmdLine string, dir string) error {
+func executeLinuxProc(cmdLine string, dir string) error {
 	procattr := os.ProcAttr{Dir: dir, Env: os.Environ(), Files: []*os.File{nil, nil, nil}}
 	_, err := os.StartProcess(cmdLine, []string{}, &procattr)
 	if nil != err {
