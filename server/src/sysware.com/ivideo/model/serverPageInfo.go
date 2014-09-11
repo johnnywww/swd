@@ -23,7 +23,11 @@ func (serverPageInfo *ServerPageInfo) getSliceServers(pageNo int, perPageRecordS
 	} else {
 		endIndex = (pageInfo.PageNo + 1) * perPageRecordSize
 	}
-	return totalServers[startIndex:endIndex]
+	if len(totalServers) < 1 {
+		return totalServers
+	} else {
+		return totalServers[startIndex:endIndex]
+	}
 }
 
 func (serverPageInfo *ServerPageInfo) GetServerPageInfo(pageNo int, perPageRecordSize int) ServerPageInfo {
