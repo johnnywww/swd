@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Cmd",
+				"CmdOutputNoLn	out string, err error ƒ"
+			],
+			[
+				"NewGetServerSt",
+				"NewGetServerStatusXMLInfo	GetServerStatusXMLInfo ƒ"
+			],
+			[
+				"getServerStatusInfoLinux",
+				"getServerStatusXMLInfoLinuxCMS	struct ʈ"
+			],
+			[
+				"NewGetPr",
+				"NewGetProcessInfoByServerInfo	GetProcessInfoByServerInfo ƒ"
+			],
+			[
 				"ser",
 				"serverInfo	*model.ServerInfo ν"
 			],
@@ -34,10 +50,6 @@
 			[
 				"getCMS",
 				"getCMSProcessInfoLinux	struct ʈ"
-			],
-			[
-				"NewGetPr",
-				"NewGetProcessInfo	GetProcessInfo ƒ"
 			],
 			[
 				"SER",
@@ -502,78 +514,152 @@
 			[
 				"te",
 				"tempFileName	string ν"
-			],
-			[
-				"Str",
-				"strings	 package ρ"
-			],
-			[
-				"wsd",
-				"wsdlFiles	[]GSoapWSDLFile ν"
-			],
-			[
-				"src",
-				"srcReader	*bufio.Reader ν"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/sysware.com/ivideo/service/getServerProcessInfoLinux.go",
+			"file": "src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
 			"settings":
 			{
-				"buffer_size": 510,
+				"buffer_size": 1024,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/service/getServerProcessInfoLinux_test.go",
+			"file": "src/sysware.com/ivideo/service/restartServerProcessInfo.go",
 			"settings":
 			{
-				"buffer_size": 373,
+				"buffer_size": 426,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/service/getServerProcessStatusInfoLinux.go",
+			"file": "src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl.go",
 			"settings":
 			{
-				"buffer_size": 2307,
+				"buffer_size": 1121,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "templates/userDialog.tmpl",
+			"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
 			"settings":
 			{
-				"buffer_size": 1307,
+				"buffer_size": 1318,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Searching 382 files for \"getServerProcessStatusInfoLinux\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\src\\sysware.com\\ivideo\\service\\getServerProcessStatusInfo.go:\n   15  	getServerProcessStatusInfo = nil\n   16  	if utils.IsLinuxOS() {\n   17: 		getServerProcessStatusInfo = &getServerProcessStatusInfoLinux{}\n   18  	}\n   19  }\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\src\\sysware.com\\ivideo\\service\\getServerProcessStatusInfoLinux.go:\n   11  )\n   12  \n   13: type getServerProcessStatusInfoLinux struct {\n   14  }\n   15  \n   ..\n   54  }\n   55  \n   56: func (getServerProcessStatusInfoLinux *getServerProcessStatusInfoLinux) GetInfo(serverId string) (map[string][]*model.ServerStatusInfo, error) {\n   57  	result := map[string][]*model.ServerStatusInfo{}\n   58  	var err error = nil\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\src\\sysware.com\\ivideo\\service\\getServerProcessStatusInfoLinux_test.go:\n   33  \n   34  func Test_GetServerProcessStatusInfo(t *testing.T) {\n   35: 	getInfo := &getServerProcessStatusInfoLinux{}\n   36  	_, err := getInfo.GetInfo(\"64020000002050000001\")\n   37  	if nil != err {\n\n5 matches across 3 files\n\n\nSearching 382 files for \"NewGetServerProcessStatusInfo\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\src\\sysware.com\\ivideo\\service\\getServerProcessStatusInfo.go:\n   19  }\n   20  \n   21: func NewGetServerProcessStatusInfo() GetServerProcessStatusInfo {\n   22  	return getServerProcessStatusInfo\n   23  }\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\src\\sysware.com\\ivideo\\service\\getServerStatusInfoLinux.go:\n   21  		return result, errors.New(fmt.Sprintf(\"没有找到服务器程序%s对应的服务器编号\", serverName))\n   22  	}\n   23: 	return NewGetServerProcessStatusInfo().GetInfo(serverId)\n   24  }\n   25  \n\n2 matches across 2 files\n",
+			"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS.go",
 			"settings":
 			{
-				"buffer_size": 1756,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getServerStatusInfoLinux.go",
-			"settings":
-			{
-				"buffer_size": 1106,
+				"buffer_size": 1311,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/service/getServerProcessStatusInfo.go",
+			"file": "public/js/ivideoCommon.js",
 			"settings":
 			{
-				"buffer_size": 510,
+				"buffer_size": 99,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/htmlHead.tmpl",
+			"settings":
+			{
+				"buffer_size": 1339,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl.go",
+			"settings":
+			{
+				"buffer_size": 961,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileName.go",
+			"settings":
+			{
+				"buffer_size": 262,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl.go",
+			"settings":
+			{
+				"buffer_size": 810,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile_test.go",
+			"settings":
+			{
+				"buffer_size": 306,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
+			"settings":
+			{
+				"buffer_size": 848,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile.go",
+			"settings":
+			{
+				"buffer_size": 1014,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getSystemTimeInfoLinux.go",
+			"settings":
+			{
+				"buffer_size": 291,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfoLinux.go",
+			"settings":
+			{
+				"buffer_size": 957,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfo.go",
+			"settings":
+			{
+				"buffer_size": 454,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/client/http/routeServerGeneralInfo.go",
+			"settings":
+			{
+				"buffer_size": 1248,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
+			"settings":
+			{
+				"buffer_size": 949,
 				"line_ending": "Windows"
 			}
 		},
@@ -581,23 +667,7 @@
 			"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
 			"settings":
 			{
-				"buffer_size": 1312,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getProcessInfoByServerInfo.go",
-			"settings":
-			{
-				"buffer_size": 505,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getProcessInfoByServerInfoLinux.go",
-			"settings":
-			{
-				"buffer_size": 514,
+				"buffer_size": 1441,
 				"line_ending": "Windows"
 			}
 		}
@@ -605,7 +675,7 @@
 	"build_system": "Packages/Go Build/Go.sublime-build",
 	"command_palette":
 	{
-		"height": 400.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -709,7 +779,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 536.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -731,7 +801,6 @@
 	"expanded_folders":
 	[
 		"/E/Source/c++/iVideo/Source/swd/client",
-		"/E/Source/c++/iVideo/Source/swd/client/public",
 		"/E/Source/c++/iVideo/Source/swd/client/public/css",
 		"/E/Source/c++/iVideo/Source/swd/client/public/js",
 		"/E/Source/c++/iVideo/Source/swd/client/src",
@@ -745,41 +814,61 @@
 	],
 	"file_history":
 	[
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerProcessInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleCMSImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessStatusInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessStatusInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCommon.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCMS.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinux.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfoLinux_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getAPSServerSetupInfoByConfigFile.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCommon_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCMS_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoImpl_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessStatusInfoLinux_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/setupInfoServiceXmlImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoByServerName.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoByServerNameImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/config.xml",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfo",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerRequestXMLInfoImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessInfoLinux_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessStatusInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerProcessInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleCMSImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfoLinux_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinux_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinux_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getSystemTimeInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleCMSImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerIdInfoImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/setup.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideoConfigServer.js",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux_test",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoLinux_test.go",
@@ -787,7 +876,6 @@
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/cmsSaveXMLFileContentBeforeServiceImpl.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/setupInfoServiceXmlImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile.go",
 		"/E/Source/c++/iVideo/Source/swd/client/config.xml",
 		"/E/Source/c++/iVideo/Source/swd/client/public/js/charisma.js",
@@ -816,13 +904,10 @@
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/userDialog.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/serverDialog.tmpl",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfoLinux_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/public/css/bootstrap-cerulean.css",
 		"/E/Source/c++/iVideo/Source/swd/client/public/css/ivideo.css",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleSIPImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveRequestHandleImpl.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoByServerName.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoByServerNameImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoByServerNameImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerSetupInfoImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerSetupInfoImpl_test.go",
@@ -831,7 +916,6 @@
 		"/E/Source/c++/iVideo/Source/swd/client/templates/serverConfigAPSDialog.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerConfigRoot.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getSIPServerSetupInfoByConfigFile_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getAPSServerSetupInfoByConfigFile.go",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/serverConfigSIPDialog.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideoServer.js",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/confirmDialog.tmpl",
@@ -857,22 +941,7 @@
 		"/E/Source/c++/iVideo/Source/swd/client/templates/serverList.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandle.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerSetupInfoByConfigFile.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerSetupInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/public/js/bootstrap-tab.js",
-		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideoLogin.js",
-		"/E/Source/c++/iVideo/Source/swd/client/public/css/bootstrap-cyborg.css",
-		"/E/Source/c++/iVideo/Source/swd/client/templates/script.tmpl",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerRootInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerIdInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessStatusInfoLinux_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessInfoLinux_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerIdInfoImpl_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/swdClient.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getSeqNo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getMemInfo.go"
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerSetupInfoByConfigFile.go"
 	],
 	"find":
 	{
@@ -898,6 +967,68 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"SERVER_TYPE_CMS",
+			"getServerInfoConfigFileNameImpl",
+			"NewGetServerInfoConfigFileName",
+			"getCMSServerSetupInfoByConfigFile",
+			"getCMSProcessInfoLinux",
+			"WriteLog",
+			"CmdOutputNoLn",
+			"GetSystemRunTimeInfoLinux",
+			"NewGetSystemRunTimeInfo",
+			"NewGetSystemTimeInfo",
+			"getLinuxOSError",
+			"cmsserver.sock",
+			"processHandleTimerFunc",
+			"interface",
+			"processHandleTimerFunc",
+			"processTimerFuncHandleQuitProc",
+			"restartLinuxProc",
+			"restartProcessByServerInfoLinuxCMS",
+			"restartProcessByServerInfoLinux",
+			"NewRestartProcessByServerInfo",
+			"restartServerProcessInfoLinux",
+			"Test_RestartCMS",
+			"cmsserver.sock",
+			"getCmsUnixSocketXMLInfo",
+			"getAbstarctUnixSocketXMLInfo",
+			"getServerProcessStatusInfoLinux",
+			"log.WriteLog",
+			"GetProcessInfoLinux",
+			"NewGetProcessInfo",
+			"restartLinuxProc",
+			"GetProcessInfoLinux",
+			"NewGetProcessInfo",
+			"recv",
+			"quitServerProcessInfoLinuxCMS",
+			"getCMSProcessInfoLinux",
+			"processHandleTimerFunc",
+			"getCmsUnixSocketXMLInfo",
+			"restartLinuxProc",
+			"getCMSProcessInfoLinux",
+			"getProcessInfoByServerInfoLinux",
+			"NewGetProcessInfoByServerInfo",
+			"getCmdUnixSocketXMLInfo",
+			"getServerInfoByServerNameImpl",
+			"NewGetServerInfoByServerName",
+			"processHandleTimerFunc",
+			"processTimerFuncHandleQuitProc",
+			"processHandleTimerFunc",
+			"restartProcessByServerInfoLinuxCommon",
+			"restartProcessByServerInfoLinux",
+			"NewRestartProcessByServerInfo",
+			"getCmdUnixSocketXMLInfo",
+			"quitServerProcessInfoLinuxCMS",
+			"quitServerProcessInfoLinux",
+			"NewQuitServerProcessInfo",
+			"respQuitXmlInfo",
+			"getAbstarctUnixSocketXMLInfo",
+			"getCmdUnixSocketXMLInfo",
+			"getCMSUnixSocketXMLInfo",
+			"getAbstarctUnixSocketXMLInfo",
+			"getServerRequestXMLInfoImpl",
+			"NewGetServerRequestXMLInfo",
+			"serverId",
 			"NewGetServerProcessStatusInfo",
 			"getServerProcessStatusInfoLinux",
 			"getSocketXMLInfo",
@@ -963,69 +1094,7 @@
 			"GetServerInfoByServerName",
 			"serverConfigSaveRequestHandleImpl",
 			"NewServerConfigSaveRequestHandle",
-			"GetServerInfoByServerName",
-			"GetServerIndexByServerName",
-			"没有找到对应的服务器",
-			"SERVER_TYPE_APS",
-			"aPS",
-			"SERVER_TYPE_APS",
-			"getAPSServerSetupInfoByConfigFile",
-			"apsSetupInfo",
-			"sipHeartInterval",
-			"APS",
-			"aps",
-			"APS",
-			"aps",
-			"showConfigServerDlg",
-			"getServerDialog",
-			"showConfigServerDlg",
-			"switchAPSServerTabById",
-			"prefix",
-			"apsRPassword",
-			"input-int",
-			"[href",
-			"@href",
-			"checkInputTextIntegerRangeAndTab",
-			"checkInputTextIntegerAndTab",
-			"[@a",
-			"[a",
-			"serverConfigSIPDialog",
-			"apsServer",
-			"ParseInt",
-			"&nbsp;",
-			"hideConfirmDialog",
-			"confirmDialogFunc",
-			"ajax",
-			"hideConfirmDialog",
-			"loading",
-			"fadeOut",
-			"ajax-link",
-			"servername",
-			"ViewDialog",
-			"Error()",
-			"NewServerConfigSaveHandle",
-			"NewGetServerSetupInfo",
-			"NewServerConfigSaveHandle",
-			"serverInfo.Type",
-			"\"	",
-			"ParseInt",
-			"getServerConfigFileName",
-			"FormValue",
-			"NewGetServerDetailSetupInfo",
-			"getServerConfigFileName",
-			"CheckServerConfigFile",
-			"IsServerConfigExist",
-			"error",
-			"GetServerInfoByServerNameAndCheckConfig",
-			"CheckServerConfigFile",
-			"saveSuccessFunc",
-			"checkInputTextIntegerRangeAndTab",
-			"isInteger",
-			"typeof",
-			"min",
-			"checkInputTextEmptyAndTab",
-			"checkValueIdentify",
-			"checkInputTextEmpty"
+			"GetServerInfoByServerName"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1096,24 +1165,113 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/sysware.com/ivideo/service/getServerProcessInfoLinux.go",
+					"file": "src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 510,
+						"buffer_size": 1024,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								439,
-								439
+								191,
+								213
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 588.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/sysware.com/ivideo/service/restartServerProcessInfo.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								560,
+								560
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								487,
+								487
 							]
 						],
 						"settings":
@@ -1123,93 +1281,92 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 238.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 532.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/sysware.com/ivideo/service/getServerProcessInfoLinux_test.go",
+					"buffer": 5,
+					"file": "public/js/ivideoCommon.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 373,
+						"buffer_size": 99,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								269,
-								294
+								0,
+								99
 							]
 						],
 						"settings":
 						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/sysware.com/ivideo/service/getServerProcessStatusInfoLinux.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2307,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1372,
-								1372
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1050.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "templates/userDialog.tmpl",
-					"semi_transient": true,
+					"buffer": 6,
+					"file": "templates/htmlHead.tmpl",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1307,
+						"buffer_size": 1339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								801,
-								801
+								1278,
+								1278
 							]
 						],
 						"settings":
 						{
 							"is_xml": false,
-							"origin_encoding": "UTF-8",
+							"origin_encoding": "ASCII",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -1221,90 +1378,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
+					"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1756,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										288,
-										319
-									],
-									[
-										477,
-										508
-									],
-									[
-										571,
-										602
-									],
-									[
-										604,
-										635
-									],
-									[
-										995,
-										1026
-									],
-									[
-										1343,
-										1372
-									],
-									[
-										1663,
-										1692
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								1675,
-								1675
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 980.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/sysware.com/ivideo/service/getServerStatusInfoLinux.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1106,
+						"buffer_size": 961,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1030,
-								1030
+								498,
+								498
 							]
 						],
 						"settings":
@@ -1321,79 +1408,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "src/sysware.com/ivideo/service/getServerProcessStatusInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 510,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								412,
-								441
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 6.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								759,
-								759
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 462.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
 					"buffer": 8,
-					"file": "src/sysware.com/ivideo/service/getProcessInfoByServerInfo.go",
+					"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileName.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 505,
+						"buffer_size": 262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								407,
-								436
+								226,
+								257
 							]
 						],
 						"settings":
@@ -1405,24 +1433,143 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "src/sysware.com/ivideo/service/getProcessInfoByServerInfoLinux.go",
+					"file": "src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 514,
+						"buffer_size": 810,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								141,
-								172
+								355,
+								385
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 266.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile_test.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								146
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 206.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								223,
+								256
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/sysware.com/ivideo/service/getSystemTimeInfoLinux.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
 							]
 						],
 						"settings":
@@ -1435,6 +1582,156 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfoLinux.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 957,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfo.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								335,
+								360
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 258.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "src/sysware.com/ivideo/client/http/routeServerGeneralInfo.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								701,
+								701
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 374.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								380
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								319,
+								319
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 56.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
 					"type": "text"
 				}
 			]
@@ -1498,6 +1795,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"quitserverprocessinfolinux.go",
+				"src\\sysware.com\\ivideo\\service\\quitServerProcessInfoLinux.go"
+			],
 			[
 				"getserverprocessstatusinfolinux",
 				"src\\sysware.com\\ivideo\\service\\getServerProcessStatusInfoLinux.go"
@@ -1968,7 +2269,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 426.0,
+	"side_bar_width": 441.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
