@@ -9,7 +9,7 @@ import (
 
 func Test_ServerConfigSaveHandleCMSImplSave(t *testing.T) {
 	saveInfo := &serverConfigSaveHandleCMSImpl{}
-	req, err := http.NewRequest("GET", "http://192.168.128.154/server/saveconfig?servername=中心管理服务器1&servertype=0&dbAddress=jdbc:oracle:thin:@192.168.5.99:1521:orcl&dbUserName=ivideo&dbPassword=sysware&dbDefaultSchema=ivideo", nil)
+	req, err := http.NewRequest("GET", "http://192.168.128.154/server/saveconfig?servername=中心管理服务器1&servertype=0&dbAddress=jdbc:oracle:thin:@192.168.5.99:1521:orcl&dbUserName=ivideo&dbPassword=sysware&dbDefaultSchema=ivideo&activemqAddress=tcp://192.168.5.154:61616", nil)
 	if nil != err {
 		t.Error(err)
 	}

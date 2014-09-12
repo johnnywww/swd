@@ -57,5 +57,20 @@ func (serverConfigSaveHandleCMSImpl *serverConfigSaveHandleCMSImpl) Save(r *http
 	if nil != err {
 		return err
 	}
-	return setup.NewCMSSetupInfoService().SaveSetupInfo(cMSServerSetupInfo, cfgFileName, common.XML_ENCODE_UTF8)
+	err = setup.NewCMSSetupInfoService().SaveSetupInfo(cMSServerSetupInfo, cfgFileName, common.XML_ENCODE_UTF8)
+	if nil != err {
+		return err
+	}
+	v = r.FormValue("activemqAddress")
+	if utils.IsEmptyStr(v) {
+		return errors.New("没有ActiveMQ服务器地址")
+	}
+	activeMQConfig := getCMSActiveMQConfigFileName(serverInfo.Address)
+	r1, err := setup.NewPropertiesFileService().GetInfo(activeMQConfig)
+	if nil != err {
+		return err
+	}
+	r1["activemq.address"] = v
+	err = setup.NewPropertiesFileService().SaveInfo(r1, activeMQConfig)
+	return err
 }

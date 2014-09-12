@@ -17,7 +17,8 @@ $(function() {
 		getNotifyInfo: getSIPServerNotifyInfo,
 		saveSuccessFunc: null
 	}));
-	enableTabSwitch('sipServerConfigTab');	
+	enableTabSwitch('sipServerConfigTab');
+		
 	serverConfigDialogs.put(SERVER_TYPE_CMS, new ViewDialog("cmsServerConfigDialog", "btnCMSSaveServer", showConfigCMSServerDlgInfo, {
 		url: "/server/saveconfig",
 		checkSaveFunc: checkCMSSaveServer,
@@ -192,7 +193,8 @@ function showConfigCMSServerDlgInfo(serverConfigInfo) {
 	$("#cmsDbServerUser").val(serverConfigInfo.configServerInfo.dbUserName);	
 	$("#cmsDbServerPassword").val(serverConfigInfo.configServerInfo.dbPassword);
 	$("#cmsDbServerPassword1").val(serverConfigInfo.configServerInfo.dbPassword);
-	switchFirstTabSwitch('sipServerConfigTab');
+	$("#cmsActiveMQAddress").val(serverConfigInfo.configServerInfo.activemqAddress);	
+	switchFirstTabSwitch('cmsServerConfigTab');
 	return true;
 }
 
@@ -208,6 +210,7 @@ function getCMSServerPostData() {
 		dbDefaultSchema: $("#cmsDbServerSchema").val(),
 		dbUserName: $("#cmsDbServerUser").val(),
 		dbPassword: $("#cmsDbServerPassword").val(),
+		activemqAddress: $("#cmsActiveMQAddress").val(),
 	};
 }
 

@@ -23,7 +23,7 @@ func (getServerDetailSetupInfoImpl *getServerDetailSetupInfoImpl) GetInfo(server
 	case common.SERVER_TYPE_SIP:
 		return (&getSIPServerSetupInfoByConfigFile{}).GetInfo(cfgFileName)
 	case common.SERVER_TYPE_CMS:
-		return (&getCMSServerSetupInfoByConfigFile{}).GetInfo(cfgFileName)
+		return (&getServerDetailSetupInfoCMSImpl{}).GetInfo(serverInfo)
 
 	}
 	return nil, errors.New("没有对应的对象")
