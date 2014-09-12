@@ -187,10 +187,10 @@ function Map() {
 
 function ServerTypeMap() {
 	this.datas = new Map();
-	this.datas.put(0, '中心管理服务器');
-	this.datas.put(1, 'SIP服务器');
-	this.datas.put(2, '转发服务器');
-	this.datas.put(3, '报警服务器');
+	this.datas.put(SERVER_TYPE_CMS, '中心管理服务器');
+	this.datas.put(SERVER_TYPE_SIP, 'SIP服务器');
+	this.datas.put(SERVER_TYPE_MTS, '转发服务器');
+	this.datas.put(SERVER_TYPE_APS, '报警服务器');
 	this.element = function(index) {
 		return this.datas.element(index)
 	}
