@@ -18,7 +18,7 @@
 						<a href="#sipServerConfig-CmsServer">中心管理服务器</a>
 					</li>					
 					<li >
-						<a href="#sipServerConfig-DbServer">缓存服务器</a>
+						<a href="#sipServerConfig-ActiveMQServer">ActiveMQ服务器</a>
 					</li>
 				</ul>
 				<div class="tab-content">
@@ -66,27 +66,17 @@
 								<input type="text" id="sipCmsServerAddress" class="input-xlarge focused"></div>
 						</div>
 					</div>
-					<div class="tab-pane" id="sipServerConfig-DbServer">
+					<div class="tab-pane" id="sipServerConfig-ActiveMQServer">
 						<div class="control-group-bottom">
-							<label for="sipDbServerAddress" class="control-label">地址</label>
+							<label for="sipActiveMQServerAddress" class="control-label">地址</label>
 							<div class="controls">
-								<input type="text" id="sipDbServerAddress" class="input-xlarge focused"></div>
+								<input type="text" id="sipActiveMQServerAddress" class="input-xlarge focused"></div>
 						</div>
 						<div class="control-group-bottom">
-							<label for="sipDbServerPort" class="control-label">端口</label>
+							<label for="sipActiveMQServerPort" class="control-label">端口</label>
 							<div class="controls">
-								<input type="text" id="sipDbServerPort" class="input-xlarge focused" input-int-min="1" input-int-max="65535"></div>
-						</div>
-						<div class="control-group-bottom">
-							<label for="sipDbServerPassword" class="control-label">密码</label>
-							<div class="controls">
-								<input type="password" id="sipDbServerPassword" class="input-xlarge focused"></div>
-						</div>
-						<div class="control-group-bottom">
-							<label for="sipDbServerPassword1" class="control-label">再次输入密码</label>
-							<div class="controls">
-								<input type="password" id="sipDbServerPassword1" class="input-xlarge focused"></div>
-						</div>							
+								<input type="text" id="sipActiveMQServerPort" class="input-xlarge focused" input-int-min="1" input-int-max="65535"></div>
+						</div>													
 					</div>					
 				</div>
 			</fieldset>

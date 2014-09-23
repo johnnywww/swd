@@ -8,8 +8,8 @@ type SIPServerSetupInfo struct {
 	XMLName       xml.Name `xml:"sysware"`
 	SIPInfo       SIPServerSIPInfo
 	CMSServerInfo CMSServerInfo
-	DbInfo        SIPServerDbInfo
 	OptionInfo    SIPServerOptionInfo
+	ActiveMQInfo  SIPServerActiveMQInfo
 }
 
 type SIPServerSIPInfo struct {
@@ -21,10 +21,10 @@ type SIPServerSIPInfo struct {
 	AddressInfo          AddressInfo
 }
 
-type SIPServerDbInfo struct {
-	XMLName     xml.Name `xml:"db"`
+type SIPServerActiveMQInfo struct {
+	XMLName     xml.Name `xml:"activeMQ"`
 	AddressInfo AddressInfo
-	Password    string `xml:"password"`
+	Topic       string `xml:"topic"`
 }
 
 type SIPServerOptionInfo struct {

@@ -33,9 +33,7 @@ func (routeLogin *RouteLogin) Routes(m *martini.ClassicMartini) {
 		userInfo := checkLoginUser(r.Form, re, "login")
 		if nil != userInfo {
 			userInfo.SetLoginState()
-			sess := shttp.GetSessionManager().SessionStart(w, r)
-			defer sess.SessionRelease(w)
-			sess.Set("userInfo", userInfo)
+			shttp.SetSessionUserInfo(w, r, userInfo)
 			gotoRootPage(re, userInfo)
 		}
 	})

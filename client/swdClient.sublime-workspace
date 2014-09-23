@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"SetSessionUserInfo	 ƒ"
+			],
+			[
+				"getCMS",
+				"getCMSActiveMQConfigFileName	string ƒ"
+			],
+			[
+				"N",
+				"NewPropertiesFileService	setup.PropertiesFileService ƒ"
+			],
+			[
+				"w",
+				"WriteString	int, error ƒ"
+			],
+			[
+				"i",
+				"IsEmptyStr	bool ƒ"
+			],
+			[
+				"G",
+				"GetDirChildDirs	[]string, error ƒ"
+			],
+			[
 				"Cmd",
 				"CmdOutputNoLn	out string, err error ƒ"
 			],
@@ -48,10 +72,6 @@
 				"GetFileDir	string ƒ"
 			],
 			[
-				"getCMS",
-				"getCMSProcessInfoLinux	struct ʈ"
-			],
-			[
 				"SER",
 				"SERVER_TYPE_CMS	 Ɩ"
 			],
@@ -68,14 +88,6 @@
 				"FormValue	string ƒ"
 			],
 			[
-				"N",
-				"NewSetupInfoService	SetupInfoService ƒ"
-			],
-			[
-				"s",
-				"saveXMLBefore	saveXMLBefore ν"
-			],
-			[
 				"I",
 				"IsEmptyStr	bool ƒ"
 			],
@@ -90,10 +102,6 @@
 			[
 				"APS",
 				"APSServerSetupInfo	struct ʈ"
-			],
-			[
-				"G",
-				"GetDataDtoJson	string ƒ"
 			],
 			[
 				"tab",
@@ -344,10 +352,6 @@
 				"Println	 ƒ"
 			],
 			[
-				"w",
-				"writeLog	 ƒ"
-			],
-			[
 				"log",
 				"logger	*log.Logger ν"
 			],
@@ -510,164 +514,58 @@
 			[
 				"Base",
 				"BaseTypeCount	 Ɩ"
-			],
-			[
-				"te",
-				"tempFileName	string ν"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
+			"file": "public/js/ivideoConfigServer.js",
 			"settings":
 			{
-				"buffer_size": 1024,
+				"buffer_size": 8396,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/service/restartServerProcessInfo.go",
+			"contents": "Searching 395 files for \"switchFirstTabSwitch\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideo.js:\n  467  }\n  468  \n  469: function switchFirstTabSwitch(tabNameId) {\n  470  	$('#' + tabNameId + ' a:first').tab('show');\n  471  }\n  472  \n  473  function enableTabSwitch(tabNameId) {	\n  474: 	switchFirstTabSwitch(tabNameId);\n  475  	$('#' + tabNameId + ' a').click(function(e) {\n  476  		e.preventDefault();\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideoConfigServer.js:\n  108  	$(\"#apsSipServerPort\").val(serverConfigInfo.configServerInfo.SipServerInfo.AddressInfo.Port);\n  109  	$(\"#apsCmsServerAddress\").val(serverConfigInfo.configServerInfo.CMSServerInfo.Address);\n  110: 	switchFirstTabSwitch('apsServerConfigTab');\n  111  	return true;\n  112  }\n  ...\n  158  	$(\"#sipDbServerPassword\").val(serverConfigInfo.configServerInfo.DbInfo.Password);\n  159  	$(\"#sipDbServerPassword1\").val(serverConfigInfo.configServerInfo.DbInfo.Password);\n  160: 	switchFirstTabSwitch('sipServerConfigTab');\n  161  	return true;\n  162  }\n  ...\n  195  	$(\"#cmsDbServerPassword1\").val(serverConfigInfo.configServerInfo.dbPassword);\n  196  	$(\"#cmsActiveMQAddress\").val(serverConfigInfo.configServerInfo.activemqAddress);	\n  197: 	switchFirstTabSwitch('cmsServerConfigTab');\n  198  	return true;\n  199  }\n\n5 matches across 2 files\n\n\nSearching 395 files for \"sipServerConfig-DbServer\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\templates\\serverConfigSIPDialog.tmpl:\n   19  					</li>					\n   20  					<li >\n   21: 						<a href=\"#sipServerConfig-DbServer\">缓存服务器</a>\n   22  					</li>\n   23  				</ul>\n   ..\n   67  						</div>\n   68  					</div>\n   69: 					<div class=\"tab-pane\" id=\"sipServerConfig-DbServer\">\n   70  						<div class=\"control-group-bottom\">\n   71  							<label for=\"sipDbServerAddress\" class=\"control-label\">地址</label>\n\n2 matches in 1 file\n\n\nSearching 395 files for \"sipServerConfigTab\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideoConfigServer.js:\n   18  		saveSuccessFunc: null\n   19  	}));\n   20: 	enableTabSwitch('sipServerConfigTab');\n   21  		\n   22  	serverConfigDialogs.put(SERVER_TYPE_CMS, new ViewDialog(\"cmsServerConfigDialog\", \"btnCMSSaveServer\", showConfigCMSServerDlgInfo, {\n   ..\n  158  	$(\"#sipDbServerPassword\").val(serverConfigInfo.configServerInfo.DbInfo.Password);\n  159  	$(\"#sipDbServerPassword1\").val(serverConfigInfo.configServerInfo.DbInfo.Password);\n  160: 	switchFirstTabSwitch('sipServerConfigTab');\n  161  	return true;\n  162  }\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\templates\\serverConfigSIPDialog.tmpl:\n   11  		<form class=\"form-horizontal\">\n   12  			<fieldset>\n   13: 				<ul id=\"sipServerConfigTab\" class=\"nav nav-tabs\">\n   14  					<li class=\"active\">\n   15  						<a href=\"#sipServerConfig-Basic\">基本信息</a>\n\n3 matches across 2 files\n\n\nSearching 395 files for \"enableTabSwitch\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideo.js:\n  471  }\n  472  \n  473: function enableTabSwitch(tabNameId) {	\n  474  	switchFirstTabSwitch(tabNameId);\n  475  	$('#' + tabNameId + ' a').click(function(e) {\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideoConfigServer.js:\n   10  		saveSuccessFunc: null\n   11  	}));\n   12: 	enableTabSwitch('apsServerConfigTab');\n   13  	serverConfigDialogs.put(SERVER_TYPE_SIP, new ViewDialog(\"sipServerConfigDialog\", \"btnSIPSaveServer\", showConfigSIPServerDlgInfo, {\n   14  		url: \"/server/saveconfig\",\n   ..\n   18  		saveSuccessFunc: null\n   19  	}));\n   20: 	enableTabSwitch('sipServerConfigTab');\n   21  		\n   22  	serverConfigDialogs.put(SERVER_TYPE_CMS, new ViewDialog(\"cmsServerConfigDialog\", \"btnCMSSaveServer\", showConfigCMSServerDlgInfo, {\n   ..\n   27  		saveSuccessFunc: null\n   28  	}));\n   29: 	enableTabSwitch('cmsServerConfigTab');		\n   30  });\n   31  \n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideoServerInfo.js:\n  104  \n  105  function serverStatusTabSwitch() {\n  106: 	enableTabSwitch('serverStatusTab');\n  107  }\n  108  \n\n5 matches across 3 files\n\n\nSearching 395 files for \"sprintf\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideo.js:\n  425  }\n  426  \n  427: function sprintf() {\n  428      var i = 0, a, f = arguments[i++], o = [], m, p, c, x, s = '';\n  429      while (f) {\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\client\\public\\js\\ivideoServerInfo.js:\n  131  		var ram_free = Math.round((data.Data[2] / ram_total) * 100);\n  132  \n  133: 		$(\"#mem-total\").text(sprintf('%.3f', ram_total / (1024 * 1024)));\n  134: 		$(\"#mem-used\").text(sprintf('%.3f', data.Data[1] / (1024 * 1024)));\n  135: 		$(\"#mem-free\").text(sprintf('%.3f', data.Data[2] / (1024 * 1024)));\n  136  \n  137  		$(\"#mem-freerate\").text(ram_free);\n\n4 matches across 2 files\n",
 			"settings":
 			{
-				"buffer_size": 426,
+				"buffer_size": 4746,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "public/js/ivideo.js",
+			"settings":
+			{
+				"buffer_size": 10912,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl.go",
+			"file": "src/sysware.com/ivideo/client/http/routeLogin.go",
 			"settings":
 			{
-				"buffer_size": 1121,
+				"buffer_size": 975,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
+			"file": "templates/serverConfigCMSDialog.tmpl",
 			"settings":
 			{
-				"buffer_size": 1318,
+				"buffer_size": 2561,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS.go",
+			"file": "templates/serverConfigAPSDialog.tmpl",
 			"settings":
 			{
-				"buffer_size": 1311,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/js/ivideoCommon.js",
-			"settings":
-			{
-				"buffer_size": 99,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "templates/htmlHead.tmpl",
-			"settings":
-			{
-				"buffer_size": 1339,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl.go",
-			"settings":
-			{
-				"buffer_size": 961,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileName.go",
-			"settings":
-			{
-				"buffer_size": 262,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl.go",
-			"settings":
-			{
-				"buffer_size": 810,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile_test.go",
-			"settings":
-			{
-				"buffer_size": 306,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
-			"settings":
-			{
-				"buffer_size": 848,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile.go",
-			"settings":
-			{
-				"buffer_size": 1014,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getSystemTimeInfoLinux.go",
-			"settings":
-			{
-				"buffer_size": 291,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfoLinux.go",
-			"settings":
-			{
-				"buffer_size": 957,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfo.go",
-			"settings":
-			{
-				"buffer_size": 454,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/client/http/routeServerGeneralInfo.go",
-			"settings":
-			{
-				"buffer_size": 1248,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
-			"settings":
-			{
-				"buffer_size": 949,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
-			"settings":
-			{
-				"buffer_size": 1441,
+				"buffer_size": 4712,
 				"line_ending": "Windows"
 			}
 		}
@@ -801,8 +699,7 @@
 	"expanded_folders":
 	[
 		"/E/Source/c++/iVideo/Source/swd/client",
-		"/E/Source/c++/iVideo/Source/swd/client/public/css",
-		"/E/Source/c++/iVideo/Source/swd/client/public/js",
+		"/E/Source/c++/iVideo/Source/swd/client/public",
 		"/E/Source/c++/iVideo/Source/swd/client/src",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo",
@@ -815,23 +712,47 @@
 	"file_history":
 	[
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleCMSImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfoCMSImpl_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/propertiesFileServiceImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/templates/serverConfigCMSDialog.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleCMSImpl_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideoConfigServer.js",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/propertiesFileService.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfoCMSImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideo.js",
+		"/E/Source/c++/iVideo/Source/swd/client/public/css/ivideo.css",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/cmsSaveXMLFileContentBeforeServiceImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleAPSImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS.go",
+		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideoCommon.js",
+		"/E/Source/c++/iVideo/Source/swd/client/templates/htmlHead.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getAPSServerSetupInfoByConfigFile.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoConfigFileName.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile_test.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getSystemTimeInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getSystemRunTimeInfoLinux.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getSystemRunTimeInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerGeneralInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessStatusInfoLinux.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCommon.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCMS.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinux.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartServerProcessInfoLinux_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getAPSServerSetupInfoByConfigFile.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCommon_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoLinuxCMS_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusXMLInfoImpl_test.go",
@@ -840,7 +761,6 @@
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoLinux.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfoLinux.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoByServerName.go",
@@ -858,43 +778,31 @@
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessStatusInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerProcessInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerProcessInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleCMSImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoByServerInfoLinux_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/restartProcessByServerInfoLinux_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinux_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getSystemTimeInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerIdInfoImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/setup.tmpl",
-		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideoConfigServer.js",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSProcessInfoLinux_test",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getProcessInfoLinux_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/templates/serverConfigCMSDialog.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleImpl.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/cmsSaveXMLFileContentBeforeServiceImpl.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile.go",
 		"/E/Source/c++/iVideo/Source/swd/client/config.xml",
 		"/E/Source/c++/iVideo/Source/swd/client/public/js/charisma.js",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerStatusInfoLinux_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/setup/setupInfoService.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleSIPImpl.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleAPSImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerConfig.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServer.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeRoot.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeLogout.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeLogin.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/route.go",
-		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideoCommon.js",
-		"/E/Source/c++/iVideo/Source/swd/client/public/js/ivideo.js",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getCpuInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getNetInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoConfigFileName.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerSave.go",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/serverInfo.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/serverInfoStatus.tmpl",
@@ -905,7 +813,6 @@
 		"/E/Source/c++/iVideo/Source/swd/client/templates/userDialog.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/templates/serverDialog.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/client/public/css/bootstrap-cerulean.css",
-		"/E/Source/c++/iVideo/Source/swd/client/public/css/ivideo.css",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandleSIPImpl_test.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveRequestHandleImpl.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerInfoByServerNameImpl_test.go",
@@ -929,19 +836,9 @@
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerStatusInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerNetCardInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerMemInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerGeneralInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerCpuInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveRequestHandleImpl_test.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveRequestHandle.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerList.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/client/http/routeServerInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/templates/index.tmpl",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getAllProcessInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/public/js/bootstrap-tour.js",
-		"/E/Source/c++/iVideo/Source/swd/client/templates/serverList.tmpl",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveHandle.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerDetailSetupInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/getServerSetupInfoByConfigFile.go"
+		"/E/Source/c++/iVideo/Source/swd/client/src/sysware.com/ivideo/service/serverConfigSaveRequestHandle.go"
 	],
 	"find":
 	{
@@ -967,6 +864,17 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"sprintf",
+			"enableTabSwitch",
+			"sipServerConfigTab",
+			"sipServerConfig-DbServer",
+			"switchFirstTabSwitch",
+			"NewCMSSetupInfoService",
+			"cmsSaveXMLFileContentBeforeServiceImpl",
+			"getServerInfoConfigFileNameImpl",
+			"NewGetServerInfoConfigFileName",
+			"getCMSServerSetupInfoByConfigFile",
+			"NewSetupInfoService",
 			"SERVER_TYPE_CMS",
 			"getServerInfoConfigFileNameImpl",
 			"NewGetServerInfoConfigFileName",
@@ -1083,18 +991,7 @@
 			"GetServerInfoConfigFileName",
 			"processTimerFuncHandleRestartProc",
 			"processHandleTimerFunc",
-			"RET_CODE_TIMEOUT",
-			"GetServerInfoConfigFileName",
-			"SIP服务器1",
-			"Dial",
-			"getSocketXMLInfo",
-			"quitProc",
-			"restartServerProcessInfoLinux",
-			"input-xlarge",
-			"GetServerInfoByServerName",
-			"serverConfigSaveRequestHandleImpl",
-			"NewServerConfigSaveRequestHandle",
-			"GetServerInfoByServerName"
+			"RET_CODE_TIMEOUT"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1165,24 +1062,202 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/sysware.com/ivideo/service/restartServerProcessInfoLinux.go",
+					"file": "public/js/ivideoConfigServer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1024,
+						"buffer_size": 8396,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								191,
-								213
+								384,
+								384
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4746,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										158,
+										178
+									],
+									[
+										316,
+										336
+									],
+									[
+										711,
+										731
+									],
+									[
+										980,
+										1000
+									],
+									[
+										1244,
+										1264
+									],
+									[
+										1556,
+										1580
+									],
+									[
+										1710,
+										1734
+									],
+									[
+										2091,
+										2109
+									],
+									[
+										2479,
+										2497
+									],
+									[
+										2689,
+										2707
+									],
+									[
+										2999,
+										3014
+									],
+									[
+										3249,
+										3264
+									],
+									[
+										3521,
+										3536
+									],
+									[
+										3767,
+										3782
+									],
+									[
+										3956,
+										3971
+									],
+									[
+										4182,
+										4189
+									],
+									[
+										4469,
+										4476
+									],
+									[
+										4543,
+										4550
+									],
+									[
+										4620,
+										4627
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								4186,
+								4186
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 5,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3680.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/js/ivideo.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10912,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3652,
+								3652
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5026.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/sysware.com/ivideo/client/http/routeLogin.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								934,
+								934
 							]
 						],
 						"settings":
@@ -1195,123 +1270,48 @@
 						"translation.y": 588.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/sysware.com/ivideo/service/restartServerProcessInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 426,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/sysware.com/ivideo/service/getUnixSocketCommandXMLInfoImpl.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1121,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								560,
-								560
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 336.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCMS.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1318,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								487,
-								487
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 238.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCMS.go",
+					"file": "templates/serverConfigCMSDialog.tmpl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1311,
+						"buffer_size": 2561,
 						"regions":
 						{
+							"TagLint":
+							{
+								"flags": 2356,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										36,
+										39
+									]
+								],
+								"scope": "variable.parameter"
+							}
 						},
 						"selection":
 						[
 							[
-								363,
-								363
+								2241,
+								2241
 							]
 						],
 						"settings":
 						{
+							"is_xml": false,
 							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 532.0,
+						"translation.y": 1406.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1319,419 +1319,33 @@
 				},
 				{
 					"buffer": 5,
-					"file": "public/js/ivideoCommon.js",
+					"file": "templates/serverConfigAPSDialog.tmpl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 99,
+						"buffer_size": 4712,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								99
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "templates/htmlHead.tmpl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1339,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1278,
-								1278
+								718,
+								718
 							]
 						],
 						"settings":
 						{
 							"is_xml": false,
-							"origin_encoding": "ASCII",
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileNameImpl.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 961,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								498,
-								498
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 182.0,
+						"translation.y": 420.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/sysware.com/ivideo/service/getServerInfoConfigFileName.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 262,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								226,
-								257
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/sysware.com/ivideo/service/getServerDetailSetupInfoImpl.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 810,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								355,
-								385
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 266.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile_test.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 306,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								113,
-								146
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/sysware.com/ivideo/service/getCMSProcessInfoLinux.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 848,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								364,
-								364
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 206.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/sysware.com/ivideo/service/getCMSServerSetupInfoByConfigFile.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1014,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								223,
-								256
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 84.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "src/sysware.com/ivideo/service/getSystemTimeInfoLinux.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 291,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								248,
-								248
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfoLinux.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 957,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								410,
-								410
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 336.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "src/sysware.com/ivideo/service/getSystemRunTimeInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 454,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								335,
-								360
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 258.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "src/sysware.com/ivideo/client/http/routeServerGeneralInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								701,
-								701
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 374.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "src/sysware.com/ivideo/service/restartProcessByServerInfoLinuxCommon.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 949,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								380,
-								380
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 252.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "src/sysware.com/ivideo/service/quitServerProcessInfoLinuxCommon.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1441,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								319,
-								319
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 56.0,
-						"translation.y": 336.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
 					"type": "text"
 				}
 			]
@@ -1796,6 +1410,10 @@
 		"selected_items":
 		[
 			[
+				"ivideocon",
+				"public\\js\\ivideoConfigServer.js"
+			],
+			[
 				"quitserverprocessinfolinux.go",
 				"src\\sysware.com\\ivideo\\service\\quitServerProcessInfoLinux.go"
 			],
@@ -1833,10 +1451,6 @@
 			],
 			[
 				"ivideoconfigs",
-				"public\\js\\ivideoConfigServer.js"
-			],
-			[
-				"ivideocon",
 				"public\\js\\ivideoConfigServer.js"
 			],
 			[
@@ -2262,6 +1876,7 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -2269,7 +1884,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 441.0,
+	"side_bar_width": 515.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

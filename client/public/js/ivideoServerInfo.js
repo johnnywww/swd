@@ -176,11 +176,17 @@ var funcMap = {
 	status: getStatusInfo,
 };
 
+function checkBoxObjChecked(obj) {
+	return true == obj.prop("checked");
+}
+
 function refreshFunc() {
 	getAllInfo();
-	setTimeout(function() {
-		refreshFunc();
-	}, $("#refresh-interval").val() * 1000);
+	if (checkBoxObjChecked($("#autoRefreshCheck"))) {
+		setTimeout(function() {
+			refreshFunc();
+		}, $("#refresh-interval").val() * 1000);
+	}
 }
 
 $(function() {
@@ -191,6 +197,14 @@ $(function() {
 			funcMap[item]();
 		} else {
 			funcMap[item](true);
+		}
+	});
+	$('#autoRefreshCheck').bind("click", function(e) {
+		if (checkBoxObjChecked($(this))) {
+			$("#refresh-interval").prop("disabled", false);
+			refreshFunc();		
+		} else {
+			$("#refresh-interval").prop("disabled", true);
 		}
 	});
 	refreshFunc();

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"go",
+				"globalSessions	*session.Manager ν"
+			],
+			[
+				"Set",
+				"SetSessionUserInfo	 ƒ"
+			],
+			[
 				"pr",
 				"Printf	n int, err error ƒ"
 			],
@@ -328,10 +336,44 @@
 	"buffers":
 	[
 		{
-			"file": "src/sysware.com/ivideo/model/sipServerSetupInfo.go",
+			"file": "src/sysware.com/ivideo/model/apsServerSetupInfo_test.go",
 			"settings":
 			{
-				"buffer_size": 882,
+				"buffer_size": 359,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 292 files for \"GetSessionManager\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\http.go:\n   20  }\n   21  \n   22: func GetSessionManager() *session.Manager {\n   23  	return globalSessions\n   24  }\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 271,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/server/http/http.go",
+			"settings":
+			{
+				"buffer_size": 2366,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/ivideo.js",
+			"settings":
+			{
+				"buffer_size": 6422,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/server/http/routeLogin.go",
+			"settings":
+			{
+				"buffer_size": 959,
 				"line_ending": "Windows"
 			}
 		},
@@ -342,134 +384,12 @@
 				"buffer_size": 1481,
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/model/userInfo.go",
-			"settings":
-			{
-				"buffer_size": 1132,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/model/setupInfo.go",
-			"settings":
-			{
-				"buffer_size": 2565,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/model/cmsServerSetupInfo_test.go",
-			"settings":
-			{
-				"buffer_size": 1825,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "templates/userDialog.tmpl",
-			"settings":
-			{
-				"buffer_size": 1307,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 290 files for \"IsServerConfigExist\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\utils\\fileTools.go:\n  200  }\n  201  \n  202: func IsServerConfigExist(cmdLine string) bool {\n  203  	return IsFileExist(GetServerConfigFileName(cmdLine))\n  204  }\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\utils\\fileTools_test.go:\n   12  }\n   13  \n   14: func Test_IsServerConfigExist(t *testing.T) {\n   15: 	if !IsServerConfigExist(\"/mnt/hgfs/Source/c++/iVideo/Source/APS/Bin/aps\") {\n   16  		t.Error(\"服务器配置文件不存在\")\n   17  	}\n\n3 matches across 2 files\n\n\nSearching 289 files for \"Dial\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\public\\css\\jquery-ui-1.8.21.custom.css:\n  425  button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */\n  426  /*!\n  427:  * jQuery UI Dialog 1.8.21\n  428   *\n  429   * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)\n  ...\n  431   * http://jquery.org/license\n  432   *\n  433:  * http://docs.jquery.com/UI/Dialog#theming\n  434   */\n  435  .ui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\public\\js\\ivideo.js:\n  276  }\n  277  \n  278: function ViewDialog(dialogId, btnId, showFunc, saveData) {\n  279  	this.dialogId = dialogId;\n  280  	this.showFunc = showFunc;\n  ...\n  294  			return;\n  295  		}\n  296: 		confirmDialogFunc('确定保存' + this.saveData.getNotifyInfo() + '吗?', function(e) {\n  297: 			var viewDialog = e.data;\n  298: 			$.post(viewDialog.saveData.url, viewDialog.saveData.getData(),\n  299  				//回调函数\n  300  				function(data) {\n  301  					console.log(data)\n  302: 					hideConfirmDialog();\n  303  					if (!data.Succ) {\n  304  						notifyErrorMsg(data.Msg);\n  305  					} else {\n  306: 						viewDialog.hide();\n  307: 						notifySuccessMsg(\"保存\" + viewDialog.saveData.getNotifyInfo() + \"成功\");\n  308: 						if (viewDialog.saveData.saveSuccessFunc) {\n  309: 							viewDialog.saveData.saveSuccessFunc(data.Data);\n  310  						}\n  311  					}\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\public\\js\\ivideoServer.js:\n   11  }\n   12  \n   13: function showServerDialog(serverInfo) {\n   14  	if (serverInfo) {\n   15  		$('#servername').val(serverInfo.serverName);\n   ..\n   23  		showServerTypeBtnValue(0);\n   24  	}\n   25: 	// $('#serverDialog div.modal-footer a.btn-primary').click(sureFunc);\n   26: 	$('#serverDialog').modal(\"show\");\n   27  }\n   28  \n   ..\n   54  }\n   55  \n   56: var serverDialog = null;\n   57  \n   58  $(function() {\n   59  	addServerTypeList();\n   60: 	serverDialog = new ViewDialog(\"serverDialog\", \"btnSaveServer\", showServerDialog, {\n   61  		url: \"/server/save\",\n   62  		checkSaveFunc: checkSaveServer,\n   ..\n   67  });\n   68  \n   69: function getServerDialog() {\n   70: 	return serverDialog;\n   71  }\n   72  \n   ..\n   90  		type: value.attr('servertype-value')\n   91  	}\n   92: 	getServerDialog().show(serverInfo);\n   93  }\n   94  \n   ..\n  111  function deleteServer(hrefObj) {\n  112  	serverName = hrefObj.parent().attr('servername-value');\n  113: 	confirmDialogFunc('确定删除' + serverName + '吗?', function(e) {\n  114  		//向add.ashx请求结果\n  115  		$.post('/server/delete', {\n  ...\n  119  			function(data) {\n  120  				console.log(data)\n  121: 				hideConfirmDialog();\n  122  				if (!data.Succ) {\n  123  					notifyErrorMsg(data.Msg);\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\public\\js\\ivideoUser.js:\n    1: function showUserDialog(userInfo) {\n    2      var username = \"\";\n    3      if (userInfo)\n    .\n   13      $('#password').val(\"\");\n   14      $('#password1').val(\"\");\n   15:     $('#userDialog').modal(\"show\");\n   16  }\n   17  \n   ..\n   51  }\n   52  \n   53: var userDialog = null;\n   54  \n   55  $(function() {\n   56:     userDialog = new ViewDialog(\"userDialog\", \"btnSaveUser\", showUserDialog, {\n   57          url: \"/user/save\",\n   58          checkSaveFunc: checkSaveUser,\n   ..\n   63  });\n   64  \n   65: function getUserDialog() {\n   66:     return userDialog;\n   67  }\n   68  \n   ..\n   95          userName: value.parent().attr('username-value')\n   96      }\n   97:     getUserDialog().show(userInfo);\n   98  }\n   99  \n  ...\n  104          return;\n  105      }\n  106:     confirmDialogFunc('确定删除' + value + '吗?', function(e) {\n  107          //向add.ashx请求结果\n  108          $.post('/user/delete', {\n  ...\n  112              function(data) {\n  113                  console.log(data)\n  114:                 hideConfirmDialog();\n  115                  if (!data.Succ) {\n  116                      notifyErrorMsg(data.Msg);\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\public\\js\\jquery-ui-1.8.21.custom.min.js:\n   51  * Includes: jquery.ui.dialog.js\n   52  * Copyright (c) 2012 AUTHORS.txt; Licensed MIT, GPL */\n   53: (function(a,b){var c=\"ui-dialog ui-widget ui-widget-content ui-corner-all \",d={buttons:!0,height:!0,maxHeight:!0,maxWidth:!0,minHeight:!0,minWidth:!0,width:!0},e={maxHeight:!0,maxWidth:!0,minHeight:!0,minWidth:!0},f=a.attrFn||{val:!0,css:!0,html:!0,text:!0,data:!0,width:!0,height:!0,offset:!0,click:!0};a.widget(\"ui.dialog\",{options:{autoOpen:!0,buttons:{},closeOnEscape:!0,closeText:\"close\",dialogClass:\"\",draggable:!0,hide:null,height:\"auto\",maxHeight:!1,maxWidth:!1,minHeight:150,minWidth:150,modal:!1,position:{my:\"center\",at:\"center\",collision:\"fit\",using:function(b){var c=a(this).css(b).offset().top;c<0&&a(this).css(\"top\",b.top-c)}},resizable:!0,show:null,stack:!0,title:\"\",width:300,zIndex:1e3},_create:function(){this.originalTitle=this.element.attr(\"title\"),typeof this.originalTitle!=\"string\"&&(this.originalTitle=\"\"),this.options.title=this.options.title||this.originalTitle;var b=this,d=b.options,e=d.title||\"&#160;\",f=a.ui.dialog.getTitleId(b.element),g=(b.uiDialog=a(\"<div></div>\")).appendTo(document.body).hide().addClass(c+d.dialogClass).css({zIndex:d.zIndex}).attr(\"tabIndex\",-1).css(\"outline\",0).keydown(function(c){d.closeOnEscape&&!c.isDefaultPrevented()&&c.keyCode&&c.keyCode===a.ui.keyCode.ESCAPE&&(b.close(c),c.preventDefault())}).attr({role:\"dialog\",\"aria-labelledby\":f}).mousedown(function(a){b.moveToTop(!1,a)}),h=b.element.show().removeAttr(\"title\").addClass(\"ui-dialog-content ui-widget-content\").appendTo(g),i=(b.uiDialogTitlebar=a(\"<div></div>\")).addClass(\"ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix\").prependTo(g),j=a('<a href=\"#\"></a>').addClass(\"ui-dialog-titlebar-close ui-corner-all\").attr(\"role\",\"button\").hover(function(){j.addClass(\"ui-state-hover\")},function(){j.removeClass(\"ui-state-hover\")}).focus(function(){j.addClass(\"ui-state-focus\")}).blur(function(){j.removeClass(\"ui-state-focus\")}).click(function(a){return b.close(a),!1}).appendTo(i),k=(b.uiDialogTitlebarCloseText=a(\"<span></span>\")).addClass(\"ui-icon ui-icon-closethick\").text(d.closeText).appendTo(j),l=a(\"<span></span>\").addClass(\"ui-dialog-title\").attr(\"id\",f).html(e).prependTo(i);a.isFunction(d.beforeclose)&&!a.isFunction(d.beforeClose)&&(d.beforeClose=d.beforeclose),i.find(\"*\").add(i).disableSelection(),d.draggable&&a.fn.draggable&&b._makeDraggable(),d.resizable&&a.fn.resizable&&b._makeResizable(),b._createButtons(d.buttons),b._isOpen=!1,a.fn.bgiframe&&g.bgiframe()},_init:function(){this.options.autoOpen&&this.open()},destroy:function(){var a=this;return a.overlay&&a.overlay.destroy(),a.uiDialog.hide(),a.element.unbind(\".dialog\").removeData(\"dialog\").removeClass(\"ui-dialog-content ui-widget-content\").hide().appendTo(\"body\"),a.uiDialog.remove(),a.originalTitle&&a.element.attr(\"title\",a.originalTitle),a},widget:function(){return this.uiDialog},close:function(b){var c=this,d,e;if(!1===c._trigger(\"beforeClose\",b))return;return c.overlay&&c.overlay.destroy(),c.uiDialog.unbind(\"keypress.ui-dialog\"),c._isOpen=!1,c.options.hide?c.uiDialog.hide(c.options.hide,function(){c._trigger(\"close\",b)}):(c.uiDialog.hide(),c._trigger(\"close\",b)),a.ui.dialog.overlay.resize(),c.options.modal&&(d=0,a(\".ui-dialog\").each(function(){this!==c.uiDialog[0]&&(e=a(this).css(\"z-index\"),isNaN(e)||(d=Math.max(d,e)))}),a.ui.dialog.maxZ=d),c},isOpen:function(){return this._isOpen},moveToTop:function(b,c){var d=this,e=d.options,f;return e.modal&&!b||!e.stack&&!e.modal?d._trigger(\"focus\",c):(e.zIndex>a.ui.dialog.maxZ&&(a.ui.dialog.maxZ=e.zIndex),d.overlay&&(a.ui.dialog.maxZ+=1,d.overlay.$el.css(\"z-index\",a.ui.dialog.overlay.maxZ=a.ui.dialog.maxZ)),f={scrollTop:d.element.scrollTop(),scrollLeft:d.element.scrollLeft()},a.ui.dialog.maxZ+=1,d.uiDialog.css(\"z-index\",a.ui.dialog.maxZ),d.element.attr(f),d._trigger(\"focus\",c),d)},open:function(){if(this._isOpen)return;var b=this,c=b.options,d=b.uiDialog;return b.overlay=c.modal?new a.ui.dialog.overlay(b):null,b._size(),b._position(c.position),d.show(c.show),b.moveToTop(!0),c.modal&&d.bind(\"keydown.ui-dialog\",function(b){if(b.keyCode!==a.ui.keyCode.TAB)return;var c=a(\":tabbable\",this),d=c.filter(\":first\"),e=c.filter(\":last\");if(b.target===e[0]&&!b.shiftKey)return d.focus(1),!1;if(b.target===d[0]&&b.shiftKey)return e.focus(1),!1}),a(b.element.find(\":tabbable\").get().concat(d.find(\".ui-dialog-buttonpane :tabbable\").get().concat(d.get()))).eq(0).focus(),b._isOpen=!0,b._trigger(\"open\"),b},_createButtons:function(b){var c=this,d=!1,e=a(\"<div></div>\").addClass(\"ui-dialog-buttonpane ui-widget-content ui-helper-clearfix\"),g=a(\"<div></div>\").addClass(\"ui-dialog-buttonset\").appendTo(e);c.uiDialog.find(\".ui-dialog-buttonpane\").remove(),typeof b==\"object\"&&b!==null&&a.each(b,function(){return!(d=!0)}),d&&(a.each(b,function(b,d){d=a.isFunction(d)?{click:d,text:b}:d;var e=a('<button type=\"button\"></button>').click(function(){d.click.apply(c.element[0],arguments)}).appendTo(g);a.each(d,function(a,b){if(a===\"click\")return;a in f?e[a](b):e.attr(a,b)}),a.fn.button&&e.button()}),e.appendTo(c.uiDialog))},_makeDraggable:function(){function f(a){return{position:a.position,offset:a.offset}}var b=this,c=b.options,d=a(document),e;b.uiDialog.draggable({cancel:\".ui-dialog-content, .ui-dialog-titlebar-close\",handle:\".ui-dialog-titlebar\",containment:\"document\",start:function(d,g){e=c.height===\"auto\"?\"auto\":a(this).height(),a(this).height(a(this).height()).addClass(\"ui-dialog-dragging\"),b._trigger(\"dragStart\",d,f(g))},drag:function(a,c){b._trigger(\"drag\",a,f(c))},stop:function(g,h){c.position=[h.position.left-d.scrollLeft(),h.position.top-d.scrollTop()],a(this).removeClass(\"ui-dialog-dragging\").height(e),b._trigger(\"dragStop\",g,f(h)),a.ui.dialog.overlay.resize()}})},_makeResizable:function(c){function h(a){return{originalPosition:a.originalPosition,originalSize:a.originalSize,position:a.position,size:a.size}}c=c===b?this.options.resizable:c;var d=this,e=d.options,f=d.uiDialog.css(\"position\"),g=typeof c==\"string\"?c:\"n,e,s,w,se,sw,ne,nw\";d.uiDialog.resizable({cancel:\".ui-dialog-content\",containment:\"document\",alsoResize:d.element,maxWidth:e.maxWidth,maxHeight:e.maxHeight,minWidth:e.minWidth,minHeight:d._minHeight(),handles:g,start:function(b,c){a(this).addClass(\"ui-dialog-resizing\"),d._trigger(\"resizeStart\",b,h(c))},resize:function(a,b){d._trigger(\"resize\",a,h(b))},stop:function(b,c){a(this).removeClass(\"ui-dialog-resizing\"),e.height=a(this).height(),e.width=a(this).width(),d._trigger(\"resizeStop\",b,h(c)),a.ui.dialog.overlay.resize()}}).css(\"position\",f).find(\".ui-resizable-se\").addClass(\"ui-icon ui-icon-grip-diagonal-se\")},_minHeight:function(){var a=this.options;return a.height===\"auto\"?a.minHeight:Math.min(a.minHeight,a.height)},_position:function(b){var c=[],d=[0,0],e;if(b){if(typeof b==\"string\"||typeof b==\"object\"&&\"0\"in b)c=b.split?b.split(\" \"):[b[0],b[1]],c.length===1&&(c[1]=c[0]),a.each([\"left\",\"top\"],function(a,b){+c[a]===c[a]&&(d[a]=c[a],c[a]=b)}),b={my:c.join(\" \"),at:c.join(\" \"),offset:d.join(\" \")};b=a.extend({},a.ui.dialog.prototype.options.position,b)}else b=a.ui.dialog.prototype.options.position;e=this.uiDialog.is(\":visible\"),e||this.uiDialog.show(),this.uiDialog.css({top:0,left:0}).position(a.extend({of:window},b)),e||this.uiDialog.hide()},_setOptions:function(b){var c=this,f={},g=!1;a.each(b,function(a,b){c._setOption(a,b),a in d&&(g=!0),a in e&&(f[a]=b)}),g&&this._size(),this.uiDialog.is(\":data(resizable)\")&&this.uiDialog.resizable(\"option\",f)},_setOption:function(b,d){var e=this,f=e.uiDialog;switch(b){case\"beforeclose\":b=\"beforeClose\";break;case\"buttons\":e._createButtons(d);break;case\"closeText\":e.uiDialogTitlebarCloseText.text(\"\"+d);break;case\"dialogClass\":f.removeClass(e.options.dialogClass).addClass(c+d);break;case\"disabled\":d?f.addClass(\"ui-dialog-disabled\"):f.removeClass(\"ui-dialog-disabled\");break;case\"draggable\":var g=f.is(\":data(draggable)\");g&&!d&&f.draggable(\"destroy\"),!g&&d&&e._makeDraggable();break;case\"position\":e._position(d);break;case\"resizable\":var h=f.is(\":data(resizable)\");h&&!d&&f.resizable(\"destroy\"),h&&typeof d==\"string\"&&f.resizable(\"option\",\"handles\",d),!h&&d!==!1&&e._makeResizable(d);break;case\"title\":a(\".ui-dialog-title\",e.uiDialogTitlebar).html(\"\"+(d||\"&#160;\"))}a.Widget.prototype._setOption.apply(e,arguments)},_size:function(){var b=this.options,c,d,e=this.uiDialog.is(\":visible\");this.element.show().css({width:\"auto\",minHeight:0,height:0}),b.minWidth>b.width&&(b.width=b.minWidth),c=this.uiDialog.css({height:\"auto\",width:b.width}).height(),d=Math.max(0,b.minHeight-c);if(b.height===\"auto\")if(a.support.minHeight)this.element.css({minHeight:d,height:\"auto\"});else{this.uiDialog.show();var f=this.element.css(\"height\",\"auto\").height();e||this.uiDialog.hide(),this.element.height(Math.max(f,d))}else this.element.height(Math.max(b.height-c,0));this.uiDialog.is(\":data(resizable)\")&&this.uiDialog.resizable(\"option\",\"minHeight\",this._minHeight())}}),a.extend(a.ui.dialog,{version:\"1.8.21\",uuid:0,maxZ:0,getTitleId:function(a){var b=a.attr(\"id\");return b||(this.uuid+=1,b=this.uuid),\"ui-dialog-title-\"+b},overlay:function(b){this.$el=a.ui.dialog.overlay.create(b)}}),a.extend(a.ui.dialog.overlay,{instances:[],oldInstances:[],maxZ:0,events:a.map(\"focus,mousedown,mouseup,keydown,keypress,click\".split(\",\"),function(a){return a+\".dialog-overlay\"}).join(\" \"),create:function(b){this.instances.length===0&&(setTimeout(function(){a.ui.dialog.overlay.instances.length&&a(document).bind(a.ui.dialog.overlay.events,function(b){if(a(b.target).zIndex()<a.ui.dialog.overlay.maxZ)return!1})},1),a(document).bind(\"keydown.dialog-overlay\",function(c){b.options.closeOnEscape&&!c.isDefaultPrevented()&&c.keyCode&&c.keyCode===a.ui.keyCode.ESCAPE&&(b.close(c),c.preventDefault())}),a(window).bind(\"resize.dialog-overlay\",a.ui.dialog.overlay.resize));var c=(this.oldInstances.pop()||a(\"<div></div>\").addClass(\"ui-widget-overlay\")).appendTo(document.body).css({width:this.width(),height:this.height()});return a.fn.bgiframe&&c.bgiframe(),this.instances.push(c),c},destroy:function(b){var c=a.inArray(b,this.instances);c!=-1&&this.oldInstances.push(this.instances.splice(c,1)[0]),this.instances.length===0&&a([document,window]).unbind(\".dialog-overlay\"),b.remove();var d=0;a.each(this.instances,function(){d=Math.max(d,this.css(\"z-index\"))}),this.maxZ=d},height:function(){var b,c;return a.browser.msie&&a.browser.version<7?(b=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight),c=Math.max(document.documentElement.offsetHeight,document.body.offsetHeight),b<c?a(window).height()+\"px\":b+\"px\"):a(document).height()+\"px\"},width:function(){var b,c;return a.browser.msie?(b=Math.max(document.documentElement.scrollWidth,document.body.scrollWidth),c=Math.max(document.documentElement.offsetWidth,document.body.offsetWidth),b<c?a(window).width()+\"px\":b+\"px\"):a(document).width()+\"px\"},resize:function(){var b=a([]);a.each(a.ui.dialog.overlay.instances,function(){b=b.add(this)}),b.css({width:0,height:0}).css({width:a.ui.dialog.overlay.width(),height:a.ui.dialog.overlay.height()})}}),a.extend(a.ui.dialog.overlay.prototype,{destroy:function(){a.ui.dialog.overlay.destroy(this.$el)}})})(jQuery);;/*! jQuery UI - v1.8.21 - 2012-06-05\n   54  * https://github.com/jquery/jquery-ui\n   55  * Includes: jquery.ui.slider.js\n   ..\n   63  * Includes: jquery.ui.datepicker.js\n   64  * Copyright (c) 2012 AUTHORS.txt; Licensed MIT, GPL */\n   65: (function($,undefined){function Datepicker(){this.debug=!1,this._curInst=null,this._keyEvent=!1,this._disabledInputs=[],this._datepickerShowing=!1,this._inDialog=!1,this._mainDivId=\"ui-datepicker-div\",this._inlineClass=\"ui-datepicker-inline\",this._appendClass=\"ui-datepicker-append\",this._triggerClass=\"ui-datepicker-trigger\",this._dialogClass=\"ui-datepicker-dialog\",this._disableClass=\"ui-datepicker-disabled\",this._unselectableClass=\"ui-datepicker-unselectable\",this._currentClass=\"ui-datepicker-current-day\",this._dayOverClass=\"ui-datepicker-days-cell-over\",this.regional=[],this.regional[\"\"]={closeText:\"Done\",prevText:\"Prev\",nextText:\"Next\",currentText:\"Today\",monthNames:[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],monthNamesShort:[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],dayNames:[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"],dayNamesShort:[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],dayNamesMin:[\"Su\",\"Mo\",\"Tu\",\"We\",\"Th\",\"Fr\",\"Sa\"],weekHeader:\"Wk\",dateFormat:\"mm/dd/yy\",firstDay:0,isRTL:!1,showMonthAfterYear:!1,yearSuffix:\"\"},this._defaults={showOn:\"focus\",showAnim:\"fadeIn\",showOptions:{},defaultDate:null,appendText:\"\",buttonText:\"...\",buttonImage:\"\",buttonImageOnly:!1,hideIfNoPrevNext:!1,navigationAsDateFormat:!1,gotoCurrent:!1,changeMonth:!1,changeYear:!1,yearRange:\"c-10:c+10\",showOtherMonths:!1,selectOtherMonths:!1,showWeek:!1,calculateWeek:this.iso8601Week,shortYearCutoff:\"+10\",minDate:null,maxDate:null,duration:\"fast\",beforeShowDay:null,beforeShow:null,onSelect:null,onChangeMonthYear:null,onClose:null,numberOfMonths:1,showCurrentAtPos:0,stepMonths:1,stepBigMonths:12,altField:\"\",altFormat:\"\",constrainInput:!0,showButtonPanel:!1,autoSize:!1,disabled:!1},$.extend(this._defaults,this.regional[\"\"]),this.dpDiv=bindHover($('<div id=\"'+this._mainDivId+'\" class=\"ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all\"></div>'))}function bindHover(a){var b=\"button, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-calendar td a\";return a.bind(\"mouseout\",function(a){var c=$(a.target).closest(b);if(!c.length)return;c.removeClass(\"ui-state-hover ui-datepicker-prev-hover ui-datepicker-next-hover\")}).bind(\"mouseover\",function(c){var d=$(c.target).closest(b);if($.datepicker._isDisabledDatepicker(instActive.inline?a.parent()[0]:instActive.input[0])||!d.length)return;d.parents(\".ui-datepicker-calendar\").find(\"a\").removeClass(\"ui-state-hover\"),d.addClass(\"ui-state-hover\"),d.hasClass(\"ui-datepicker-prev\")&&d.addClass(\"ui-datepicker-prev-hover\"),d.hasClass(\"ui-datepicker-next\")&&d.addClass(\"ui-datepicker-next-hover\")})}function extendRemove(a,b){$.extend(a,b);for(var c in b)if(b[c]==null||b[c]==undefined)a[c]=b[c];return a}function isArray(a){return a&&($.browser.safari&&typeof a==\"object\"&&a.length||a.constructor&&a.constructor.toString().match(/\\Array\\(\\)/))}$.extend($.ui,{datepicker:{version:\"1.8.21\"}});var PROP_NAME=\"datepicker\",dpuuid=(new Date).getTime(),instActive;$.extend(Datepicker.prototype,{markerClassName:\"hasDatepicker\",maxRows:4,log:function(){this.debug&&console.log.apply(\"\",arguments)},_widgetDatepicker:function(){return this.dpDiv},setDefaults:function(a){return extendRemove(this._defaults,a||{}),this},_attachDatepicker:function(target,settings){var inlineSettings=null;for(var attrName in this._defaults){var attrValue=target.getAttribute(\"date:\"+attrName);if(attrValue){inlineSettings=inlineSettings||{};try{inlineSettings[attrName]=eval(attrValue)}catch(err){inlineSettings[attrName]=attrValue}}}var nodeName=target.nodeName.toLowerCase(),inline=nodeName==\"div\"||nodeName==\"span\";target.id||(this.uuid+=1,target.id=\"dp\"+this.uuid);var inst=this._newInst($(target),inline);inst.settings=$.extend({},settings||{},inlineSettings||{}),nodeName==\"input\"?this._connectDatepicker(target,inst):inline&&this._inlineDatepicker(target,inst)},_newInst:function(a,b){var c=a[0].id.replace(/([^A-Za-z0-9_-])/g,\"\\\\\\\\$1\");return{id:c,input:a,selectedDay:0,selectedMonth:0,selectedYear:0,drawMonth:0,drawYear:0,inline:b,dpDiv:b?bindHover($('<div class=\"'+this._inlineClass+' ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all\"></div>')):this.dpDiv}},_connectDatepicker:function(a,b){var c=$(a);b.append=$([]),b.trigger=$([]);if(c.hasClass(this.markerClassName))return;this._attachments(c,b),c.addClass(this.markerClassName).keydown(this._doKeyDown).keypress(this._doKeyPress).keyup(this._doKeyUp).bind(\"setData.datepicker\",function(a,c,d){b.settings[c]=d}).bind(\"getData.datepicker\",function(a,c){return this._get(b,c)}),this._autoSize(b),$.data(a,PROP_NAME,b),b.settings.disabled&&this._disableDatepicker(a)},_attachments:function(a,b){var c=this._get(b,\"appendText\"),d=this._get(b,\"isRTL\");b.append&&b.append.remove(),c&&(b.append=$('<span class=\"'+this._appendClass+'\">'+c+\"</span>\"),a[d?\"before\":\"after\"](b.append)),a.unbind(\"focus\",this._showDatepicker),b.trigger&&b.trigger.remove();var e=this._get(b,\"showOn\");(e==\"focus\"||e==\"both\")&&a.focus(this._showDatepicker);if(e==\"button\"||e==\"both\"){var f=this._get(b,\"buttonText\"),g=this._get(b,\"buttonImage\");b.trigger=$(this._get(b,\"buttonImageOnly\")?$(\"<img/>\").addClass(this._triggerClass).attr({src:g,alt:f,title:f}):$('<button type=\"button\"></button>').addClass(this._triggerClass).html(g==\"\"?f:$(\"<img/>\").attr({src:g,alt:f,title:f}))),a[d?\"before\":\"after\"](b.trigger),b.trigger.click(function(){return $.datepicker._datepickerShowing&&$.datepicker._lastInput==a[0]?$.datepicker._hideDatepicker():$.datepicker._datepickerShowing&&$.datepicker._lastInput!=a[0]?($.datepicker._hideDatepicker(),$.datepicker._showDatepicker(a[0])):$.datepicker._showDatepicker(a[0]),!1})}},_autoSize:function(a){if(this._get(a,\"autoSize\")&&!a.inline){var b=new Date(2009,11,20),c=this._get(a,\"dateFormat\");if(c.match(/[DM]/)){var d=function(a){var b=0,c=0;for(var d=0;d<a.length;d++)a[d].length>b&&(b=a[d].length,c=d);return c};b.setMonth(d(this._get(a,c.match(/MM/)?\"monthNames\":\"monthNamesShort\"))),b.setDate(d(this._get(a,c.match(/DD/)?\"dayNames\":\"dayNamesShort\"))+20-b.getDay())}a.input.attr(\"size\",this._formatDate(a,b).length)}},_inlineDatepicker:function(a,b){var c=$(a);if(c.hasClass(this.markerClassName))return;c.addClass(this.markerClassName).append(b.dpDiv).bind(\"setData.datepicker\",function(a,c,d){b.settings[c]=d}).bind(\"getData.datepicker\",function(a,c){return this._get(b,c)}),$.data(a,PROP_NAME,b),this._setDate(b,this._getDefaultDate(b),!0),this._updateDatepicker(b),this._updateAlternate(b),b.settings.disabled&&this._disableDatepicker(a),b.dpDiv.css(\"display\",\"block\")},_dialogDatepicker:function(a,b,c,d,e){var f=this._dialogInst;if(!f){this.uuid+=1;var g=\"dp\"+this.uuid;this._dialogInput=$('<input type=\"text\" id=\"'+g+'\" style=\"position: absolute; top: -100px; width: 0px; z-index: -10;\"/>'),this._dialogInput.keydown(this._doKeyDown),$(\"body\").append(this._dialogInput),f=this._dialogInst=this._newInst(this._dialogInput,!1),f.settings={},$.data(this._dialogInput[0],PROP_NAME,f)}extendRemove(f.settings,d||{}),b=b&&b.constructor==Date?this._formatDate(f,b):b,this._dialogInput.val(b),this._pos=e?e.length?e:[e.pageX,e.pageY]:null;if(!this._pos){var h=document.documentElement.clientWidth,i=document.documentElement.clientHeight,j=document.documentElement.scrollLeft||document.body.scrollLeft,k=document.documentElement.scrollTop||document.body.scrollTop;this._pos=[h/2-100+j,i/2-150+k]}return this._dialogInput.css(\"left\",this._pos[0]+20+\"px\").css(\"top\",this._pos[1]+\"px\"),f.settings.onSelect=c,this._inDialog=!0,this.dpDiv.addClass(this._dialogClass),this._showDatepicker(this._dialogInput[0]),$.blockUI&&$.blockUI(this.dpDiv),$.data(this._dialogInput[0],PROP_NAME,f),this},_destroyDatepicker:function(a){var b=$(a),c=$.data(a,PROP_NAME);if(!b.hasClass(this.markerClassName))return;var d=a.nodeName.toLowerCase();$.removeData(a,PROP_NAME),d==\"input\"?(c.append.remove(),c.trigger.remove(),b.removeClass(this.markerClassName).unbind(\"focus\",this._showDatepicker).unbind(\"keydown\",this._doKeyDown).unbind(\"keypress\",this._doKeyPress).unbind(\"keyup\",this._doKeyUp)):(d==\"div\"||d==\"span\")&&b.removeClass(this.markerClassName).empty()},_enableDatepicker:function(a){var b=$(a),c=$.data(a,PROP_NAME);if(!b.hasClass(this.markerClassName))return;var d=a.nodeName.toLowerCase();if(d==\"input\")a.disabled=!1,c.trigger.filter(\"button\").each(function(){this.disabled=!1}).end().filter(\"img\").css({opacity:\"1.0\",cursor:\"\"});else if(d==\"div\"||d==\"span\"){var e=b.children(\".\"+this._inlineClass);e.children().removeClass(\"ui-state-disabled\"),e.find(\"select.ui-datepicker-month, select.ui-datepicker-year\").removeAttr(\"disabled\")}this._disabledInputs=$.map(this._disabledInputs,function(b){return b==a?null:b})},_disableDatepicker:function(a){var b=$(a),c=$.data(a,PROP_NAME);if(!b.hasClass(this.markerClassName))return;var d=a.nodeName.toLowerCase();if(d==\"input\")a.disabled=!0,c.trigger.filter(\"button\").each(function(){this.disabled=!0}).end().filter(\"img\").css({opacity:\"0.5\",cursor:\"default\"});else if(d==\"div\"||d==\"span\"){var e=b.children(\".\"+this._inlineClass);e.children().addClass(\"ui-state-disabled\"),e.find(\"select.ui-datepicker-month, select.ui-datepicker-year\").attr(\"disabled\",\"disabled\")}this._disabledInputs=$.map(this._disabledInputs,function(b){return b==a?null:b}),this._disabledInputs[this._disabledInputs.length]=a},_isDisabledDatepicker:function(a){if(!a)return!1;for(var b=0;b<this._disabledInputs.length;b++)if(this._disabledInputs[b]==a)return!0;return!1},_getInst:function(a){try{return $.data(a,PROP_NAME)}catch(b){throw\"Missing instance data for this datepicker\"}},_optionDatepicker:function(a,b,c){var d=this._getInst(a);if(arguments.length==2&&typeof b==\"string\")return b==\"defaults\"?$.extend({},$.datepicker._defaults):d?b==\"all\"?$.extend({},d.settings):this._get(d,b):null;var e=b||{};typeof b==\"string\"&&(e={},e[b]=c);if(d){this._curInst==d&&this._hideDatepicker();var f=this._getDateDatepicker(a,!0),g=this._getMinMaxDate(d,\"min\"),h=this._getMinMaxDate(d,\"max\");extendRemove(d.settings,e),g!==null&&e.dateFormat!==undefined&&e.minDate===undefined&&(d.settings.minDate=this._formatDate(d,g)),h!==null&&e.dateFormat!==undefined&&e.maxDate===undefined&&(d.settings.maxDate=this._formatDate(d,h)),this._attachments($(a),d),this._autoSize(d),this._setDate(d,f),this._updateAlternate(d),this._updateDatepicker(d)}},_changeDatepicker:function(a,b,c){this._optionDatepicker(a,b,c)},_refreshDatepicker:function(a){var b=this._getInst(a);b&&this._updateDatepicker(b)},_setDateDatepicker:function(a,b){var c=this._getInst(a);c&&(this._setDate(c,b),this._updateDatepicker(c),this._updateAlternate(c))},_getDateDatepicker:function(a,b){var c=this._getInst(a);return c&&!c.inline&&this._setDateFromField(c,b),c?this._getDate(c):null},_doKeyDown:function(a){var b=$.datepicker._getInst(a.target),c=!0,d=b.dpDiv.is(\".ui-datepicker-rtl\");b._keyEvent=!0;if($.datepicker._datepickerShowing)switch(a.keyCode){case 9:$.datepicker._hideDatepicker(),c=!1;break;case 13:var e=$(\"td.\"+$.datepicker._dayOverClass+\":not(.\"+$.datepicker._currentClass+\")\",b.dpDiv);e[0]&&$.datepicker._selectDay(a.target,b.selectedMonth,b.selectedYear,e[0]);var f=$.datepicker._get(b,\"onSelect\");if(f){var g=$.datepicker._formatDate(b);f.apply(b.input?b.input[0]:null,[g,b])}else $.datepicker._hideDatepicker();return!1;case 27:$.datepicker._hideDatepicker();break;case 33:$.datepicker._adjustDate(a.target,a.ctrlKey?-$.datepicker._get(b,\"stepBigMonths\"):-$.datepicker._get(b,\"stepMonths\"),\"M\");break;case 34:$.datepicker._adjustDate(a.target,a.ctrlKey?+$.datepicker._get(b,\"stepBigMonths\"):+$.datepicker._get(b,\"stepMonths\"),\"M\");break;case 35:(a.ctrlKey||a.metaKey)&&$.datepicker._clearDate(a.target),c=a.ctrlKey||a.metaKey;break;case 36:(a.ctrlKey||a.metaKey)&&$.datepicker._gotoToday(a.target),c=a.ctrlKey||a.metaKey;break;case 37:(a.ctrlKey||a.metaKey)&&$.datepicker._adjustDate(a.target,d?1:-1,\"D\"),c=a.ctrlKey||a.metaKey,a.originalEvent.altKey&&$.datepicker._adjustDate(a.target,a.ctrlKey?-$.datepicker._get(b,\"stepBigMonths\"):-$.datepicker._get(b,\"stepMonths\"),\"M\");break;case 38:(a.ctrlKey||a.metaKey)&&$.datepicker._adjustDate(a.target,-7,\"D\"),c=a.ctrlKey||a.metaKey;break;case 39:(a.ctrlKey||a.metaKey)&&$.datepicker._adjustDate(a.target,d?-1:1,\"D\"),c=a.ctrlKey||a.metaKey,a.originalEvent.altKey&&$.datepicker._adjustDate(a.target,a.ctrlKey?+$.datepicker._get(b,\"stepBigMonths\"):+$.datepicker._get(b,\"stepMonths\"),\"M\");break;case 40:(a.ctrlKey||a.metaKey)&&$.datepicker._adjustDate(a.target,7,\"D\"),c=a.ctrlKey||a.metaKey;break;default:c=!1}else a.keyCode==36&&a.ctrlKey?$.datepicker._showDatepicker(this):c=!1;c&&(a.preventDefault(),a.stopPropagation())},_doKeyPress:function(a){var b=$.datepicker._getInst(a.target);if($.datepicker._get(b,\"constrainInput\")){var c=$.datepicker._possibleChars($.datepicker._get(b,\"dateFormat\")),d=String.fromCharCode(a.charCode==undefined?a.keyCode:a.charCode);return a.ctrlKey||a.metaKey||d<\" \"||!c||c.indexOf(d)>-1}},_doKeyUp:function(a){var b=$.datepicker._getInst(a.target);if(b.input.val()!=b.lastVal)try{var c=$.datepicker.parseDate($.datepicker._get(b,\"dateFormat\"),b.input?b.input.val():null,$.datepicker._getFormatConfig(b));c&&($.datepicker._setDateFromField(b),$.datepicker._updateAlternate(b),$.datepicker._updateDatepicker(b))}catch(d){$.datepicker.log(d)}return!0},_showDatepicker:function(a){a=a.target||a,a.nodeName.toLowerCase()!=\"input\"&&(a=$(\"input\",a.parentNode)[0]);if($.datepicker._isDisabledDatepicker(a)||$.datepicker._lastInput==a)return;var b=$.datepicker._getInst(a);$.datepicker._curInst&&$.datepicker._curInst!=b&&($.datepicker._curInst.dpDiv.stop(!0,!0),b&&$.datepicker._datepickerShowing&&$.datepicker._hideDatepicker($.datepicker._curInst.input[0]));var c=$.datepicker._get(b,\"beforeShow\"),d=c?c.apply(a,[a,b]):{};if(d===!1)return;extendRemove(b.settings,d),b.lastVal=null,$.datepicker._lastInput=a,$.datepicker._setDateFromField(b),$.datepicker._inDialog&&(a.value=\"\"),$.datepicker._pos||($.datepicker._pos=$.datepicker._findPos(a),$.datepicker._pos[1]+=a.offsetHeight);var e=!1;$(a).parents().each(function(){return e|=$(this).css(\"position\")==\"fixed\",!e}),e&&$.browser.opera&&($.datepicker._pos[0]-=document.documentElement.scrollLeft,$.datepicker._pos[1]-=document.documentElement.scrollTop);var f={left:$.datepicker._pos[0],top:$.datepicker._pos[1]};$.datepicker._pos=null,b.dpDiv.empty(),b.dpDiv.css({position:\"absolute\",display:\"block\",top:\"-1000px\"}),$.datepicker._updateDatepicker(b),f=$.datepicker._checkOffset(b,f,e),b.dpDiv.css({position:$.datepicker._inDialog&&$.blockUI?\"static\":e?\"fixed\":\"absolute\",display:\"none\",left:f.left+\"px\",top:f.top+\"px\"});if(!b.inline){var g=$.datepicker._get(b,\"showAnim\"),h=$.datepicker._get(b,\"duration\"),i=function(){var a=b.dpDiv.find(\"iframe.ui-datepicker-cover\");if(!!a.length){var c=$.datepicker._getBorders(b.dpDiv);a.css({left:-c[0],top:-c[1],width:b.dpDiv.outerWidth(),height:b.dpDiv.outerHeight()})}};b.dpDiv.zIndex($(a).zIndex()+1),$.datepicker._datepickerShowing=!0,$.effects&&$.effects[g]?b.dpDiv.show(g,$.datepicker._get(b,\"showOptions\"),h,i):b.dpDiv[g||\"show\"](g?h:null,i),(!g||!h)&&i(),b.input.is(\":visible\")&&!b.input.is(\":disabled\")&&b.input.focus(),$.datepicker._curInst=b}},_updateDatepicker:function(a){var b=this;b.maxRows=4;var c=$.datepicker._getBorders(a.dpDiv);instActive=a,a.dpDiv.empty().append(this._generateHTML(a));var d=a.dpDiv.find(\"iframe.ui-datepicker-cover\");!d.length||d.css({left:-c[0],top:-c[1],width:a.dpDiv.outerWidth(),height:a.dpDiv.outerHeight()}),a.dpDiv.find(\".\"+this._dayOverClass+\" a\").mouseover();var e=this._getNumberOfMonths(a),f=e[1],g=17;a.dpDiv.removeClass(\"ui-datepicker-multi-2 ui-datepicker-multi-3 ui-datepicker-multi-4\").width(\"\"),f>1&&a.dpDiv.addClass(\"ui-datepicker-multi-\"+f).css(\"width\",g*f+\"em\"),a.dpDiv[(e[0]!=1||e[1]!=1?\"add\":\"remove\")+\"Class\"](\"ui-datepicker-multi\"),a.dpDiv[(this._get(a,\"isRTL\")?\"add\":\"remove\")+\"Class\"](\"ui-datepicker-rtl\"),a==$.datepicker._curInst&&$.datepicker._datepickerShowing&&a.input&&a.input.is(\":visible\")&&!a.input.is(\":disabled\")&&a.input[0]!=document.activeElement&&a.input.focus();if(a.yearshtml){var h=a.yearshtml;setTimeout(function(){h===a.yearshtml&&a.yearshtml&&a.dpDiv.find(\"select.ui-datepicker-year:first\").replaceWith(a.yearshtml),h=a.yearshtml=null},0)}},_getBorders:function(a){var b=function(a){return{thin:1,medium:2,thick:3}[a]||a};return[parseFloat(b(a.css(\"border-left-width\"))),parseFloat(b(a.css(\"border-top-width\")))]},_checkOffset:function(a,b,c){var d=a.dpDiv.outerWidth(),e=a.dpDiv.outerHeight(),f=a.input?a.input.outerWidth():0,g=a.input?a.input.outerHeight():0,h=document.documentElement.clientWidth+$(document).scrollLeft(),i=document.documentElement.clientHeight+$(document).scrollTop();return b.left-=this._get(a,\"isRTL\")?d-f:0,b.left-=c&&b.left==a.input.offset().left?$(document).scrollLeft():0,b.top-=c&&b.top==a.input.offset().top+g?$(document).scrollTop():0,b.left-=Math.min(b.left,b.left+d>h&&h>d?Math.abs(b.left+d-h):0),b.top-=Math.min(b.top,b.top+e>i&&i>e?Math.abs(e+g):0),b},_findPos:function(a){var b=this._getInst(a),c=this._get(b,\"isRTL\");while(a&&(a.type==\"hidden\"||a.nodeType!=1||$.expr.filters.hidden(a)))a=a[c?\"previousSibling\":\"nextSibling\"];var d=$(a).offset();return[d.left,d.top]},_hideDatepicker:function(a){var b=this._curInst;if(!b||a&&b!=$.data(a,PROP_NAME))return;if(this._datepickerShowing){var c=this._get(b,\"showAnim\"),d=this._get(b,\"duration\"),e=function(){$.datepicker._tidyDialog(b)};$.effects&&$.effects[c]?b.dpDiv.hide(c,$.datepicker._get(b,\"showOptions\"),d,e):b.dpDiv[c==\"slideDown\"?\"slideUp\":c==\"fadeIn\"?\"fadeOut\":\"hide\"](c?d:null,e),c||e(),this._datepickerShowing=!1;var f=this._get(b,\"onClose\");f&&f.apply(b.input?b.input[0]:null,[b.input?b.input.val():\"\",b]),this._lastInput=null,this._inDialog&&(this._dialogInput.css({position:\"absolute\",left:\"0\",top:\"-100px\"}),$.blockUI&&($.unblockUI(),$(\"body\").append(this.dpDiv))),this._inDialog=!1}},_tidyDialog:function(a){a.dpDiv.removeClass(this._dialogClass).unbind(\".ui-datepicker-calendar\")},_checkExternalClick:function(a){if(!$.datepicker._curInst)return;var b=$(a.target),c=$.datepicker._getInst(b[0]);(b[0].id!=$.datepicker._mainDivId&&b.parents(\"#\"+$.datepicker._mainDivId).length==0&&!b.hasClass($.datepicker.markerClassName)&&!b.closest(\".\"+$.datepicker._triggerClass).length&&$.datepicker._datepickerShowing&&(!$.datepicker._inDialog||!$.blockUI)||b.hasClass($.datepicker.markerClassName)&&$.datepicker._curInst!=c)&&$.datepicker._hideDatepicker()},_adjustDate:function(a,b,c){var d=$(a),e=this._getInst(d[0]);if(this._isDisabledDatepicker(d[0]))return;this._adjustInstDate(e,b+(c==\"M\"?this._get(e,\"showCurrentAtPos\"):0),c),this._updateDatepicker(e)},_gotoToday:function(a){var b=$(a),c=this._getInst(b[0]);if(this._get(c,\"gotoCurrent\")&&c.currentDay)c.selectedDay=c.currentDay,c.drawMonth=c.selectedMonth=c.currentMonth,c.drawYear=c.selectedYear=c.currentYear;else{var d=new Date;c.selectedDay=d.getDate(),c.drawMonth=c.selectedMonth=d.getMonth(),c.drawYear=c.selectedYear=d.getFullYear()}this._notifyChange(c),this._adjustDate(b)},_selectMonthYear:function(a,b,c){var d=$(a),e=this._getInst(d[0]);e[\"selected\"+(c==\"M\"?\"Month\":\"Year\")]=e[\"draw\"+(c==\"M\"?\"Month\":\"Year\")]=parseInt(b.options[b.selectedIndex].value,10),this._notifyChange(e),this._adjustDate(d)},_selectDay:function(a,b,c,d){var e=$(a);if($(d).hasClass(this._unselectableClass)||this._isDisabledDatepicker(e[0]))return;var f=this._getInst(e[0]);f.selectedDay=f.currentDay=$(\"a\",d).html(),f.selectedMonth=f.currentMonth=b,f.selectedYear=f.currentYear=c,this._selectDate(a,this._formatDate(f,f.currentDay,f.currentMonth,f.currentYear))},_clearDate:function(a){var b=$(a),c=this._getInst(b[0]);this._selectDate(b,\"\")},_selectDate:function(a,b){var c=$(a),d=this._getInst(c[0]);b=b!=null?b:this._formatDate(d),d.input&&d.input.val(b),this._updateAlternate(d);var e=this._get(d,\"onSelect\");e?e.apply(d.input?d.input[0]:null,[b,d]):d.input&&d.input.trigger(\"change\"),d.inline?this._updateDatepicker(d):(this._hideDatepicker(),this._lastInput=d.input[0],typeof d.input[0]!=\"object\"&&d.input.focus(),this._lastInput=null)},_updateAlternate:function(a){var b=this._get(a,\"altField\");if(b){var c=this._get(a,\"altFormat\")||this._get(a,\"dateFormat\"),d=this._getDate(a),e=this.formatDate(c,d,this._getFormatConfig(a));$(b).each(function(){$(this).val(e)})}},noWeekends:function(a){var b=a.getDay();return[b>0&&b<6,\"\"]},iso8601Week:function(a){var b=new Date(a.getTime());b.setDate(b.getDate()+4-(b.getDay()||7));var c=b.getTime();return b.setMonth(0),b.setDate(1),Math.floor(Math.round((c-b)/864e5)/7)+1},parseDate:function(a,b,c){if(a==null||b==null)throw\"Invalid arguments\";b=typeof b==\"object\"?b.toString():b+\"\";if(b==\"\")return null;var d=(c?c.shortYearCutoff:null)||this._defaults.shortYearCutoff;d=typeof d!=\"string\"?d:(new Date).getFullYear()%100+parseInt(d,10);var e=(c?c.dayNamesShort:null)||this._defaults.dayNamesShort,f=(c?c.dayNames:null)||this._defaults.dayNames,g=(c?c.monthNamesShort:null)||this._defaults.monthNamesShort,h=(c?c.monthNames:null)||this._defaults.monthNames,i=-1,j=-1,k=-1,l=-1,m=!1,n=function(b){var c=s+1<a.length&&a.charAt(s+1)==b;return c&&s++,c},o=function(a){var c=n(a),d=a==\"@\"?14:a==\"!\"?20:a==\"y\"&&c?4:a==\"o\"?3:2,e=new RegExp(\"^\\\\d{1,\"+d+\"}\"),f=b.substring(r).match(e);if(!f)throw\"Missing number at position \"+r;return r+=f[0].length,parseInt(f[0],10)},p=function(a,c,d){var e=$.map(n(a)?d:c,function(a,b){return[[b,a]]}).sort(function(a,b){return-(a[1].length-b[1].length)}),f=-1;$.each(e,function(a,c){var d=c[1];if(b.substr(r,d.length).toLowerCase()==d.toLowerCase())return f=c[0],r+=d.length,!1});if(f!=-1)return f+1;throw\"Unknown name at position \"+r},q=function(){if(b.charAt(r)!=a.charAt(s))throw\"Unexpected literal at position \"+r;r++},r=0;for(var s=0;s<a.length;s++)if(m)a.charAt(s)==\"'\"&&!n(\"'\")?m=!1:q();else switch(a.charAt(s)){case\"d\":k=o(\"d\");break;case\"D\":p(\"D\",e,f);break;case\"o\":l=o(\"o\");break;case\"m\":j=o(\"m\");break;case\"M\":j=p(\"M\",g,h);break;case\"y\":i=o(\"y\");break;case\"@\":var t=new Date(o(\"@\"));i=t.getFullYear(),j=t.getMonth()+1,k=t.getDate();break;case\"!\":var t=new Date((o(\"!\")-this._ticksTo1970)/1e4);i=t.getFullYear(),j=t.getMonth()+1,k=t.getDate();break;case\"'\":n(\"'\")?q():m=!0;break;default:q()}if(r<b.length)throw\"Extra/unparsed characters found in date: \"+b.substring(r);i==-1?i=(new Date).getFullYear():i<100&&(i+=(new Date).getFullYear()-(new Date).getFullYear()%100+(i<=d?0:-100));if(l>-1){j=1,k=l;do{var u=this._getDaysInMonth(i,j-1);if(k<=u)break;j++,k-=u}while(!0)}var t=this._daylightSavingAdjust(new Date(i,j-1,k));if(t.getFullYear()!=i||t.getMonth()+1!=j||t.getDate()!=k)throw\"Invalid date\";return t},ATOM:\"yy-mm-dd\",COOKIE:\"D, dd M yy\",ISO_8601:\"yy-mm-dd\",RFC_822:\"D, d M y\",RFC_850:\"DD, dd-M-y\",RFC_1036:\"D, d M y\",RFC_1123:\"D, d M yy\",RFC_2822:\"D, d M yy\",RSS:\"D, d M y\",TICKS:\"!\",TIMESTAMP:\"@\",W3C:\"yy-mm-dd\",_ticksTo1970:(718685+Math.floor(492.5)-Math.floor(19.7)+Math.floor(4.925))*24*60*60*1e7,formatDate:function(a,b,c){if(!b)return\"\";var d=(c?c.dayNamesShort:null)||this._defaults.dayNamesShort,e=(c?c.dayNames:null)||this._defaults.dayNames,f=(c?c.monthNamesShort:null)||this._defaults.monthNamesShort,g=(c?c.monthNames:null)||this._defaults.monthNames,h=function(b){var c=m+1<a.length&&a.charAt(m+1)==b;return c&&m++,c},i=function(a,b,c){var d=\"\"+b;if(h(a))while(d.length<c)d=\"0\"+d;return d},j=function(a,b,c,d){return h(a)?d[b]:c[b]},k=\"\",l=!1;if(b)for(var m=0;m<a.length;m++)if(l)a.charAt(m)==\"'\"&&!h(\"'\")?l=!1:k+=a.charAt(m);else switch(a.charAt(m)){case\"d\":k+=i(\"d\",b.getDate(),2);break;case\"D\":k+=j(\"D\",b.getDay(),d,e);break;case\"o\":k+=i(\"o\",Math.round(((new Date(b.getFullYear(),b.getMonth(),b.getDate())).getTime()-(new Date(b.getFullYear(),0,0)).getTime())/864e5),3);break;case\"m\":k+=i(\"m\",b.getMonth()+1,2);break;case\"M\":k+=j(\"M\",b.getMonth(),f,g);break;case\"y\":k+=h(\"y\")?b.getFullYear():(b.getYear()%100<10?\"0\":\"\")+b.getYear()%100;break;case\"@\":k+=b.getTime();break;case\"!\":k+=b.getTime()*1e4+this._ticksTo1970;break;case\"'\":h(\"'\")?k+=\"'\":l=!0;break;default:k+=a.charAt(m)}return k},_possibleChars:function(a){var b=\"\",c=!1,d=function(b){var c=e+1<a.length&&a.charAt(e+1)==b;return c&&e++,c};for(var e=0;e<a.length;e++)if(c)a.charAt(e)==\"'\"&&!d(\"'\")?c=!1:b+=a.charAt(e);else switch(a.charAt(e)){case\"d\":case\"m\":case\"y\":case\"@\":b+=\"0123456789\";break;case\"D\":case\"M\":return null;case\"'\":d(\"'\")?b+=\"'\":c=!0;break;default:b+=a.charAt(e)}return b},_get:function(a,b){return a.settings[b]!==undefined?a.settings[b]:this._defaults[b]},_setDateFromField:function(a,b){if(a.input.val()==a.lastVal)return;var c=this._get(a,\"dateFormat\"),d=a.lastVal=a.input?a.input.val():null,e,f;e=f=this._getDefaultDate(a);var g=this._getFormatConfig(a);try{e=this.parseDate(c,d,g)||f}catch(h){this.log(h),d=b?\"\":d}a.selectedDay=e.getDate(),a.drawMonth=a.selectedMonth=e.getMonth(),a.drawYear=a.selectedYear=e.getFullYear(),a.currentDay=d?e.getDate():0,a.currentMonth=d?e.getMonth():0,a.currentYear=d?e.getFullYear():0,this._adjustInstDate(a)},_getDefaultDate:function(a){return this._restrictMinMax(a,this._determineDate(a,this._get(a,\"defaultDate\"),new Date))},_determineDate:function(a,b,c){var d=function(a){var b=new Date;return b.setDate(b.getDate()+a),b},e=function(b){try{return $.datepicker.parseDate($.datepicker._get(a,\"dateFormat\"),b,$.datepicker._getFormatConfig(a))}catch(c){}var d=(b.toLowerCase().match(/^c/)?$.datepicker._getDate(a):null)||new Date,e=d.getFullYear(),f=d.getMonth(),g=d.getDate(),h=/([+-]?[0-9]+)\\s*(d|D|w|W|m|M|y|Y)?/g,i=h.exec(b);while(i){switch(i[2]||\"d\"){case\"d\":case\"D\":g+=parseInt(i[1],10);break;case\"w\":case\"W\":g+=parseInt(i[1],10)*7;break;case\"m\":case\"M\":f+=parseInt(i[1],10),g=Math.min(g,$.datepicker._getDaysInMonth(e,f));break;case\"y\":case\"Y\":e+=parseInt(i[1],10),g=Math.min(g,$.datepicker._getDaysInMonth(e,f))}i=h.exec(b)}return new Date(e,f,g)},f=b==null||b===\"\"?c:typeof b==\"string\"?e(b):typeof b==\"number\"?isNaN(b)?c:d(b):new Date(b.getTime());return f=f&&f.toString()==\"Invalid Date\"?c:f,f&&(f.setHours(0),f.setMinutes(0),f.setSeconds(0),f.setMilliseconds(0)),this._daylightSavingAdjust(f)},_daylightSavingAdjust:function(a){return a?(a.setHours(a.getHours()>12?a.getHours()+2:0),a):null},_setDate:function(a,b,c){var d=!b,e=a.selectedMonth,f=a.selectedYear,g=this._restrictMinMax(a,this._determineDate(a,b,new Date));a.selectedDay=a.currentDay=g.getDate(),a.drawMonth=a.selectedMonth=a.currentMonth=g.getMonth(),a.drawYear=a.selectedYear=a.currentYear=g.getFullYear(),(e!=a.selectedMonth||f!=a.selectedYear)&&!c&&this._notifyChange(a),this._adjustInstDate(a),a.input&&a.input.val(d?\"\":this._formatDate(a))},_getDate:function(a){var b=!a.currentYear||a.input&&a.input.val()==\"\"?null:this._daylightSavingAdjust(new Date(a.currentYear,a.currentMonth,a.currentDay));return b},_generateHTML:function(a){var b=new Date;b=this._daylightSavingAdjust(new Date(b.getFullYear(),b.getMonth(),b.getDate()));var c=this._get(a,\"isRTL\"),d=this._get(a,\"showButtonPanel\"),e=this._get(a,\"hideIfNoPrevNext\"),f=this._get(a,\"navigationAsDateFormat\"),g=this._getNumberOfMonths(a),h=this._get(a,\"showCurrentAtPos\"),i=this._get(a,\"stepMonths\"),j=g[0]!=1||g[1]!=1,k=this._daylightSavingAdjust(a.currentDay?new Date(a.currentYear,a.currentMonth,a.currentDay):new Date(9999,9,9)),l=this._getMinMaxDate(a,\"min\"),m=this._getMinMaxDate(a,\"max\"),n=a.drawMonth-h,o=a.drawYear;n<0&&(n+=12,o--);if(m){var p=this._daylightSavingAdjust(new Date(m.getFullYear(),m.getMonth()-g[0]*g[1]+1,m.getDate()));p=l&&p<l?l:p;while(this._daylightSavingAdjust(new Date(o,n,1))>p)n--,n<0&&(n=11,o--)}a.drawMonth=n,a.drawYear=o;var q=this._get(a,\"prevText\");q=f?this.formatDate(q,this._daylightSavingAdjust(new Date(o,n-i,1)),this._getFormatConfig(a)):q;var r=this._canAdjustMonth(a,-1,o,n)?'<a class=\"ui-datepicker-prev ui-corner-all\" onclick=\"DP_jQuery_'+dpuuid+\".datepicker._adjustDate('#\"+a.id+\"', -\"+i+\", 'M');\\\"\"+' title=\"'+q+'\"><span class=\"ui-icon ui-icon-circle-triangle-'+(c?\"e\":\"w\")+'\">'+q+\"</span></a>\":e?\"\":'<a class=\"ui-datepicker-prev ui-corner-all ui-state-disabled\" title=\"'+q+'\"><span class=\"ui-icon ui-icon-circle-triangle-'+(c?\"e\":\"w\")+'\">'+q+\"</span></a>\",s=this._get(a,\"nextText\");s=f?this.formatDate(s,this._daylightSavingAdjust(new Date(o,n+i,1)),this._getFormatConfig(a)):s;var t=this._canAdjustMonth(a,1,o,n)?'<a class=\"ui-datepicker-next ui-corner-all\" onclick=\"DP_jQuery_'+dpuuid+\".datepicker._adjustDate('#\"+a.id+\"', +\"+i+\", 'M');\\\"\"+' title=\"'+s+'\"><span class=\"ui-icon ui-icon-circle-triangle-'+(c?\"w\":\"e\")+'\">'+s+\"</span></a>\":e?\"\":'<a class=\"ui-datepicker-next ui-corner-all ui-state-disabled\" title=\"'+s+'\"><span class=\"ui-icon ui-icon-circle-triangle-'+(c?\"w\":\"e\")+'\">'+s+\"</span></a>\",u=this._get(a,\"currentText\"),v=this._get(a,\"gotoCurrent\")&&a.currentDay?k:b;u=f?this.formatDate(u,v,this._getFormatConfig(a)):u;var w=a.inline?\"\":'<button type=\"button\" class=\"ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all\" onclick=\"DP_jQuery_'+dpuuid+'.datepicker._hideDatepicker();\">'+this._get(a,\"closeText\")+\"</button>\",x=d?'<div class=\"ui-datepicker-buttonpane ui-widget-content\">'+(c?w:\"\")+(this._isInRange(a,v)?'<button type=\"button\" class=\"ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all\" onclick=\"DP_jQuery_'+dpuuid+\".datepicker._gotoToday('#\"+a.id+\"');\\\"\"+\">\"+u+\"</button>\":\"\")+(c?\"\":w)+\"</div>\":\"\",y=parseInt(this._get(a,\"firstDay\"),10);y=isNaN(y)?0:y;var z=this._get(a,\"showWeek\"),A=this._get(a,\"dayNames\"),B=this._get(a,\"dayNamesShort\"),C=this._get(a,\"dayNamesMin\"),D=this._get(a,\"monthNames\"),E=this._get(a,\"monthNamesShort\"),F=this._get(a,\"beforeShowDay\"),G=this._get(a,\"showOtherMonths\"),H=this._get(a,\"selectOtherMonths\"),I=this._get(a,\"calculateWeek\")||this.iso8601Week,J=this._getDefaultDate(a),K=\"\";for(var L=0;L<g[0];L++){var M=\"\";this.maxRows=4;for(var N=0;N<g[1];N++){var O=this._daylightSavingAdjust(new Date(o,n,a.selectedDay)),P=\" ui-corner-all\",Q=\"\";if(j){Q+='<div class=\"ui-datepicker-group';if(g[1]>1)switch(N){case 0:Q+=\" ui-datepicker-group-first\",P=\" ui-corner-\"+(c?\"right\":\"left\");break;case g[1]-1:Q+=\" ui-datepicker-group-last\",P=\" ui-corner-\"+(c?\"left\":\"right\");break;default:Q+=\" ui-datepicker-group-middle\",P=\"\"}Q+='\">'}Q+='<div class=\"ui-datepicker-header ui-widget-header ui-helper-clearfix'+P+'\">'+(/all|left/.test(P)&&L==0?c?t:r:\"\")+(/all|right/.test(P)&&L==0?c?r:t:\"\")+this._generateMonthYearHeader(a,n,o,l,m,L>0||N>0,D,E)+'</div><table class=\"ui-datepicker-calendar\"><thead>'+\"<tr>\";var R=z?'<th class=\"ui-datepicker-week-col\">'+this._get(a,\"weekHeader\")+\"</th>\":\"\";for(var S=0;S<7;S++){var T=(S+y)%7;R+=\"<th\"+((S+y+6)%7>=5?' class=\"ui-datepicker-week-end\"':\"\")+\">\"+'<span title=\"'+A[T]+'\">'+C[T]+\"</span></th>\"}Q+=R+\"</tr></thead><tbody>\";var U=this._getDaysInMonth(o,n);o==a.selectedYear&&n==a.selectedMonth&&(a.selectedDay=Math.min(a.selectedDay,U));var V=(this._getFirstDayOfMonth(o,n)-y+7)%7,W=Math.ceil((V+U)/7),X=j?this.maxRows>W?this.maxRows:W:W;this.maxRows=X;var Y=this._daylightSavingAdjust(new Date(o,n,1-V));for(var Z=0;Z<X;Z++){Q+=\"<tr>\";var _=z?'<td class=\"ui-datepicker-week-col\">'+this._get(a,\"calculateWeek\")(Y)+\"</td>\":\"\";for(var S=0;S<7;S++){var ba=F?F.apply(a.input?a.input[0]:null,[Y]):[!0,\"\"],bb=Y.getMonth()!=n,bc=bb&&!H||!ba[0]||l&&Y<l||m&&Y>m;_+='<td class=\"'+((S+y+6)%7>=5?\" ui-datepicker-week-end\":\"\")+(bb?\" ui-datepicker-other-month\":\"\")+(Y.getTime()==O.getTime()&&n==a.selectedMonth&&a._keyEvent||J.getTime()==Y.getTime()&&J.getTime()==O.getTime()?\" \"+this._dayOverClass:\"\")+(bc?\" \"+this._unselectableClass+\" ui-state-disabled\":\"\")+(bb&&!G?\"\":\" \"+ba[1]+(Y.getTime()==k.getTime()?\" \"+this._currentClass:\"\")+(Y.getTime()==b.getTime()?\" ui-datepicker-today\":\"\"))+'\"'+((!bb||G)&&ba[2]?' title=\"'+ba[2]+'\"':\"\")+(bc?\"\":' onclick=\"DP_jQuery_'+dpuuid+\".datepicker._selectDay('#\"+a.id+\"',\"+Y.getMonth()+\",\"+Y.getFullYear()+', this);return false;\"')+\">\"+(bb&&!G?\"&#xa0;\":bc?'<span class=\"ui-state-default\">'+Y.getDate()+\"</span>\":'<a class=\"ui-state-default'+(Y.getTime()==b.getTime()?\" ui-state-highlight\":\"\")+(Y.getTime()==k.getTime()?\" ui-state-active\":\"\")+(bb?\" ui-priority-secondary\":\"\")+'\" href=\"#\">'+Y.getDate()+\"</a>\")+\"</td>\",Y.setDate(Y.getDate()+1),Y=this._daylightSavingAdjust(Y)}Q+=_+\"</tr>\"}n++,n>11&&(n=0,o++),Q+=\"</tbody></table>\"+(j?\"</div>\"+(g[0]>0&&N==g[1]-1?'<div class=\"ui-datepicker-row-break\"></div>':\"\"):\"\"),M+=Q}K+=M}return K+=x+($.browser.msie&&parseInt($.browser.version,10)<7&&!a.inline?'<iframe src=\"javascript:false;\" class=\"ui-datepicker-cover\" frameborder=\"0\"></iframe>':\"\"),a._keyEvent=!1,K},_generateMonthYearHeader:function(a,b,c,d,e,f,g,h){var i=this._get(a,\"changeMonth\"),j=this._get(a,\"changeYear\"),k=this._get(a,\"showMonthAfterYear\"),l='<div class=\"ui-datepicker-title\">',m=\"\";if(f||!i)m+='<span class=\"ui-datepicker-month\">'+g[b]+\"</span>\";else{var n=d&&d.getFullYear()==c,o=e&&e.getFullYear()==c;m+='<select class=\"ui-datepicker-month\" onchange=\"DP_jQuery_'+dpuuid+\".datepicker._selectMonthYear('#\"+a.id+\"', this, 'M');\\\" \"+\">\";for(var p=0;p<12;p++)(!n||p>=d.getMonth())&&(!o||p<=e.getMonth())&&(m+='<option value=\"'+p+'\"'+(p==b?' selected=\"selected\"':\"\")+\">\"+h[p]+\"</option>\");m+=\"</select>\"}k||(l+=m+(f||!i||!j?\"&#xa0;\":\"\"));if(!a.yearshtml){a.yearshtml=\"\";if(f||!j)l+='<span class=\"ui-datepicker-year\">'+c+\"</span>\";else{var q=this._get(a,\"yearRange\").split(\":\"),r=(new Date).getFullYear(),s=function(a){var b=a.match(/c[+-].*/)?c+parseInt(a.substring(1),10):a.match(/[+-].*/)?r+parseInt(a,10):parseInt(a,10);return isNaN(b)?r:b},t=s(q[0]),u=Math.max(t,s(q[1]||\"\"));t=d?Math.max(t,d.getFullYear()):t,u=e?Math.min(u,e.getFullYear()):u,a.yearshtml+='<select class=\"ui-datepicker-year\" onchange=\"DP_jQuery_'+dpuuid+\".datepicker._selectMonthYear('#\"+a.id+\"', this, 'Y');\\\" \"+\">\";for(;t<=u;t++)a.yearshtml+='<option value=\"'+t+'\"'+(t==c?' selected=\"selected\"':\"\")+\">\"+t+\"</option>\";a.yearshtml+=\"</select>\",l+=a.yearshtml,a.yearshtml=null}}return l+=this._get(a,\"yearSuffix\"),k&&(l+=(f||!i||!j?\"&#xa0;\":\"\")+m),l+=\"</div>\",l},_adjustInstDate:function(a,b,c){var d=a.drawYear+(c==\"Y\"?b:0),e=a.drawMonth+(c==\"M\"?b:0),f=Math.min(a.selectedDay,this._getDaysInMonth(d,e))+(c==\"D\"?b:0),g=this._restrictMinMax(a,this._daylightSavingAdjust(new Date(d,e,f)));a.selectedDay=g.getDate(),a.drawMonth=a.selectedMonth=g.getMonth(),a.drawYear=a.selectedYear=g.getFullYear(),(c==\"M\"||c==\"Y\")&&this._notifyChange(a)},_restrictMinMax:function(a,b){var c=this._getMinMaxDate(a,\"min\"),d=this._getMinMaxDate(a,\"max\"),e=c&&b<c?c:b;return e=d&&e>d?d:e,e},_notifyChange:function(a){var b=this._get(a,\"onChangeMonthYear\");b&&b.apply(a.input?a.input[0]:null,[a.selectedYear,a.selectedMonth+1,a])},_getNumberOfMonths:function(a){var b=this._get(a,\"numberOfMonths\");return b==null?[1,1]:typeof b==\"number\"?[1,b]:b},_getMinMaxDate:function(a,b){return this._determineDate(a,this._get(a,b+\"Date\"),null)},_getDaysInMonth:function(a,b){return 32-this._daylightSavingAdjust(new Date(a,b,32)).getDate()},_getFirstDayOfMonth:function(a,b){return(new Date(a,b,1)).getDay()},_canAdjustMonth:function(a,b,c,d){var e=this._getNumberOfMonths(a),f=this._daylightSavingAdjust(new Date(c,d+(b<0?b:e[0]*e[1]),1));return b<0&&f.setDate(this._getDaysInMonth(f.getFullYear(),f.getMonth())),this._isInRange(a,f)},_isInRange:function(a,b){var c=this._getMinMaxDate(a,\"min\"),d=this._getMinMaxDate(a,\"max\");return(!c||b.getTime()>=c.getTime())&&(!d||b.getTime()<=d.getTime())},_getFormatConfig:function(a){var b=this._get(a,\"shortYearCutoff\");return b=typeof b!=\"string\"?b:(new Date).getFullYear()%100+parseInt(b,10),{shortYearCutoff:b,dayNamesShort:this._get(a,\"dayNamesShort\"),dayNames:this._get(a,\"dayNames\"),monthNamesShort:this._get(a,\"monthNamesShort\"),monthNames:this._get(a,\"monthNames\")}},_formatDate:function(a,b,c,d){b||(a.currentDay=a.selectedDay,a.currentMonth=a.selectedMonth,a.currentYear=a.selectedYear);var e=b?typeof b==\"object\"?b:this._daylightSavingAdjust(new Date(d,c,b)):this._daylightSavingAdjust(new Date(a.currentYear,a.currentMonth,a.currentDay));return this.formatDate(this._get(a,\"dateFormat\"),e,this._getFormatConfig(a))}}),$.fn.datepicker=function(a){if(!this.length)return this;$.datepicker.initialized||($(document).mousedown($.datepicker._checkExternalClick).find(\"body\").append($.datepicker.dpDiv),$.datepicker.initialized=!0);var b=Array.prototype.slice.call(arguments,1);return typeof a!=\"string\"||a!=\"isDisabled\"&&a!=\"getDate\"&&a!=\"widget\"?a==\"option\"&&arguments.length==2&&typeof arguments[1]==\"string\"?$.datepicker[\"_\"+a+\"Datepicker\"].apply($.datepicker,[this[0]].concat(b)):this.each(function(){typeof a==\"string\"?$.datepicker[\"_\"+a+\"Datepicker\"].apply($.datepicker,[this].concat(b)):$.datepicker._attachDatepicker(this,a)}):$.datepicker[\"_\"+a+\"Datepicker\"].apply($.datepicker,[this[0]].concat(b))},$.datepicker=new Datepicker,$.datepicker.initialized=!1,$.datepicker.uuid=(new Date).getTime(),$.datepicker.version=\"1.8.21\",window[\"DP_jQuery_\"+dpuuid]=$})(jQuery);;/*! jQuery UI - v1.8.21 - 2012-06-05\n   66  * https://github.com/jquery/jquery-ui\n   67  * Includes: jquery.ui.progressbar.js\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\public\\js\\jquery.uploadify-3.1.min.js:\n   14  is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>\n   15  */\n   16: ;var swfobject=function(){var aq=\"undefined\",aD=\"object\",ab=\"Shockwave Flash\",X=\"ShockwaveFlash.ShockwaveFlash\",aE=\"application/x-shockwave-flash\",ac=\"SWFObjectExprInst\",ax=\"onreadystatechange\",af=window,aL=document,aB=navigator,aa=false,Z=[aN],aG=[],ag=[],al=[],aJ,ad,ap,at,ak=false,aU=false,aH,an,aI=true,ah=function(){var a=typeof aL.getElementById!=aq&&typeof aL.getElementsByTagName!=aq&&typeof aL.createElement!=aq,e=aB.userAgent.toLowerCase(),c=aB.platform.toLowerCase(),h=c?/win/.test(c):/win/.test(e),j=c?/mac/.test(c):/mac/.test(e),g=/webkit/.test(e)?parseFloat(e.replace(/^.*webkit\\/(\\d+(\\.\\d+)?).*$/,\"$1\")):false,d=!+\"\\v1\",f=[0,0,0],k=null;if(typeof aB.plugins!=aq&&typeof aB.plugins[ab]==aD){k=aB.plugins[ab].description;if(k&&!(typeof aB.mimeTypes!=aq&&aB.mimeTypes[aE]&&!aB.mimeTypes[aE].enabledPlugin)){aa=true;d=false;k=k.replace(/^.*\\s+(\\S+\\s+\\S+$)/,\"$1\");f[0]=parseInt(k.replace(/^(.*)\\..*$/,\"$1\"),10);f[1]=parseInt(k.replace(/^.*\\.(.*)\\s.*$/,\"$1\"),10);f[2]=/[a-zA-Z]/.test(k)?parseInt(k.replace(/^.*[a-zA-Z]+(.*)$/,\"$1\"),10):0;}}else{if(typeof af.ActiveXObject!=aq){try{var i=new ActiveXObject(X);if(i){k=i.GetVariable(\"$version\");if(k){d=true;k=k.split(\" \")[1].split(\",\");f=[parseInt(k[0],10),parseInt(k[1],10),parseInt(k[2],10)];}}}catch(b){}}}return{w3:a,pv:f,wk:g,ie:d,win:h,mac:j};}(),aK=function(){if(!ah.w3){return;}if((typeof aL.readyState!=aq&&aL.readyState==\"complete\")||(typeof aL.readyState==aq&&(aL.getElementsByTagName(\"body\")[0]||aL.body))){aP();}if(!ak){if(typeof aL.addEventListener!=aq){aL.addEventListener(\"DOMContentLoaded\",aP,false);}if(ah.ie&&ah.win){aL.attachEvent(ax,function(){if(aL.readyState==\"complete\"){aL.detachEvent(ax,arguments.callee);aP();}});if(af==top){(function(){if(ak){return;}try{aL.documentElement.doScroll(\"left\");}catch(a){setTimeout(arguments.callee,0);return;}aP();})();}}if(ah.wk){(function(){if(ak){return;}if(!/loaded|complete/.test(aL.readyState)){setTimeout(arguments.callee,0);return;}aP();})();}aC(aP);}}();function aP(){if(ak){return;}try{var b=aL.getElementsByTagName(\"body\")[0].appendChild(ar(\"span\"));b.parentNode.removeChild(b);}catch(a){return;}ak=true;var d=Z.length;for(var c=0;c<d;c++){Z[c]();}}function aj(a){if(ak){a();}else{Z[Z.length]=a;}}function aC(a){if(typeof af.addEventListener!=aq){af.addEventListener(\"load\",a,false);}else{if(typeof aL.addEventListener!=aq){aL.addEventListener(\"load\",a,false);}else{if(typeof af.attachEvent!=aq){aM(af,\"onload\",a);}else{if(typeof af.onload==\"function\"){var b=af.onload;af.onload=function(){b();a();};}else{af.onload=a;}}}}}function aN(){if(aa){Y();}else{am();}}function Y(){var d=aL.getElementsByTagName(\"body\")[0];var b=ar(aD);b.setAttribute(\"type\",aE);var a=d.appendChild(b);if(a){var c=0;(function(){if(typeof a.GetVariable!=aq){var e=a.GetVariable(\"$version\");if(e){e=e.split(\" \")[1].split(\",\");ah.pv=[parseInt(e[0],10),parseInt(e[1],10),parseInt(e[2],10)];}}else{if(c<10){c++;setTimeout(arguments.callee,10);return;}}d.removeChild(b);a=null;am();})();}else{am();}}function am(){var g=aG.length;if(g>0){for(var h=0;h<g;h++){var c=aG[h].id;var l=aG[h].callbackFn;var a={success:false,id:c};if(ah.pv[0]>0){var i=aS(c);if(i){if(ao(aG[h].swfVersion)&&!(ah.wk&&ah.wk<312)){ay(c,true);if(l){a.success=true;a.ref=av(c);l(a);}}else{if(aG[h].expressInstall&&au()){var e={};e.data=aG[h].expressInstall;e.width=i.getAttribute(\"width\")||\"0\";e.height=i.getAttribute(\"height\")||\"0\";if(i.getAttribute(\"class\")){e.styleclass=i.getAttribute(\"class\");}if(i.getAttribute(\"align\")){e.align=i.getAttribute(\"align\");}var f={};var d=i.getElementsByTagName(\"param\");var k=d.length;for(var j=0;j<k;j++){if(d[j].getAttribute(\"name\").toLowerCase()!=\"movie\"){f[d[j].getAttribute(\"name\")]=d[j].getAttribute(\"value\");}}ae(e,f,c,l);}else{aF(i);if(l){l(a);}}}}}else{ay(c,true);if(l){var b=av(c);if(b&&typeof b.SetVariable!=aq){a.success=true;a.ref=b;}l(a);}}}}}function av(b){var d=null;var c=aS(b);if(c&&c.nodeName==\"OBJECT\"){if(typeof c.SetVariable!=aq){d=c;}else{var a=c.getElementsByTagName(aD)[0];if(a){d=a;}}}return d;}function au(){return !aU&&ao(\"6.0.65\")&&(ah.win||ah.mac)&&!(ah.wk&&ah.wk<312);}function ae(f,d,h,e){aU=true;ap=e||null;at={success:false,id:h};var a=aS(h);if(a){if(a.nodeName==\"OBJECT\"){aJ=aO(a);ad=null;}else{aJ=a;ad=h;}f.id=ac;if(typeof f.width==aq||(!/%$/.test(f.width)&&parseInt(f.width,10)<310)){f.width=\"310\";}if(typeof f.height==aq||(!/%$/.test(f.height)&&parseInt(f.height,10)<137)){f.height=\"137\";}aL.title=aL.title.slice(0,47)+\" - Flash Player Installation\";var b=ah.ie&&ah.win?\"ActiveX\":\"PlugIn\",c=\"MMredirectURL=\"+af.location.toString().replace(/&/g,\"%26\")+\"&MMplayerType=\"+b+\"&MMdoctitle=\"+aL.title;if(typeof d.flashvars!=aq){d.flashvars+=\"&\"+c;}else{d.flashvars=c;}if(ah.ie&&ah.win&&a.readyState!=4){var g=ar(\"div\");h+=\"SWFObjectNew\";g.setAttribute(\"id\",h);a.parentNode.insertBefore(g,a);a.style.display=\"none\";(function(){if(a.readyState==4){a.parentNode.removeChild(a);}else{setTimeout(arguments.callee,10);}})();}aA(f,d,h);}}function aF(a){if(ah.ie&&ah.win&&a.readyState!=4){var b=ar(\"div\");a.parentNode.insertBefore(b,a);b.parentNode.replaceChild(aO(a),b);a.style.display=\"none\";(function(){if(a.readyState==4){a.parentNode.removeChild(a);}else{setTimeout(arguments.callee,10);}})();}else{a.parentNode.replaceChild(aO(a),a);}}function aO(b){var d=ar(\"div\");if(ah.win&&ah.ie){d.innerHTML=b.innerHTML;}else{var e=b.getElementsByTagName(aD)[0];if(e){var a=e.childNodes;if(a){var f=a.length;for(var c=0;c<f;c++){if(!(a[c].nodeType==1&&a[c].nodeName==\"PARAM\")&&!(a[c].nodeType==8)){d.appendChild(a[c].cloneNode(true));}}}}}return d;}function aA(e,g,c){var d,a=aS(c);if(ah.wk&&ah.wk<312){return d;}if(a){if(typeof e.id==aq){e.id=c;}if(ah.ie&&ah.win){var f=\"\";for(var i in e){if(e[i]!=Object.prototype[i]){if(i.toLowerCase()==\"data\"){g.movie=e[i];}else{if(i.toLowerCase()==\"styleclass\"){f+=' class=\"'+e[i]+'\"';}else{if(i.toLowerCase()!=\"classid\"){f+=\" \"+i+'=\"'+e[i]+'\"';}}}}}var h=\"\";for(var j in g){if(g[j]!=Object.prototype[j]){h+='<param name=\"'+j+'\" value=\"'+g[j]+'\" />';}}a.outerHTML='<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"'+f+\">\"+h+\"</object>\";ag[ag.length]=e.id;d=aS(e.id);}else{var b=ar(aD);b.setAttribute(\"type\",aE);for(var k in e){if(e[k]!=Object.prototype[k]){if(k.toLowerCase()==\"styleclass\"){b.setAttribute(\"class\",e[k]);}else{if(k.toLowerCase()!=\"classid\"){b.setAttribute(k,e[k]);}}}}for(var l in g){if(g[l]!=Object.prototype[l]&&l.toLowerCase()!=\"movie\"){aQ(b,l,g[l]);}}a.parentNode.replaceChild(b,a);d=b;}}return d;}function aQ(b,d,c){var a=ar(\"param\");a.setAttribute(\"name\",d);a.setAttribute(\"value\",c);b.appendChild(a);}function aw(a){var b=aS(a);if(b&&b.nodeName==\"OBJECT\"){if(ah.ie&&ah.win){b.style.display=\"none\";(function(){if(b.readyState==4){aT(a);}else{setTimeout(arguments.callee,10);}})();}else{b.parentNode.removeChild(b);}}}function aT(a){var b=aS(a);if(b){for(var c in b){if(typeof b[c]==\"function\"){b[c]=null;}}b.parentNode.removeChild(b);}}function aS(a){var c=null;try{c=aL.getElementById(a);}catch(b){}return c;}function ar(a){return aL.createElement(a);}function aM(a,c,b){a.attachEvent(c,b);al[al.length]=[a,c,b];}function ao(a){var b=ah.pv,c=a.split(\".\");c[0]=parseInt(c[0],10);c[1]=parseInt(c[1],10)||0;c[2]=parseInt(c[2],10)||0;return(b[0]>c[0]||(b[0]==c[0]&&b[1]>c[1])||(b[0]==c[0]&&b[1]==c[1]&&b[2]>=c[2]))?true:false;}function az(b,f,a,c){if(ah.ie&&ah.mac){return;}var e=aL.getElementsByTagName(\"head\")[0];if(!e){return;}var g=(a&&typeof a==\"string\")?a:\"screen\";if(c){aH=null;an=null;}if(!aH||an!=g){var d=ar(\"style\");d.setAttribute(\"type\",\"text/css\");d.setAttribute(\"media\",g);aH=e.appendChild(d);if(ah.ie&&ah.win&&typeof aL.styleSheets!=aq&&aL.styleSheets.length>0){aH=aL.styleSheets[aL.styleSheets.length-1];}an=g;}if(ah.ie&&ah.win){if(aH&&typeof aH.addRule==aD){aH.addRule(b,f);}}else{if(aH&&typeof aL.createTextNode!=aq){aH.appendChild(aL.createTextNode(b+\" {\"+f+\"}\"));}}}function ay(a,c){if(!aI){return;}var b=c?\"visible\":\"hidden\";if(ak&&aS(a)){aS(a).style.visibility=b;}else{az(\"#\"+a,\"visibility:\"+b);}}function ai(b){var a=/[\\\\\\\"<>\\.;]/;var c=a.exec(b)!=null;return c&&typeof encodeURIComponent!=aq?encodeURIComponent(b):b;}var aR=function(){if(ah.ie&&ah.win){window.attachEvent(\"onunload\",function(){var a=al.length;for(var b=0;b<a;b++){al[b][0].detachEvent(al[b][1],al[b][2]);}var d=ag.length;for(var c=0;c<d;c++){aw(ag[c]);}for(var e in ah){ah[e]=null;}ah=null;for(var f in swfobject){swfobject[f]=null;}swfobject=null;});}}();return{registerObject:function(a,e,c,b){if(ah.w3&&a&&e){var d={};d.id=a;d.swfVersion=e;d.expressInstall=c;d.callbackFn=b;aG[aG.length]=d;ay(a,false);}else{if(b){b({success:false,id:a});}}},getObjectById:function(a){if(ah.w3){return av(a);}},embedSWF:function(k,e,h,f,c,a,b,i,g,j){var d={success:false,id:e};if(ah.w3&&!(ah.wk&&ah.wk<312)&&k&&e&&h&&f&&c){ay(e,false);aj(function(){h+=\"\";f+=\"\";var q={};if(g&&typeof g===aD){for(var o in g){q[o]=g[o];}}q.data=k;q.width=h;q.height=f;var n={};if(i&&typeof i===aD){for(var p in i){n[p]=i[p];}}if(b&&typeof b===aD){for(var l in b){if(typeof n.flashvars!=aq){n.flashvars+=\"&\"+l+\"=\"+b[l];}else{n.flashvars=l+\"=\"+b[l];}}}if(ao(c)){var m=aA(q,n,e);if(q.id==e){ay(e,true);}d.success=true;d.ref=m;}else{if(a&&au()){q.data=a;ae(q,n,e,j);return;}else{ay(e,true);}}if(j){j(d);}});}else{if(j){j(d);}}},switchOffAutoHideShow:function(){aI=false;},ua:ah,getFlashPlayerVersion:function(){return{major:ah.pv[0],minor:ah.pv[1],release:ah.pv[2]};},hasFlashPlayerVersion:ao,createSWF:function(a,b,c){if(ah.w3){return aA(a,b,c);}else{return undefined;}},showExpressInstall:function(b,a,d,c){if(ah.w3&&au()){ae(b,a,d,c);}},removeSWF:function(a){if(ah.w3){aw(a);}},createCSS:function(b,a,c,d){if(ah.w3){az(b,a,c,d);}},addDomLoadEvent:aj,addLoadEvent:aC,getQueryParamValue:function(b){var a=aL.location.search||aL.location.hash;if(a){if(/\\?/.test(a)){a=a.split(\"?\")[1];}if(b==null){return ai(a);}var c=a.split(\"&\");for(var d=0;d<c.length;d++){if(c[d].substring(0,c[d].indexOf(\"=\"))==b){return ai(c[d].substring((c[d].indexOf(\"=\")+1)));}}}return\"\";},expressInstallCallback:function(){if(aU){var a=aS(ac);if(a&&aJ){a.parentNode.replaceChild(aJ,a);if(ad){ay(ad,true);if(ah.ie&&ah.win){aJ.style.display=\"block\";}}if(ap){ap(at);}}aU=false;}}};}();var SWFUpload;if(SWFUpload==undefined){SWFUpload=function(b){this.initSWFUpload(b);};}SWFUpload.prototype.initSWFUpload=function(c){try{this.customSettings={};this.settings=c;this.eventQueue=[];this.movieName=\"SWFUpload_\"+SWFUpload.movieCount++;this.movieElement=null;SWFUpload.instances[this.movieName]=this;this.initSettings();this.loadFlash();this.displayDebugInfo();}catch(d){delete SWFUpload.instances[this.movieName];throw d;}};SWFUpload.instances={};SWFUpload.movieCount=0;SWFUpload.version=\"2.2.0 2009-03-25\";SWFUpload.QUEUE_ERROR={QUEUE_LIMIT_EXCEEDED:-100,FILE_EXCEEDS_SIZE_LIMIT:-110,ZERO_BYTE_FILE:-120,INVALID_FILETYPE:-130};SWFUpload.UPLOAD_ERROR={HTTP_ERROR:-200,MISSING_UPLOAD_URL:-210,IO_ERROR:-220,SECURITY_ERROR:-230,UPLOAD_LIMIT_EXCEEDED:-240,UPLOAD_FAILED:-250,SPECIFIED_FILE_ID_NOT_FOUND:-260,FILE_VALIDATION_FAILED:-270,FILE_CANCELLED:-280,UPLOAD_STOPPED:-290};SWFUpload.FILE_STATUS={QUEUED:-1,IN_PROGRESS:-2,ERROR:-3,COMPLETE:-4,CANCELLED:-5};SWFUpload.BUTTON_ACTION={SELECT_FILE:-100,SELECT_FILES:-110,START_UPLOAD:-120};SWFUpload.CURSOR={ARROW:-1,HAND:-2};SWFUpload.WINDOW_MODE={WINDOW:\"window\",TRANSPARENT:\"transparent\",OPAQUE:\"opaque\"};SWFUpload.completeURL=function(e){if(typeof(e)!==\"string\"||e.match(/^https?:\\/\\//i)||e.match(/^\\//)){return e;}var f=window.location.protocol+\"//\"+window.location.hostname+(window.location.port?\":\"+window.location.port:\"\");var d=window.location.pathname.lastIndexOf(\"/\");if(d<=0){path=\"/\";}else{path=window.location.pathname.substr(0,d)+\"/\";}return path+e;};SWFUpload.prototype.initSettings=function(){this.ensureDefault=function(c,d){this.settings[c]=(this.settings[c]==undefined)?d:this.settings[c];};this.ensureDefault(\"upload_url\",\"\");this.ensureDefault(\"preserve_relative_urls\",false);this.ensureDefault(\"file_post_name\",\"Filedata\");this.ensureDefault(\"post_params\",{});this.ensureDefault(\"use_query_string\",false);this.ensureDefault(\"requeue_on_error\",false);this.ensureDefault(\"http_success\",[]);this.ensureDefault(\"assume_success_timeout\",0);this.ensureDefault(\"file_types\",\"*.*\");this.ensureDefault(\"file_types_description\",\"All Files\");this.ensureDefault(\"file_size_limit\",0);this.ensureDefault(\"file_upload_limit\",0);this.ensureDefault(\"file_queue_limit\",0);this.ensureDefault(\"flash_url\",\"swfupload.swf\");this.ensureDefault(\"prevent_swf_caching\",true);this.ensureDefault(\"button_image_url\",\"\");this.ensureDefault(\"button_width\",1);this.ensureDefault(\"button_height\",1);this.ensureDefault(\"button_text\",\"\");this.ensureDefault(\"button_text_style\",\"color: #000000; font-size: 16pt;\");this.ensureDefault(\"button_text_top_padding\",0);this.ensureDefault(\"button_text_left_padding\",0);this.ensureDefault(\"button_action\",SWFUpload.BUTTON_ACTION.SELECT_FILES);this.ensureDefault(\"button_disabled\",false);this.ensureDefault(\"button_placeholder_id\",\"\");this.ensureDefault(\"button_placeholder\",null);this.ensureDefault(\"button_cursor\",SWFUpload.CURSOR.ARROW);this.ensureDefault(\"button_window_mode\",SWFUpload.WINDOW_MODE.WINDOW);this.ensureDefault(\"debug\",false);this.settings.debug_enabled=this.settings.debug;this.settings.return_upload_start_handler=this.returnUploadStart;this.ensureDefault(\"swfupload_loaded_handler\",null);this.ensureDefault(\"file_dialog_start_handler\",null);this.ensureDefault(\"file_queued_handler\",null);this.ensureDefault(\"file_queue_error_handler\",null);this.ensureDefault(\"file_dialog_complete_handler\",null);this.ensureDefault(\"upload_start_handler\",null);this.ensureDefault(\"upload_progress_handler\",null);this.ensureDefault(\"upload_error_handler\",null);this.ensureDefault(\"upload_success_handler\",null);this.ensureDefault(\"upload_complete_handler\",null);this.ensureDefault(\"debug_handler\",this.debugMessage);this.ensureDefault(\"custom_settings\",{});this.customSettings=this.settings.custom_settings;if(!!this.settings.prevent_swf_caching){this.settings.flash_url=this.settings.flash_url+(this.settings.flash_url.indexOf(\"?\")<0?\"?\":\"&\")+\"preventswfcaching=\"+new Date().getTime();}if(!this.settings.preserve_relative_urls){this.settings.upload_url=SWFUpload.completeURL(this.settings.upload_url);this.settings.button_image_url=SWFUpload.completeURL(this.settings.button_image_url);}delete this.ensureDefault;};SWFUpload.prototype.loadFlash=function(){var d,c;if(document.getElementById(this.movieName)!==null){throw\"ID \"+this.movieName+\" is already in use. The Flash Object could not be added\";}d=document.getElementById(this.settings.button_placeholder_id)||this.settings.button_placeholder;if(d==undefined){throw\"Could not find the placeholder element: \"+this.settings.button_placeholder_id;}c=document.createElement(\"div\");c.innerHTML=this.getFlashHTML();d.parentNode.replaceChild(c.firstChild,d);if(window[this.movieName]==undefined){window[this.movieName]=this.getMovieElement();}};SWFUpload.prototype.getFlashHTML=function(){return['<object id=\"',this.movieName,'\" type=\"application/x-shockwave-flash\" data=\"',this.settings.flash_url,'\" width=\"',this.settings.button_width,'\" height=\"',this.settings.button_height,'\" class=\"swfupload\">','<param name=\"wmode\" value=\"',this.settings.button_window_mode,'\" />','<param name=\"movie\" value=\"',this.settings.flash_url,'\" />','<param name=\"quality\" value=\"high\" />','<param name=\"menu\" value=\"false\" />','<param name=\"allowScriptAccess\" value=\"always\" />','<param name=\"flashvars\" value=\"'+this.getFlashVars()+'\" />',\"</object>\"].join(\"\");};SWFUpload.prototype.getFlashVars=function(){var c=this.buildParamString();var d=this.settings.http_success.join(\",\");return[\"movieName=\",encodeURIComponent(this.movieName),\"&amp;uploadURL=\",encodeURIComponent(this.settings.upload_url),\"&amp;useQueryString=\",encodeURIComponent(this.settings.use_query_string),\"&amp;requeueOnError=\",encodeURIComponent(this.settings.requeue_on_error),\"&amp;httpSuccess=\",encodeURIComponent(d),\"&amp;assumeSuccessTimeout=\",encodeURIComponent(this.settings.assume_success_timeout),\"&amp;params=\",encodeURIComponent(c),\"&amp;filePostName=\",encodeURIComponent(this.settings.file_post_name),\"&amp;fileTypes=\",encodeURIComponent(this.settings.file_types),\"&amp;fileTypesDescription=\",encodeURIComponent(this.settings.file_types_description),\"&amp;fileSizeLimit=\",encodeURIComponent(this.settings.file_size_limit),\"&amp;fileUploadLimit=\",encodeURIComponent(this.settings.file_upload_limit),\"&amp;fileQueueLimit=\",encodeURIComponent(this.settings.file_queue_limit),\"&amp;debugEnabled=\",encodeURIComponent(this.settings.debug_enabled),\"&amp;buttonImageURL=\",encodeURIComponent(this.settings.button_image_url),\"&amp;buttonWidth=\",encodeURIComponent(this.settings.button_width),\"&amp;buttonHeight=\",encodeURIComponent(this.settings.button_height),\"&amp;buttonText=\",encodeURIComponent(this.settings.button_text),\"&amp;buttonTextTopPadding=\",encodeURIComponent(this.settings.button_text_top_padding),\"&amp;buttonTextLeftPadding=\",encodeURIComponent(this.settings.button_text_left_padding),\"&amp;buttonTextStyle=\",encodeURIComponent(this.settings.button_text_style),\"&amp;buttonAction=\",encodeURIComponent(this.settings.button_action),\"&amp;buttonDisabled=\",encodeURIComponent(this.settings.button_disabled),\"&amp;buttonCursor=\",encodeURIComponent(this.settings.button_cursor)].join(\"\");};SWFUpload.prototype.getMovieElement=function(){if(this.movieElement==undefined){this.movieElement=document.getElementById(this.movieName);}if(this.movieElement===null){throw\"Could not find Flash element\";}return this.movieElement;};SWFUpload.prototype.buildParamString=function(){var f=this.settings.post_params;var d=[];if(typeof(f)===\"object\"){for(var e in f){if(f.hasOwnProperty(e)){d.push(encodeURIComponent(e.toString())+\"=\"+encodeURIComponent(f[e].toString()));}}}return d.join(\"&amp;\");};SWFUpload.prototype.destroy=function(){try{this.cancelUpload(null,false);var g=null;g=this.getMovieElement();if(g&&typeof(g.CallFunction)===\"unknown\"){for(var j in g){try{if(typeof(g[j])===\"function\"){g[j]=null;}}catch(h){}}try{g.parentNode.removeChild(g);}catch(f){}}window[this.movieName]=null;SWFUpload.instances[this.movieName]=null;delete SWFUpload.instances[this.movieName];this.movieElement=null;this.settings=null;this.customSettings=null;this.eventQueue=null;this.movieName=null;return true;}catch(i){return false;}};SWFUpload.prototype.displayDebugInfo=function(){this.debug([\"---SWFUpload Instance Info---\\n\",\"Version: \",SWFUpload.version,\"\\n\",\"Movie Name: \",this.movieName,\"\\n\",\"Settings:\\n\",\"\\t\",\"upload_url:               \",this.settings.upload_url,\"\\n\",\"\\t\",\"flash_url:                \",this.settings.flash_url,\"\\n\",\"\\t\",\"use_query_string:         \",this.settings.use_query_string.toString(),\"\\n\",\"\\t\",\"requeue_on_error:         \",this.settings.requeue_on_error.toString(),\"\\n\",\"\\t\",\"http_success:             \",this.settings.http_success.join(\", \"),\"\\n\",\"\\t\",\"assume_success_timeout:   \",this.settings.assume_success_timeout,\"\\n\",\"\\t\",\"file_post_name:           \",this.settings.file_post_name,\"\\n\",\"\\t\",\"post_params:              \",this.settings.post_params.toString(),\"\\n\",\"\\t\",\"file_types:               \",this.settings.file_types,\"\\n\",\"\\t\",\"file_types_description:   \",this.settings.file_types_description,\"\\n\",\"\\t\",\"file_size_limit:          \",this.settings.file_size_limit,\"\\n\",\"\\t\",\"file_upload_limit:        \",this.settings.file_upload_limit,\"\\n\",\"\\t\",\"file_queue_limit:         \",this.settings.file_queue_limit,\"\\n\",\"\\t\",\"debug:                    \",this.settings.debug.toString(),\"\\n\",\"\\t\",\"prevent_swf_caching:      \",this.settings.prevent_swf_caching.toString(),\"\\n\",\"\\t\",\"button_placeholder_id:    \",this.settings.button_placeholder_id.toString(),\"\\n\",\"\\t\",\"button_placeholder:       \",(this.settings.button_placeholder?\"Set\":\"Not Set\"),\"\\n\",\"\\t\",\"button_image_url:         \",this.settings.button_image_url.toString(),\"\\n\",\"\\t\",\"button_width:             \",this.settings.button_width.toString(),\"\\n\",\"\\t\",\"button_height:            \",this.settings.button_height.toString(),\"\\n\",\"\\t\",\"button_text:              \",this.settings.button_text.toString(),\"\\n\",\"\\t\",\"button_text_style:        \",this.settings.button_text_style.toString(),\"\\n\",\"\\t\",\"button_text_top_padding:  \",this.settings.button_text_top_padding.toString(),\"\\n\",\"\\t\",\"button_text_left_padding: \",this.settings.button_text_left_padding.toString(),\"\\n\",\"\\t\",\"button_action:            \",this.settings.button_action.toString(),\"\\n\",\"\\t\",\"button_disabled:          \",this.settings.button_disabled.toString(),\"\\n\",\"\\t\",\"custom_settings:          \",this.settings.custom_settings.toString(),\"\\n\",\"Event Handlers:\\n\",\"\\t\",\"swfupload_loaded_handler assigned:  \",(typeof this.settings.swfupload_loaded_handler===\"function\").toString(),\"\\n\",\"\\t\",\"file_dialog_start_handler assigned: \",(typeof this.settings.file_dialog_start_handler===\"function\").toString(),\"\\n\",\"\\t\",\"file_queued_handler assigned:       \",(typeof this.settings.file_queued_handler===\"function\").toString(),\"\\n\",\"\\t\",\"file_queue_error_handler assigned:  \",(typeof this.settings.file_queue_error_handler===\"function\").toString(),\"\\n\",\"\\t\",\"upload_start_handler assigned:      \",(typeof this.settings.upload_start_handler===\"function\").toString(),\"\\n\",\"\\t\",\"upload_progress_handler assigned:   \",(typeof this.settings.upload_progress_handler===\"function\").toString(),\"\\n\",\"\\t\",\"upload_error_handler assigned:      \",(typeof this.settings.upload_error_handler===\"function\").toString(),\"\\n\",\"\\t\",\"upload_success_handler assigned:    \",(typeof this.settings.upload_success_handler===\"function\").toString(),\"\\n\",\"\\t\",\"upload_complete_handler assigned:   \",(typeof this.settings.upload_complete_handler===\"function\").toString(),\"\\n\",\"\\t\",\"debug_handler assigned:             \",(typeof this.settings.debug_handler===\"function\").toString(),\"\\n\"].join(\"\"));};SWFUpload.prototype.addSetting=function(d,f,e){if(f==undefined){return(this.settings[d]=e);}else{return(this.settings[d]=f);}};SWFUpload.prototype.getSetting=function(b){if(this.settings[b]!=undefined){return this.settings[b];}return\"\";};SWFUpload.prototype.callFlash=function(functionName,argumentArray){argumentArray=argumentArray||[];var movieElement=this.getMovieElement();var returnValue,returnString;try{returnString=movieElement.CallFunction('<invoke name=\"'+functionName+'\" returntype=\"javascript\">'+__flash__argumentsToXML(argumentArray,0)+\"</invoke>\");returnValue=eval(returnString);}catch(ex){throw\"Call to \"+functionName+\" failed\";}if(returnValue!=undefined&&typeof returnValue.post===\"object\"){returnValue=this.unescapeFilePostParams(returnValue);}return returnValue;};SWFUpload.prototype.selectFile=function(){this.callFlash(\"SelectFile\");};SWFUpload.prototype.selectFiles=function(){this.callFlash(\"SelectFiles\");};SWFUpload.prototype.startUpload=function(b){this.callFlash(\"StartUpload\",[b]);};SWFUpload.prototype.cancelUpload=function(d,c){if(c!==false){c=true;}this.callFlash(\"CancelUpload\",[d,c]);};SWFUpload.prototype.stopUpload=function(){this.callFlash(\"StopUpload\");};SWFUpload.prototype.getStats=function(){return this.callFlash(\"GetStats\");};SWFUpload.prototype.setStats=function(b){this.callFlash(\"SetStats\",[b]);};SWFUpload.prototype.getFile=function(b){if(typeof(b)===\"number\"){return this.callFlash(\"GetFileByIndex\",[b]);}else{return this.callFlash(\"GetFile\",[b]);}};SWFUpload.prototype.addFileParam=function(e,d,f){return this.callFlash(\"AddFileParam\",[e,d,f]);};SWFUpload.prototype.removeFileParam=function(d,c){this.callFlash(\"RemoveFileParam\",[d,c]);};SWFUpload.prototype.setUploadURL=function(b){this.settings.upload_url=b.toString();this.callFlash(\"SetUploadURL\",[b]);};SWFUpload.prototype.setPostParams=function(b){this.settings.post_params=b;this.callFlash(\"SetPostParams\",[b]);};SWFUpload.prototype.addPostParam=function(d,c){this.settings.post_params[d]=c;this.callFlash(\"SetPostParams\",[this.settings.post_params]);};SWFUpload.prototype.removePostParam=function(b){delete this.settings.post_params[b];this.callFlash(\"SetPostParams\",[this.settings.post_params]);};SWFUpload.prototype.setFileTypes=function(d,c){this.settings.file_types=d;this.settings.file_types_description=c;this.callFlash(\"SetFileTypes\",[d,c]);};SWFUpload.prototype.setFileSizeLimit=function(b){this.settings.file_size_limit=b;this.callFlash(\"SetFileSizeLimit\",[b]);};SWFUpload.prototype.setFileUploadLimit=function(b){this.settings.file_upload_limit=b;this.callFlash(\"SetFileUploadLimit\",[b]);};SWFUpload.prototype.setFileQueueLimit=function(b){this.settings.file_queue_limit=b;this.callFlash(\"SetFileQueueLimit\",[b]);};SWFUpload.prototype.setFilePostName=function(b){this.settings.file_post_name=b;this.callFlash(\"SetFilePostName\",[b]);};SWFUpload.prototype.setUseQueryString=function(b){this.settings.use_query_string=b;this.callFlash(\"SetUseQueryString\",[b]);};SWFUpload.prototype.setRequeueOnError=function(b){this.settings.requeue_on_error=b;this.callFlash(\"SetRequeueOnError\",[b]);};SWFUpload.prototype.setHTTPSuccess=function(b){if(typeof b===\"string\"){b=b.replace(\" \",\"\").split(\",\");}this.settings.http_success=b;this.callFlash(\"SetHTTPSuccess\",[b]);};SWFUpload.prototype.setAssumeSuccessTimeout=function(b){this.settings.assume_success_timeout=b;this.callFlash(\"SetAssumeSuccessTimeout\",[b]);};SWFUpload.prototype.setDebugEnabled=function(b){this.settings.debug_enabled=b;this.callFlash(\"SetDebugEnabled\",[b]);};SWFUpload.prototype.setButtonImageURL=function(b){if(b==undefined){b=\"\";}this.settings.button_image_url=b;this.callFlash(\"SetButtonImageURL\",[b]);};SWFUpload.prototype.setButtonDimensions=function(f,e){this.settings.button_width=f;this.settings.button_height=e;var d=this.getMovieElement();if(d!=undefined){d.style.width=f+\"px\";d.style.height=e+\"px\";}this.callFlash(\"SetButtonDimensions\",[f,e]);};SWFUpload.prototype.setButtonText=function(b){this.settings.button_text=b;this.callFlash(\"SetButtonText\",[b]);};SWFUpload.prototype.setButtonTextPadding=function(c,d){this.settings.button_text_top_padding=d;this.settings.button_text_left_padding=c;this.callFlash(\"SetButtonTextPadding\",[c,d]);};SWFUpload.prototype.setButtonTextStyle=function(b){this.settings.button_text_style=b;this.callFlash(\"SetButtonTextStyle\",[b]);};SWFUpload.prototype.setButtonDisabled=function(b){this.settings.button_disabled=b;this.callFlash(\"SetButtonDisabled\",[b]);};SWFUpload.prototype.setButtonAction=function(b){this.settings.button_action=b;this.callFlash(\"SetButtonAction\",[b]);};SWFUpload.prototype.setButtonCursor=function(b){this.settings.button_cursor=b;this.callFlash(\"SetButtonCursor\",[b]);};SWFUpload.prototype.queueEvent=function(d,f){if(f==undefined){f=[];}else{if(!(f instanceof Array)){f=[f];}}var e=this;if(typeof this.settings[d]===\"function\"){this.eventQueue.push(function(){this.settings[d].apply(this,f);});setTimeout(function(){e.executeNextEvent();},0);}else{if(this.settings[d]!==null){throw\"Event handler \"+d+\" is unknown or is not a function\";}}};SWFUpload.prototype.executeNextEvent=function(){var b=this.eventQueue?this.eventQueue.shift():null;if(typeof(b)===\"function\"){b.apply(this);}};SWFUpload.prototype.unescapeFilePostParams=function(l){var j=/[$]([0-9a-f]{4})/i;var i={};var k;if(l!=undefined){for(var h in l.post){if(l.post.hasOwnProperty(h)){k=h;var g;while((g=j.exec(k))!==null){k=k.replace(g[0],String.fromCharCode(parseInt(\"0x\"+g[1],16)));}i[k]=l.post[h];}}l.post=i;}return l;};SWFUpload.prototype.testExternalInterface=function(){try{return this.callFlash(\"TestExternalInterface\");}catch(b){return false;}};SWFUpload.prototype.flashReady=function(){var b=this.getMovieElement();if(!b){this.debug(\"Flash called back ready but the flash movie can't be found.\");return;}this.cleanUp(b);this.queueEvent(\"swfupload_loaded_handler\");};SWFUpload.prototype.cleanUp=function(f){try{if(this.movieElement&&typeof(f.CallFunction)===\"unknown\"){this.debug(\"Removing Flash functions hooks (this should only run in IE and should prevent memory leaks)\");for(var h in f){try{if(typeof(f[h])===\"function\"){f[h]=null;}}catch(e){}}}}catch(g){}window.__flash__removeCallback=function(c,b){try{if(c){c[b]=null;}}catch(a){}};};SWFUpload.prototype.fileDialogStart=function(){this.queueEvent(\"file_dialog_start_handler\");};SWFUpload.prototype.fileQueued=function(b){b=this.unescapeFilePostParams(b);this.queueEvent(\"file_queued_handler\",b);};SWFUpload.prototype.fileQueueError=function(e,f,d){e=this.unescapeFilePostParams(e);this.queueEvent(\"file_queue_error_handler\",[e,f,d]);};SWFUpload.prototype.fileDialogComplete=function(d,f,e){this.queueEvent(\"file_dialog_complete_handler\",[d,f,e]);};SWFUpload.prototype.uploadStart=function(b){b=this.unescapeFilePostParams(b);this.queueEvent(\"return_upload_start_handler\",b);};SWFUpload.prototype.returnUploadStart=function(d){var c;if(typeof this.settings.upload_start_handler===\"function\"){d=this.unescapeFilePostParams(d);c=this.settings.upload_start_handler.call(this,d);}else{if(this.settings.upload_start_handler!=undefined){throw\"upload_start_handler must be a function\";}}if(c===undefined){c=true;}c=!!c;this.callFlash(\"ReturnUploadStart\",[c]);};SWFUpload.prototype.uploadProgress=function(e,f,d){e=this.unescapeFilePostParams(e);this.queueEvent(\"upload_progress_handler\",[e,f,d]);};SWFUpload.prototype.uploadError=function(e,f,d){e=this.unescapeFilePostParams(e);this.queueEvent(\"upload_error_handler\",[e,f,d]);};SWFUpload.prototype.uploadSuccess=function(d,e,f){d=this.unescapeFilePostParams(d);this.queueEvent(\"upload_success_handler\",[d,e,f]);};SWFUpload.prototype.uploadComplete=function(b){b=this.unescapeFilePostParams(b);this.queueEvent(\"upload_complete_handler\",b);};SWFUpload.prototype.debug=function(b){this.queueEvent(\"debug_handler\",b);};SWFUpload.prototype.debugMessage=function(h){if(this.settings.debug){var f,g=[];if(typeof h===\"object\"&&typeof h.name===\"string\"&&typeof h.message===\"string\"){for(var e in h){if(h.hasOwnProperty(e)){g.push(e+\": \"+h[e]);}}f=g.join(\"\\n\")||\"\";g=f.split(\"\\n\");f=\"EXCEPTION: \"+g.join(\"\\nEXCEPTION: \");SWFUpload.Console.writeLine(f);}else{SWFUpload.Console.writeLine(h);}}};SWFUpload.Console={};SWFUpload.Console.writeLine=function(g){var e,f;try{e=document.getElementById(\"SWFUpload_Console\");if(!e){f=document.createElement(\"form\");document.getElementsByTagName(\"body\")[0].appendChild(f);e=document.createElement(\"textarea\");e.id=\"SWFUpload_Console\";e.style.fontFamily=\"monospace\";e.setAttribute(\"wrap\",\"off\");e.wrap=\"off\";e.style.overflow=\"auto\";e.style.width=\"700px\";e.style.height=\"350px\";e.style.margin=\"5px\";f.appendChild(e);}e.value+=g+\"\\n\";e.scrollTop=e.scrollHeight-e.clientHeight;}catch(h){alert(\"Exception: \"+h.name+\" Message: \"+h.message);}};(function(c){var b={init:function(d,e){return this.each(function(){var n=c(this);var m=n.clone();var j=c.extend({id:n.attr(\"id\"),swf:\"uploadify.swf\",uploader:\"uploadify.php\",auto:true,buttonClass:\"\",buttonCursor:\"hand\",buttonImage:null,buttonText:\"SELECT FILES\",checkExisting:false,debug:false,fileObjName:\"Filedata\",fileSizeLimit:0,fileTypeDesc:\"All Files\",fileTypeExts:\"*.*\",height:30,method:\"post\",multi:true,formData:{},preventCaching:true,progressData:\"percentage\",queueID:false,queueSizeLimit:999,removeCompleted:true,removeTimeout:3,requeueErrors:false,successTimeout:30,uploadLimit:0,width:120,overrideEvents:[]},d);var g={assume_success_timeout:j.successTimeout,button_placeholder_id:j.id,button_width:j.width,button_height:j.height,button_text:null,button_text_style:null,button_text_top_padding:0,button_text_left_padding:0,button_action:(j.multi?SWFUpload.BUTTON_ACTION.SELECT_FILES:SWFUpload.BUTTON_ACTION.SELECT_FILE),button_disabled:false,button_cursor:(j.buttonCursor==\"arrow\"?SWFUpload.CURSOR.ARROW:SWFUpload.CURSOR.HAND),button_window_mode:SWFUpload.WINDOW_MODE.TRANSPARENT,debug:j.debug,requeue_on_error:j.requeueErrors,file_post_name:j.fileObjName,file_size_limit:j.fileSizeLimit,file_types:j.fileTypeExts,file_types_description:j.fileTypeDesc,file_queue_limit:j.queueSizeLimit,file_upload_limit:j.uploadLimit,flash_url:j.swf,prevent_swf_caching:j.preventCaching,post_params:j.formData,upload_url:j.uploader,use_query_string:(j.method==\"get\"),file_dialog_complete_handler:a.onDialogClose,file_dialog_start_handler:a.onDialogOpen,file_queued_handler:a.onSelect,file_queue_error_handler:a.onSelectError,swfupload_loaded_handler:j.onSWFReady,upload_complete_handler:a.onUploadComplete,upload_error_handler:a.onUploadError,upload_progress_handler:a.onUploadProgress,upload_start_handler:a.onUploadStart,upload_success_handler:a.onUploadSuccess};if(e){g=c.extend(g,e);}g=c.extend(g,j);var o=swfobject.getFlashPlayerVersion();var h=(o.major>=9);if(h){window[\"uploadify_\"+j.id]=new SWFUpload(g);var i=window[\"uploadify_\"+j.id];n.data(\"uploadify\",i);var l=c(\"<div />\",{id:j.id,\"class\":\"uploadify\",css:{height:j.height+\"px\",width:j.width+\"px\"}});c(\"#\"+i.movieName).wrap(l);l=c(\"#\"+j.id);l.data(\"uploadify\",i);var f=c(\"<div />\",{id:j.id+\"-button\",\"class\":\"uploadify-button \"+j.buttonClass});if(j.buttonImage){f.css({\"background-image\":\"url('\"+j.buttonImage+\"')\",\"text-indent\":\"-9999px\"});}f.html('<span class=\"uploadify-button-text\">'+j.buttonText+\"</span>\").css({height:j.height+\"px\",\"line-height\":j.height+\"px\",width:j.width+\"px\"});l.append(f);c(\"#\"+i.movieName).css({position:\"absolute\",\"z-index\":1});if(!j.queueID){var k=c(\"<div />\",{id:j.id+\"-queue\",\"class\":\"uploadify-queue\"});l.after(k);i.settings.queueID=j.id+\"-queue\";i.settings.defaultQueue=true;}i.queueData={files:{},filesSelected:0,filesQueued:0,filesReplaced:0,filesCancelled:0,filesErrored:0,uploadsSuccessful:0,uploadsErrored:0,averageSpeed:0,queueLength:0,queueSize:0,uploadSize:0,queueBytesUploaded:0,uploadQueue:[],errorMsg:\"Some files were not added to the queue:\"};i.original=m;i.wrapper=l;i.button=f;i.queue=k;if(j.onInit){j.onInit.call(n,i);}}else{if(j.onFallback){j.onFallback.call(n);}}});},cancel:function(d,f){var e=arguments;this.each(function(){var l=c(this),i=l.data(\"uploadify\"),j=i.settings,h=-1;if(e[0]){if(e[0]==\"*\"){var g=i.queueData.queueLength;c(\"#\"+j.queueID).find(\".uploadify-queue-item\").each(function(){h++;if(e[1]===true){i.cancelUpload(c(this).attr(\"id\"),false);}else{i.cancelUpload(c(this).attr(\"id\"));}c(this).find(\".data\").removeClass(\"data\").html(\" - Cancelled\");c(this).find(\".uploadify-progress-bar\").remove();c(this).delay(1000+100*h).fadeOut(500,function(){c(this).remove();});});i.queueData.queueSize=0;i.queueData.queueLength=0;if(j.onClearQueue){j.onClearQueue.call(l,g);}}else{for(var m=0;m<e.length;m++){i.cancelUpload(e[m]);c(\"#\"+e[m]).find(\".data\").removeClass(\"data\").html(\" - Cancelled\");c(\"#\"+e[m]).find(\".uploadify-progress-bar\").remove();c(\"#\"+e[m]).delay(1000+100*m).fadeOut(500,function(){c(this).remove();});}}}else{var k=c(\"#\"+j.queueID).find(\".uploadify-queue-item\").get(0);$item=c(k);i.cancelUpload($item.attr(\"id\"));$item.find(\".data\").removeClass(\"data\").html(\" - Cancelled\");$item.find(\".uploadify-progress-bar\").remove();$item.delay(1000).fadeOut(500,function(){c(this).remove();});}});},destroy:function(){this.each(function(){var f=c(this),d=f.data(\"uploadify\"),e=d.settings;d.destroy();if(e.defaultQueue){c(\"#\"+e.queueID).remove();}c(\"#\"+e.id).replaceWith(d.original);if(e.onDestroy){e.onDestroy.call(this);}delete d;});},disable:function(d){this.each(function(){var g=c(this),e=g.data(\"uploadify\"),f=e.settings;if(d){e.button.addClass(\"disabled\");if(f.onDisable){f.onDisable.call(this);}}else{e.button.removeClass(\"disabled\");if(f.onEnable){f.onEnable.call(this);}}e.setButtonDisabled(d);});},settings:function(e,g,h){var d=arguments;var f=g;this.each(function(){var k=c(this),i=k.data(\"uploadify\"),j=i.settings;if(typeof(d[0])==\"object\"){for(var l in g){setData(l,g[l]);}}if(d.length===1){f=j[e];}else{switch(e){case\"uploader\":i.setUploadURL(g);break;case\"formData\":if(!h){g=c.extend(j.formData,g);}i.setPostParams(j.formData);break;case\"method\":if(g==\"get\"){i.setUseQueryString(true);}else{i.setUseQueryString(false);}break;case\"fileObjName\":i.setFilePostName(g);break;case\"fileTypeExts\":i.setFileTypes(g,j.fileTypeDesc);break;case\"fileTypeDesc\":i.setFileTypes(j.fileTypeExts,g);break;case\"fileSizeLimit\":i.setFileSizeLimit(g);break;case\"uploadLimit\":i.setFileUploadLimit(g);break;case\"queueSizeLimit\":i.setFileQueueLimit(g);break;case\"buttonImage\":i.button.css(\"background-image\",settingValue);break;case\"buttonCursor\":if(g==\"arrow\"){i.setButtonCursor(SWFUpload.CURSOR.ARROW);}else{i.setButtonCursor(SWFUpload.CURSOR.HAND);}break;case\"buttonText\":c(\"#\"+j.id+\"-button\").find(\".uploadify-button-text\").html(g);break;case\"width\":i.setButtonDimensions(g,j.height);break;case\"height\":i.setButtonDimensions(j.width,g);break;case\"multi\":if(g){i.setButtonAction(SWFUpload.BUTTON_ACTION.SELECT_FILES);}else{i.setButtonAction(SWFUpload.BUTTON_ACTION.SELECT_FILE);}break;}j[e]=g;}});if(d.length===1){return f;}},stop:function(){this.each(function(){var e=c(this),d=e.data(\"uploadify\");d.queueData.averageSpeed=0;d.queueData.uploadSize=0;d.queueData.bytesUploaded=0;d.queueData.uploadQueue=[];d.stopUpload();});},upload:function(){var d=arguments;this.each(function(){var f=c(this),e=f.data(\"uploadify\");e.queueData.averageSpeed=0;e.queueData.uploadSize=0;e.queueData.bytesUploaded=0;e.queueData.uploadQueue=[];if(d[0]){if(d[0]==\"*\"){e.queueData.uploadSize=e.queueData.queueSize;e.queueData.uploadQueue.push(\"*\");e.startUpload();}else{for(var g=0;g<d.length;g++){e.queueData.uploadSize+=e.queueData.files[d[g]].size;e.queueData.uploadQueue.push(d[g]);}e.startUpload(e.queueData.uploadQueue.shift());}}else{e.startUpload();}});}};var a={onDialogOpen:function(){var d=this.settings;this.queueData.errorMsg=\"Some files were not added to the queue:\";this.queueData.filesReplaced=0;this.queueData.filesCancelled=0;if(d.onDialogOpen){d.onDialogOpen.call(this);}},onDialogClose:function(d,f,g){var e=this.settings;this.queueData.filesErrored=d-f;this.queueData.filesSelected=d;this.queueData.filesQueued=f-this.queueData.filesCancelled;this.queueData.queueLength=g;if(c.inArray(\"onDialogClose\",e.overrideEvents)<0){if(this.queueData.filesErrored>0){alert(this.queueData.errorMsg);}}if(e.onDialogClose){e.onDialogClose.call(this,this.queueData);}if(e.auto){c(\"#\"+e.id).uploadify(\"upload\",\"*\");}},onSelect:function(g){var h=this.settings;var e={};for(var f in this.queueData.files){e=this.queueData.files[f];if(e.uploaded!=true&&e.name==g.name){var d=confirm('The file named \"'+g.name+'\" is already in the queue.\\nDo you want to replace the existing item in the queue?');if(!d){this.cancelUpload(g.id);this.queueData.filesCancelled++;return false;}else{c(\"#\"+e.id).remove();this.cancelUpload(e.id);this.queueData.filesReplaced++;}}}var i=Math.round(g.size/1024);var l=\"KB\";if(i>1000){i=Math.round(i/1000);l=\"MB\";}var k=i.toString().split(\".\");i=k[0];if(k.length>1){i+=\".\"+k[1].substr(0,2);}i+=l;var j=g.name;if(j.length>25){j=j.substr(0,25)+\"...\";}if(c.inArray(\"onSelect\",h.overrideEvents)<0){c(\"#\"+h.queueID).append('<div id=\"'+g.id+'\" class=\"uploadify-queue-item\">					<div class=\"cancel\">						<a href=\"javascript:$(\\'#'+h.id+\"').uploadify('cancel', '\"+g.id+'\\')\">X</a>					</div>					<span class=\"fileName\">'+j+\" (\"+i+')</span><span class=\"data\"></span>					<div class=\"uploadify-progress\">						<div class=\"uploadify-progress-bar\"><!--Progress Bar--></div>					</div>				</div>');}this.queueData.queueSize+=g.size;this.queueData.files[g.id]=g;if(h.onSelect){h.onSelect.apply(this,arguments);}},onSelectError:function(d,g,f){var e=this.settings;if(c.inArray(\"onSelectError\",e.overrideEvents)<0){switch(g){case SWFUpload.QUEUE_ERROR.QUEUE_LIMIT_EXCEEDED:if(e.queueSizeLimit>f){this.queueData.errorMsg+=\"\\nThe number of files selected exceeds the remaining upload limit (\"+f+\").\";}else{this.queueData.errorMsg+=\"\\nThe number of files selected exceeds the queue size limit (\"+e.queueSizeLimit+\").\";}break;case SWFUpload.QUEUE_ERROR.FILE_EXCEEDS_SIZE_LIMIT:this.queueData.errorMsg+='\\nThe file \"'+d.name+'\" exceeds the size limit ('+e.fileSizeLimit+\").\";break;case SWFUpload.QUEUE_ERROR.ZERO_BYTE_FILE:this.queueData.errorMsg+='\\nThe file \"'+d.name+'\" is empty.';break;case SWFUpload.QUEUE_ERROR.FILE_EXCEEDS_SIZE_LIMIT:this.queueData.errorMsg+='\\nThe file \"'+d.name+'\" is not an accepted file type ('+e.fileTypeDesc+\").\";break;}}if(g!=SWFUpload.QUEUE_ERROR.QUEUE_LIMIT_EXCEEDED){delete this.queueData.files[d.id];}if(e.onSelectError){e.onSelectError.apply(this,arguments);}},onQueueComplete:function(){if(this.settings.onQueueComplete){this.settings.onQueueComplete.call(this,this.settings.queueData);}},onUploadComplete:function(f){var g=this.settings,d=this;var e=this.getStats();this.queueData.queueLength=e.files_queued;if(this.queueData.uploadQueue[0]==\"*\"){if(this.queueData.queueLength>0){this.startUpload();}else{this.queueData.uploadQueue=[];if(g.onQueueComplete){g.onQueueComplete.call(this,this.queueData);}}}else{if(this.queueData.uploadQueue.length>0){this.startUpload(this.queueData.uploadQueue.shift());}else{this.queueData.uploadQueue=[];if(g.onQueueComplete){g.onQueueComplete.call(this,this.queueData);}}}if(c.inArray(\"onUploadComplete\",g.overrideEvents)<0){if(g.removeCompleted){switch(f.filestatus){case SWFUpload.FILE_STATUS.COMPLETE:setTimeout(function(){if(c(\"#\"+f.id)){d.queueData.queueSize-=f.size;d.queueData.queueLength-=1;delete d.queueData.files[f.id];c(\"#\"+f.id).fadeOut(500,function(){c(this).remove();});}},g.removeTimeout*1000);break;case SWFUpload.FILE_STATUS.ERROR:if(!g.requeueErrors){setTimeout(function(){if(c(\"#\"+f.id)){d.queueData.queueSize-=f.size;d.queueData.queueLength-=1;delete d.queueData.files[f.id];c(\"#\"+f.id).fadeOut(500,function(){c(this).remove();});}},g.removeTimeout*1000);}break;}}else{f.uploaded=true;}}if(g.onUploadComplete){g.onUploadComplete.call(this,f);}},onUploadError:function(e,i,h){var f=this.settings;var g=\"Error\";switch(i){case SWFUpload.UPLOAD_ERROR.HTTP_ERROR:g=\"HTTP Error (\"+h+\")\";break;case SWFUpload.UPLOAD_ERROR.MISSING_UPLOAD_URL:g=\"Missing Upload URL\";break;case SWFUpload.UPLOAD_ERROR.IO_ERROR:g=\"IO Error\";break;case SWFUpload.UPLOAD_ERROR.SECURITY_ERROR:g=\"Security Error\";break;case SWFUpload.UPLOAD_ERROR.UPLOAD_LIMIT_EXCEEDED:alert(\"The upload limit has been reached (\"+h+\").\");g=\"Exceeds Upload Limit\";break;case SWFUpload.UPLOAD_ERROR.UPLOAD_FAILED:g=\"Failed\";break;case SWFUpload.UPLOAD_ERROR.SPECIFIED_FILE_ID_NOT_FOUND:break;case SWFUpload.UPLOAD_ERROR.FILE_VALIDATION_FAILED:g=\"Validation Error\";break;case SWFUpload.UPLOAD_ERROR.FILE_CANCELLED:g=\"Cancelled\";this.queueData.queueSize-=e.size;this.queueData.queueLength-=1;if(e.status==SWFUpload.FILE_STATUS.IN_PROGRESS||c.inArray(e.id,this.queueData.uploadQueue)>=0){this.queueData.uploadSize-=e.size;}if(f.onCancel){f.onCancel.call(this,e);}delete this.queueData.files[e.id];break;case SWFUpload.UPLOAD_ERROR.UPLOAD_STOPPED:g=\"Stopped\";break;}if(c.inArray(\"onUploadError\",f.overrideEvents)<0){if(i!=SWFUpload.UPLOAD_ERROR.FILE_CANCELLED&&i!=SWFUpload.UPLOAD_ERROR.UPLOAD_STOPPED){c(\"#\"+e.id).addClass(\"uploadify-error\");}c(\"#\"+e.id).find(\".uploadify-progress-bar\").css(\"width\",\"1px\");if(i!=SWFUpload.UPLOAD_ERROR.SPECIFIED_FILE_ID_NOT_FOUND&&e.status!=SWFUpload.FILE_STATUS.COMPLETE){c(\"#\"+e.id).find(\".data\").html(\" - \"+g);}}var d=this.getStats();this.queueData.uploadsErrored=d.upload_errors;if(f.onUploadError){f.onUploadError.call(this,e,i,h,g);}},onUploadProgress:function(g,m,j){var h=this.settings;var e=new Date();var n=e.getTime();var k=n-this.timer;if(k>500){this.timer=n;}var i=m-this.bytesLoaded;this.bytesLoaded=m;var d=this.queueData.queueBytesUploaded+m;var p=Math.round(m/j*100);var o=\"KB/s\";var l=0;var f=(i/1024)/(k/1000);f=Math.floor(f*10)/10;if(this.queueData.averageSpeed>0){this.queueData.averageSpeed=Math.floor((this.queueData.averageSpeed+f)/2);}else{this.queueData.averageSpeed=Math.floor(f);}if(f>1000){l=(f*0.001);this.queueData.averageSpeed=Math.floor(l);o=\"MB/s\";}if(c.inArray(\"onUploadProgress\",h.overrideEvents)<0){if(h.progressData==\"percentage\"){c(\"#\"+g.id).find(\".data\").html(\" - \"+p+\"%\");}else{if(h.progressData==\"speed\"&&k>500){c(\"#\"+g.id).find(\".data\").html(\" - \"+this.queueData.averageSpeed+o);}}c(\"#\"+g.id).find(\".uploadify-progress-bar\").css(\"width\",p+\"%\");}if(h.onUploadProgress){h.onUploadProgress.call(this,g,m,j,d,this.queueData.uploadSize);}},onUploadStart:function(d){var e=this.settings;var f=new Date();this.timer=f.getTime();this.bytesLoaded=0;if(this.queueData.uploadQueue.length==0){this.queueData.uploadSize=d.size;}if(e.checkExisting){c.ajax({type:\"POST\",async:false,url:e.checkExisting,data:{filename:d.name},success:function(h){if(h==1){var g=confirm('A file with the name \"'+d.name+'\" already exists on the server.\\nWould you like to replace the existing file?');if(!g){this.cancelUpload(d.id);c(\"#\"+d.id).remove();if(this.queueData.uploadQueue.length>0&&this.queueData.queueLength>0){if(this.queueData.uploadQueue[0]==\"*\"){this.startUpload();}else{this.startUpload(this.queueData.uploadQueue.shift());}}}}}});}if(e.onUploadStart){e.onUploadStart.call(this,d);}},onUploadSuccess:function(f,h,d){var g=this.settings;var e=this.getStats();this.queueData.uploadsSuccessful=e.successful_uploads;this.queueData.queueBytesUploaded+=f.size;if(c.inArray(\"onUploadSuccess\",g.overrideEvents)<0){c(\"#\"+f.id).find(\".data\").html(\" - Complete\");}if(g.onUploadSuccess){g.onUploadSuccess.call(this,f,h,d);}}};c.fn.uploadify=function(d){if(b[d]){return b[d].apply(this,Array.prototype.slice.call(arguments,1));}else{if(typeof d===\"object\"||!d){return b.init.apply(this,arguments);}else{c.error(\"The method \"+d+\" does not exist in $.uploadify\");}}};})($);\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\utils\\appTools.go:\n   24  	httpClient := http.Client{\n   25  		Transport: &http.Transport{\n   26: 			Dial: func(netw, addr string) (net.Conn, error) {\n   27  				deadline := time.Now().Add(SERVER_STATE_CHECK_INTERVAL_SEC * time.Second)\n   28: 				c, err := net.DialTimeout(netw, addr, time.Second*SERVER_STATE_CHECK_INTERVAL_SEC)\n   29  				if err != nil {\n   30  					return nil, err\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\templates\\confirmDialog.tmpl:\n    1: {{define \"confirmDialog\"}}\n    2: 	<div class=\"modal hide fade\" style=\"margin: -100px 0 0 -300px;\" id=\"confirmDialog\" >\n    3  		<div class=\"modal-header\">\n    4  			<button type=\"button\" class=\"close\" data-dismiss=\"modal\">×</button>\n    .\n   24  	\n   25  	<script type=\"text/javascript\">\n   26: 	function confirmDialogFunc(msg, sureFunc, data) {		\n   27: 		$('#confirmDialog div.modal-footer a.btn-primary').bind(\"click\", data, sureFunc);\n   28  		$('#confirmIcon').attr(\"class\", \"icon-info\");\n   29  		$('#confirmInfo').html(msg);\n   30: 		$('#confirmDialog').modal(\"show\");\n   31  	}\n   32  	\n   33  \n   34: 	function hideConfirmDialog() {\n   35: 		$('#confirmDialog').modal(\"hide\");\n   36: 		$('#confirmDialog div.modal-footer a.btn-primary').unbind(\"click\");\n   37  	}\n   38  	</script>\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\templates\\serverDialog.tmpl:\n    1: {{define \"serverDialog\"}}\n    2: <div class=\"modal hide fade\" style=\"margin: -200px 0 0 -300px;\" id=\"serverDialog\">\n    3  	<div class=\"modal-header\">\n    4  		<button type=\"button\" class=\"close\" data-dismiss=\"modal\">×</button>\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\templates\\setup.tmpl:\n  128  	</div>\n  129  \n  130: 	{{template \"serverDialog\"}}\n  131: 	{{template \"userDialog\"}}	\n  132  \n  133: 	{{template \"confirmDialog\"}}\n  134  \n  135  	{{template \"script\"}}\n  ...\n  140  \n  141  	$(function(){\n  142: 		getServerDialog().saveData.saveSuccessFunc = changeServerProfile;\n  143  		$('#btnAddServer').bind(\"click\", function(e) {\n  144  			e.preventDefault();\n  145: 			getServerDialog().show(null);\n  146  		});\n  147: 		getUserDialog().saveData.saveSuccessFunc = changeUserProfile;	\n  148  		$('#btnAddUser').bind(\"click\", function(e) {\n  149  			e.preventDefault();\n  150: 			getUserDialog().show(null);\n  151  		});		\n  152  		bindTdEdtDelBtnFunc(\"Servers\", deleteServer, showEditServerDlg);\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\templates\\userDialog.tmpl:\n    1: {{define \"userDialog\"}}\n    2: <div class=\"modal hide fade\" style=\"margin: -200px 0 0 -300px;\" id=\"userDialog\">\n    3  	<div class=\"modal-header\">\n    4  		<button type=\"button\" class=\"close\" data-dismiss=\"modal\">×</button>\n\n110 matches across 11 files\n\n\nSearching 289 files for \"CmdOutputNoLn\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\utils\\systemTools.go:\n   28  }\n   29  \n   30: func CmdOutputNoLn(name string, arg ...string) (out string, err error) {\n   31  	out, err = CmdOutputStr(name, arg...)\n   32  	if err != nil {\n\n1 match in 1 file\n\n\nSearching 291 files for \"getServerDialog\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\public\\js\\ivideoServer.js:\n   67  });\n   68  \n   69: function getServerDialog() {\n   70  	return serverDialog;\n   71  }\n   ..\n   90  		type: value.attr('servertype-value')\n   91  	}\n   92: 	getServerDialog().show(serverInfo);\n   93  }\n   94  \n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\templates\\setup.tmpl:\n  140  \n  141  	$(function(){\n  142: 		getServerDialog().saveData.saveSuccessFunc = changeServerProfile;\n  143  		$('#btnAddServer').bind(\"click\", function(e) {\n  144  			e.preventDefault();\n  145: 			getServerDialog().show(null);\n  146  		});\n  147  		getUserDialog().saveData.saveSuccessFunc = changeUserProfile;	\n\n4 matches across 2 files\n\n\nSearching 291 files for \"SERVER_TYPE_CMS\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\common\\common.go:\n   10  \n   11  const (\n   12: 	SERVER_TYPE_CMS, SERVER_TYPE_SIP, SERVER_TYPE_MTS, SERVER_TYPE_APS = 0, 1, 2, 3\n   13  )\n   14  \n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\routeServerSave.go:\n   37  		if nil != err {\n   38  			log.WriteLog(\"error: %v\", err)\n   39: 			iType = common.SERVER_TYPE_CMS\n   40  		}\n   41  		if utils.IsEmptyStr(servername) {\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\template_func.go:\n   59  	case common.SERVER_TYPE_SIP:\n   60  		return \"SIP服务器\"\n   61: 	case common.SERVER_TYPE_CMS:\n   62  		return \"中心管理服务器\"\n   63  	case common.SERVER_TYPE_MTS:\n\n3 matches across 3 files\n",
-			"settings":
-			{
-				"buffer_size": 103420,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "public/js/ivideo.js",
-			"settings":
-			{
-				"buffer_size": 6366,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "templates/htmlHead.tmpl",
-			"settings":
-			{
-				"buffer_size": 1374,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/js/ivideoServer.js",
-			"settings":
-			{
-				"buffer_size": 3621,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/utils/systemTools.go",
-			"settings":
-			{
-				"buffer_size": 692,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config.xml",
-			"settings":
-			{
-				"buffer_size": 524,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/utils/fileTools.go",
-			"settings":
-			{
-				"buffer_size": 4014,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/model/apsServerSetupInfo_test.go",
-			"settings":
-			{
-				"buffer_size": 359,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/common/common.go",
-			"settings":
-			{
-				"buffer_size": 938,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/sysware.com/ivideo/model/serverPageInfo.go",
-			"settings":
-			{
-				"buffer_size": 1350,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "templates/setup.tmpl",
-			"settings":
-			{
-				"buffer_size": 3824,
-				"line_ending": "Windows"
-			}
 		}
 	],
 	"build_system": "Packages/Go Build/Go.sublime-build",
 	"command_palette":
 	{
-		"height": 81.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -584,38 +504,48 @@
 	[
 		"/E/Source/c++/iVideo/Source/swd/server",
 		"/E/Source/c++/iVideo/Source/swd/server/public",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/common",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils",
-		"/E/Source/c++/iVideo/Source/swd/server/templates"
+		"/E/Source/c++/iVideo/Source/swd/server/src",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com"
 	],
 	"file_history":
 	[
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/testsession1.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/sipServerSetupInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/cmsServerSetupInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/userInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/setupInfo.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/cmsServerSetupInfo_test.go",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/userDialog.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideo.js",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideoServer.js",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/systemTools.go",
+		"/E/Source/c++/iVideo/Source/swd/server/config.xml",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/fileTools.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/common/common.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverPageInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/templates/setup.tmpl",
+		"/D/Program Files/go/src/cmd/fix/timefileinfo_test.go",
+		"/D/Program Files/go/src/cmd/fix/timefileinfo.go",
+		"/D/Program Files/go/src/pkg/testing/iotest/logger.go",
+		"/D/Program Files/go/src/lib9/time.c",
+		"/E/Source/web/charisma/table.html",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/htmlHead.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverInfo.go",
 		"/D/Program Files/go/src/sudo.bash",
 		"/D/Program Files/go/src/pkg/archive/tar/common.go",
-		"/E/Source/c++/iVideo/Source/swd/server/config.xml",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/config.xml",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/common/common.go",
 		"/D/Program Files/go/src/pkg/github.com/nsf/gocode/utils.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/systemTools.go",
 		"/D/Program Files/go/src/cmd/godoc/utils.go",
 		"/D/Program Files/go/src/cmd/cgo/util.go",
 		"/D/Program Files/go/src/cmd/fix/url2_test.go",
 		"/E/Source/web/charisma/ui.html",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/setupInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServerSave.go",
-		"/E/Source/c++/iVideo/Source/swd/server/templates/userDialog.tmpl",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/setupInfo_test.go",
 		"/D/Program Files/go/src/pkg/net/server_test.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/apsServerSetupInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/cmsServerInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/dataDto.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/appTools.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/fileTools.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServerList.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/addressInfo.go",
 		"/D/Program Files/go/src/pkg/encoding/asn1/common.go",
@@ -641,7 +571,6 @@
 		"/D/Program Files/go/src/cmd/5g/prog.c",
 		"/D/Program Files/go/src/pkg/net/fd_poll_runtime.go",
 		"/D/Program Files/go/src/libmach/plan9.c",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/userInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/memInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/netCardInfo.go",
 		"/D/Program Files/go/src/pkg/syscall/asm_openbsd_386.s",
@@ -682,7 +611,6 @@
 		"/E/Source/Java/jetty-hightide-8.1.7.v20120910/webapps/charisma/css/chosen.css",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServer.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServerDelete.go",
-		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideoServer.js",
 		"/E/Source/Java/jetty-hightide-8.1.7.v20120910/webapps/charisma/css/bootstrap-responsive.min.css",
 		"/E/Source/Java/jetty-hightide-8.1.7.v20120910/webapps/charisma/css/bootstrap-responsive.css",
 		"/E/Source/Java/jetty-hightide-8.1.7.v20120910/webapps/charisma/css/bootstrap-redy.css",
@@ -708,19 +636,7 @@
 		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 2/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
-		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideo.js",
-		"/E/Source/c++/iVideo/Source/swd/server/templates/error.tmpl",
-		"/E/Source/web/charisma/table.html",
-		"/E/Source/web/charisma/error.html",
-		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 2/Packages/User/HTMLBeautify.sublime-settings",
-		"/D/Program Files/go/src/pkg/html/escape.go",
-		"/D/Program Files/go/src/pkg/html/entity.go",
-		"/E/Source/c++/iVideo/Source/swd/server/public/css/bootstrap-united.css",
-		"/E/Source/c++/iVideo/Source/swd/server/public/css/bootstrap-redy.css",
-		"/E/Source/c++/iVideo/Source/swd/server/public/css/bootstrap-journal.css",
-		"/E/Source/c++/iVideo/Source/swd/server/public/css/bootstrap-cyborg.css",
-		"/E/Source/c++/iVideo/Source/swd/server/public/js/charisma.js"
+		"/C/Users/SW-ITS-HHE/AppData/Roaming/Sublime Text 2/Packages/HTMLBeautify/HTMLBeautify.sublime-settings"
 	],
 	"find":
 	{
@@ -745,6 +661,12 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"GetSessionManager",
+			"globalSessions",
+			"GetSessionUserInfo",
+			"sprintf",
+			"SessionFactoryInfo",
+			"CMSServerSetupInfo",
 			"SERVER_TYPE_CMS",
 			"getServerDialog",
 			"btnAddServer",
@@ -866,13 +788,7 @@
 			"StatusNotFound",
 			"NotFoundHandler",
 			"Handler",
-			"ServeHTTP",
-			"\"CONNECT\"",
-			"ServeHTTP",
-			"HandleFunc",
-			"DefaultServeMux",
-			"Server",
-			"server"
+			"ServeHTTP"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -919,904 +835,11 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/sysware.com/ivideo/model/sipServerSetupInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 882,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								882
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 68.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/sysware.com/ivideo/model/cmsServerSetupInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1481,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1095,
-								1095
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 700.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/sysware.com/ivideo/model/userInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/sysware.com/ivideo/model/setupInfo.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2565,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								906,
-								906
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1932.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/sysware.com/ivideo/model/cmsServerSetupInfo_test.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1825,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1683,
-								1683
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 812.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "templates/userDialog.tmpl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1307,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1299,
-								1299
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 252.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 103420,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										175,
-										194
-									],
-									[
-										410,
-										429
-									],
-									[
-										458,
-										477
-									],
-									[
-										864,
-										868
-									],
-									[
-										1042,
-										1046
-									],
-									[
-										1255,
-										1259
-									],
-									[
-										1420,
-										1424
-									],
-									[
-										1510,
-										1514
-									],
-									[
-										1548,
-										1552
-									],
-									[
-										1573,
-										1577
-									],
-									[
-										1699,
-										1703
-									],
-									[
-										1816,
-										1820
-									],
-									[
-										1872,
-										1876
-									],
-									[
-										1934,
-										1938
-									],
-									[
-										1987,
-										1991
-									],
-									[
-										2170,
-										2174
-									],
-									[
-										2344,
-										2348
-									],
-									[
-										2419,
-										2423
-									],
-									[
-										2500,
-										2504
-									],
-									[
-										2588,
-										2592
-									],
-									[
-										2605,
-										2609
-									],
-									[
-										2619,
-										2623
-									],
-									[
-										2655,
-										2659
-									],
-									[
-										2786,
-										2790
-									],
-									[
-										2818,
-										2822
-									],
-									[
-										2922,
-										2926
-									],
-									[
-										3091,
-										3095
-									],
-									[
-										3289,
-										3293
-									],
-									[
-										3455,
-										3459
-									],
-									[
-										3625,
-										3629
-									],
-									[
-										3704,
-										3708
-									],
-									[
-										3764,
-										3768
-									],
-									[
-										3781,
-										3785
-									],
-									[
-										3793,
-										3797
-									],
-									[
-										3825,
-										3829
-									],
-									[
-										3962,
-										3966
-									],
-									[
-										3995,
-										3999
-									],
-									[
-										4120,
-										4124
-									],
-									[
-										4222,
-										4226
-									],
-									[
-										4458,
-										4462
-									],
-									[
-										5727,
-										5731
-									],
-									[
-										6199,
-										6203
-									],
-									[
-										6673,
-										6677
-									],
-									[
-										7287,
-										7291
-									],
-									[
-										7429,
-										7433
-									],
-									[
-										7537,
-										7541
-									],
-									[
-										7663,
-										7667
-									],
-									[
-										7731,
-										7735
-									],
-									[
-										7798,
-										7802
-									],
-									[
-										7929,
-										7933
-									],
-									[
-										8423,
-										8427
-									],
-									[
-										8574,
-										8578
-									],
-									[
-										9321,
-										9325
-									],
-									[
-										9724,
-										9728
-									],
-									[
-										9861,
-										9865
-									],
-									[
-										10606,
-										10610
-									],
-									[
-										10678,
-										10682
-									],
-									[
-										11776,
-										11780
-									],
-									[
-										11808,
-										11812
-									],
-									[
-										11829,
-										11833
-									],
-									[
-										11900,
-										11904
-									],
-									[
-										12058,
-										12062
-									],
-									[
-										12096,
-										12100
-									],
-									[
-										12168,
-										12172
-									],
-									[
-										12285,
-										12289
-									],
-									[
-										12847,
-										12851
-									],
-									[
-										12985,
-										12989
-									],
-									[
-										13118,
-										13122
-									],
-									[
-										13299,
-										13303
-									],
-									[
-										13372,
-										13376
-									],
-									[
-										13477,
-										13481
-									],
-									[
-										13515,
-										13519
-									],
-									[
-										16211,
-										16215
-									],
-									[
-										23637,
-										23641
-									],
-									[
-										30029,
-										30033
-									],
-									[
-										30646,
-										30650
-									],
-									[
-										33552,
-										33556
-									],
-									[
-										33874,
-										33878
-									],
-									[
-										34015,
-										34019
-									],
-									[
-										34032,
-										34036
-									],
-									[
-										34468,
-										34472
-									],
-									[
-										81461,
-										81465
-									],
-									[
-										81812,
-										81816
-									],
-									[
-										85456,
-										85460
-									],
-									[
-										85498,
-										85502
-									],
-									[
-										90826,
-										90830
-									],
-									[
-										91004,
-										91008
-									],
-									[
-										91020,
-										91024
-									],
-									[
-										91047,
-										91051
-									],
-									[
-										91262,
-										91266
-									],
-									[
-										91370,
-										91374
-									],
-									[
-										91387,
-										91391
-									],
-									[
-										98979,
-										98983
-									],
-									[
-										99139,
-										99143
-									],
-									[
-										99357,
-										99361
-									],
-									[
-										99450,
-										99454
-									],
-									[
-										99653,
-										99657
-									],
-									[
-										99709,
-										99713
-									],
-									[
-										99893,
-										99897
-									],
-									[
-										99972,
-										99976
-									],
-									[
-										100003,
-										100007
-									],
-									[
-										100047,
-										100051
-									],
-									[
-										100224,
-										100228
-									],
-									[
-										100315,
-										100319
-									],
-									[
-										100547,
-										100551
-									],
-									[
-										100581,
-										100585
-									],
-									[
-										100627,
-										100631
-									],
-									[
-										100729,
-										100733
-									],
-									[
-										100891,
-										100895
-									],
-									[
-										100941,
-										100945
-									],
-									[
-										101098,
-										101102
-									],
-									[
-										101296,
-										101300
-									],
-									[
-										101385,
-										101389
-									],
-									[
-										101708,
-										101721
-									],
-									[
-										102028,
-										102043
-									],
-									[
-										102156,
-										102171
-									],
-									[
-										102310,
-										102325
-									],
-									[
-										102472,
-										102487
-									],
-									[
-										102786,
-										102801
-									],
-									[
-										103069,
-										103084
-									],
-									[
-										103314,
-										103329
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								102615,
-								102615
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 5,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 39620.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/js/ivideo.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6366,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5040.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "templates/htmlHead.tmpl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1311,
-								1311
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "public/js/ivideoServer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3621,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1640,
-								1640
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1470.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/sysware.com/ivideo/utils/systemTools.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 692,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								506,
-								506
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 202.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "config.xml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 524,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								475,
-								475
-							]
-						],
-						"settings":
-						{
-							"is_xml": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/sysware.com/ivideo/utils/fileTools.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4014,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3910,
-								3910
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4430.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
 					"file": "src/sysware.com/ivideo/model/apsServerSetupInfo_test.go",
 					"semi_transient": false,
 					"settings":
@@ -1828,8 +851,84 @@
 						"selection":
 						[
 							[
-								335,
-								335
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 13.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 271,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										174,
+										191
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/sysware.com/ivideo/server/http/http.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								12
 							]
 						],
 						"settings":
@@ -1842,24 +941,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
-					"file": "src/sysware.com/ivideo/common/common.go",
+					"buffer": 3,
+					"file": "public/js/ivideo.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 938,
+						"buffer_size": 6422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								318,
-								318
+								4687,
+								4687
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6468.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/sysware.com/ivideo/server/http/routeLogin.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								880,
+								880
 							]
 						],
 						"settings":
@@ -1869,32 +998,32 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 538.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "src/sysware.com/ivideo/model/serverPageInfo.go",
+					"buffer": 5,
+					"file": "src/sysware.com/ivideo/model/cmsServerSetupInfo.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1350,
+						"buffer_size": 1481,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1350,
-								1350
+								663,
+								681
 							]
 						],
 						"settings":
 						{
-							"origin_encoding": "ASCII",
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -1903,37 +1032,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "templates/setup.tmpl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3450,
-								3465
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3640.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1997,6 +1095,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"tiletoo",
+				"server\\src\\sysware.com\\ivideo\\utils\\fileTools.go"
+			],
 			[
 				"serverp",
 				"server\\src\\sysware.com\\ivideo\\model\\serverPageInfo.go"
@@ -2128,6 +1230,7 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},

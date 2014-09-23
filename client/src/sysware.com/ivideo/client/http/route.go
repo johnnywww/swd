@@ -14,12 +14,12 @@ func StartHttp() {
 }
 
 func checkLoginUser(form url.Values, re render.Render, errorUrl string) *model.UserInfo {
-	result, errorMsg := shttp.CheckValidUser(form)
+	result, errorMsg := shttp.GetSessionUserInfoByForm(form)
 	retInfos := make(map[string]string)
 	retInfos["userName"] = form.Get("username")
 	retInfos["password"] = "******"
 	if !utils.IsEmptyStr(errorMsg) {
-		retInfos["errorInfo"] = "没有配置信息，请找管理员"
+		retInfos["errorInfo"] = errorMsg
 		re.HTML(200, errorUrl, retInfos)
 	}
 	return result

@@ -35,12 +35,11 @@ func (serverConfigSaveHandleSIPImpl *serverConfigSaveHandleSIPImpl) Save(r *http
 	}
 	sipSetupInfo.CMSServerInfo.Address = r.FormValue("cmsServerAddress")
 
-	sipSetupInfo.DbInfo.AddressInfo.IP = r.FormValue("dbServerAddress")
-	sipSetupInfo.DbInfo.AddressInfo.Port, err = strconv.Atoi(r.FormValue("dbServerPort"))
+	sipSetupInfo.ActiveMQInfo.AddressInfo.IP = r.FormValue("activeMQServerAddress")
+	sipSetupInfo.ActiveMQInfo.AddressInfo.Port, err = strconv.Atoi(r.FormValue("activeMQServerPort"))
 	if nil != err {
 		return err
 	}
-	sipSetupInfo.DbInfo.Password = r.FormValue("dbServerPassword")
 	cfgFileName, err := NewGetServerInfoConfigFileName().GetInfo(serverInfo)
 	if nil != err {
 		return err

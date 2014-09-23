@@ -23,5 +23,5 @@
           <address>/home/pc01/source/java/apache-tomcat-7.0.53/webapps/cms</address>
           <type>0</type>
       </server>
-      <port>9500</port>
+      <port>9600</port>
   </swd>

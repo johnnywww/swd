@@ -4,6 +4,7 @@ import (
 	"errors"
 	"os"
 	"sysware.com/ivideo/common"
+	"sysware.com/ivideo/log"
 	"sysware.com/ivideo/model"
 )
 
@@ -11,6 +12,7 @@ type restartProcessByServerInfoLinux struct {
 }
 
 func executeLinuxProc(cmdLine string, dir string) error {
+	log.WriteLog("start linux proc cmd: %s  dir: %s", cmdLine, dir)
 	procattr := os.ProcAttr{Dir: dir, Env: os.Environ(), Files: []*os.File{nil, nil, nil}}
 	_, err := os.StartProcess(cmdLine, []string{}, &procattr)
 	if nil != err {

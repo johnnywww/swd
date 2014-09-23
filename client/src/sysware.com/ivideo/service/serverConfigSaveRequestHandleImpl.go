@@ -22,11 +22,11 @@ func (serverConfigSaveRequestHandleImpl *serverConfigSaveRequestHandleImpl) Save
 	if nil != err {
 		return err
 	}
-	processInfo, err := NewGetProcessInfo().GetInfo(serverInfo.Address)
 	err = NewServerConfigSaveHandle().Save(r, serverInfo)
 	if nil != err {
 		return err
 	}
+	processInfo, err := NewGetProcessInfoByServerInfo().GetInfo(serverInfo)
 	if nil != processInfo {
 		err = NewRestartServerProcessInfo().Restart(serverName)
 		if nil != err {

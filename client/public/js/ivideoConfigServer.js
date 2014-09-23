@@ -153,10 +153,8 @@ function showConfigSIPServerDlgInfo(serverConfigInfo) {
 	$("#sipAddress").val(serverConfigInfo.configServerInfo.SIPInfo.AddressInfo.IP);
 	$("#sipPort").val(serverConfigInfo.configServerInfo.SIPInfo.AddressInfo.Port);
 	$("#sipCmsServerAddress").val(serverConfigInfo.configServerInfo.CMSServerInfo.Address);
-	$("#sipDbServerAddress").val(serverConfigInfo.configServerInfo.DbInfo.AddressInfo.IP);
-	$("#sipDbServerPort").val(serverConfigInfo.configServerInfo.DbInfo.AddressInfo.Port);
-	$("#sipDbServerPassword").val(serverConfigInfo.configServerInfo.DbInfo.Password);
-	$("#sipDbServerPassword1").val(serverConfigInfo.configServerInfo.DbInfo.Password);
+	$("#sipActiveMQServerAddress").val(serverConfigInfo.configServerInfo.ActiveMQInfo.AddressInfo.IP);
+	$("#sipActiveMQServerPort").val(serverConfigInfo.configServerInfo.ActiveMQInfo.AddressInfo.Port);
 	switchFirstTabSwitch('sipServerConfigTab');
 	return true;
 }
@@ -176,9 +174,8 @@ function getSIPServerPostData() {
 		address: $("#sipAddress").val(),
 		port: $("#sipPort").val(),		
 		cmsServerAddress: $("#sipCmsServerAddress").val(),		
-		dbServerAddress: $("#sipDbServerAddress").val(),
-		dbServerPort: $("#sipDbServerPort").val(),	
-		dbServerPassword: $("#sipDbServerPassword").val(),	
+		activeMQServerAddress: $("#sipActiveMQServerAddress").val(),
+		activeMQServerPort: $("#sipActiveMQServerPort").val(),	
 	};
 }
 

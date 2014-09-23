@@ -1,6 +1,7 @@
 package http
 
 import (
+	"fmt"
 	"github.com/astaxie/beego/session"
 	"github.com/go-martini/martini"
 	"github.com/martini-contrib/render"
@@ -10,17 +11,15 @@ import (
 	"strconv"
 	"sysware.com/ivideo/log"
 	"sysware.com/ivideo/model"
+	"sysware.com/ivideo/utils"
+	"time"
 )
 
 var globalSessions *session.Manager
 
 func init() {
-	globalSessions, _ = session.NewManager("memory", `{"cookieName":"gosessionid","gclifetime":3600}`)
+	globalSessions, _ = session.NewManager("memory", fmt.Sprintf(`{"cookieName":"gosessionid%d","gclifetime":3600}`, time.Now().Unix()))
 	go globalSessions.GC()
-}
-
-func GetSessionManager() *session.Manager {
-	return globalSessions
 }
 
 func StartHttp(routeHandle model.RouteHandle) {
@@ -62,10 +61,24 @@ func GetSessionUserInfo(w http.ResponseWriter, r *http.Request) *model.UserInfo 
 	return userInfo.(*model.UserInfo)
 }
 
-func CheckValidUser(form url.Values) (userInfo *model.UserInfo, errorMsg string) {
+func SetSessionUserInfo(w http.ResponseWriter, r *http.Request, userInfo *model.UserInfo) {
+	sess := globalSessions.SessionStart(w, r)
+	defer sess.SessionRelease(w)
+	sess.Set("userInfo", userInfo)
+}
+
+func GetSessionUserInfoByForm(form url.Values) (userInfo *model.UserInfo, errorMsg string) {
 	userInfo = nil
 	username := form.Get("username")
 	password := form.Get("password")
+	if utils.IsEmptyStr(username) {
+		errorMsg = "用户名为空"
+		return
+	}
+	if utils.IsEmptyStr(password) {
+		errorMsg = "密码为空"
+		return
+	}
 	setupInfo := &model.SetupInfo{}
 	if !model.NewSetupHandle().GetSetupInfo(setupInfo) {
 		errorMsg = "没有配置信息，请找管理员"
