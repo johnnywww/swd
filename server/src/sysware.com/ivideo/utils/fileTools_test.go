@@ -16,3 +16,9 @@ func Test_IsServerConfigExist(t *testing.T) {
 		t.Error("服务器配置文件不存在")
 	}
 }
+
+func Test_GetFileName(t *testing.T) {
+	if GetFileName("/home/pc01/source/APS/aps") != "aps" {
+		t.Error("获取文件名失败")
+	}
+}

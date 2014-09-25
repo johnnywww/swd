@@ -17,7 +17,6 @@ func (routeServerList *RouteServerList) routeMoreServer(r *http.Request, re rend
 	r.ParseForm()
 	startPage, err := strconv.Atoi(r.FormValue("pageNo"))
 	if nil != err {
-		log.WriteLog("error: %v", err)
 		startPage = 0
 	}
 	serverPageInfo := model.NewServerPageHandle().GetServerPageInfo(startPage, 10)

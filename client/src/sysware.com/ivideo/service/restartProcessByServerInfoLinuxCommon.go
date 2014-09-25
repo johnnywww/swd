@@ -25,7 +25,7 @@ func (restartProcessByServerInfoLinuxCommon *restartProcessByServerInfoLinuxComm
 		return errors.New("不支持的类型")
 	}
 	cmdLine := serverInfo.Address
-	err := executeLinuxProc(cmdLine, utils.GetFileDir(cmdLine))
+	err := NewExecuteLinuxProc().Exec(cmdLine, utils.GetFileDir(cmdLine))
 	if nil != err {
 		return err
 	}

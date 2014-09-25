@@ -39,7 +39,7 @@ func (quitServerProcessInfoLinuxCMS *quitServerProcessInfoLinuxCMS) Quit(serverI
 		return err
 	}
 	cmdLine := webPath + "/bin/shutdown.sh"
-	err = executeLinuxProc(cmdLine, webPath)
+	err = NewExecuteLinuxProc().Exec(cmdLine, webPath)
 	if nil != err {
 		return err
 	}

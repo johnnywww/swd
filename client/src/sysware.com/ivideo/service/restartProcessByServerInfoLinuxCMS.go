@@ -40,7 +40,7 @@ func (restartProcessByServerInfoLinuxCMS *restartProcessByServerInfoLinuxCMS) Re
 		return err
 	}
 	cmdLine := webPath + "/bin/startup.sh"
-	err = executeLinuxProc(cmdLine, webPath)
+	err = NewExecuteLinuxProc().Exec(cmdLine, webPath)
 	if nil != err {
 		return err
 	}
