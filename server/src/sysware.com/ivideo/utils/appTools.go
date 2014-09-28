@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net"
 	"net/http"
+	"os"
 	"strings"
 	"sysware.com/ivideo/common"
 	"sysware.com/ivideo/log"
@@ -13,6 +14,15 @@ import (
 const (
 	SERVER_STATE_CHECK_INTERVAL_SEC = 2
 )
+
+func IsDebugEnv() bool {
+	env := os.Getenv("SWD_RUN_ENV")
+	return common.SWD_RUN_ENV_DEBUG == env
+}
+
+func SetDebugEnv() {
+	os.Setenv("SWD_RUN_ENV", common.SWD_RUN_ENV_DEBUG)
+}
 
 func GetServerState(address string) int {
 	result := common.SERVER_STATE_OFFLINE

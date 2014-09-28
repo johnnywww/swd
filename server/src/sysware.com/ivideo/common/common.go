@@ -55,3 +55,8 @@ const (
 const (
 	XML_ENCODE_UTF8, XML_ENCODE_GB2312 = "UTF-8", "gb2312"
 )
+
+const (
+	SWD_RUN_ENV_DEBUG = "debug"
+	SWD_RUN_ENV_PROD  = "prod"
+)

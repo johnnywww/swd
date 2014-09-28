@@ -22,8 +22,23 @@ func init() {
 	go globalSessions.GC()
 }
 
+func startDebugProf() {
+	go func() {
+		http.ListenAndServe(":6160", nil)
+	}()
+}
+
+func checkEnv() {
+	if utils.IsDebugEnv() {
+		martini.Env = martini.Dev
+		startDebugProf()
+	} else {
+		martini.Env = martini.Prod
+	}
+}
+
 func StartHttp(routeHandle model.RouteHandle) {
-	martini.Env = martini.Prod
+	checkEnv()
 	port := 9500
 	setupInfo := &model.SetupInfo{}
 	if model.NewSetupHandle().GetSetupInfo(setupInfo) {
