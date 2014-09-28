@@ -23,6 +23,7 @@ func init() {
 }
 
 func StartHttp(routeHandle model.RouteHandle) {
+	martini.Env = martini.Prod
 	port := 9500
 	setupInfo := &model.SetupInfo{}
 	if model.NewSetupHandle().GetSetupInfo(setupInfo) {
