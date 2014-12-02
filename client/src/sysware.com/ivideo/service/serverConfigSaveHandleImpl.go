@@ -24,7 +24,8 @@ func (serverConfigSaveHandleImpl *serverConfigSaveHandleImpl) Save(r *http.Reque
 		return (&serverConfigSaveHandleSIPImpl{}).Save(r, serverInfo)
 	case common.SERVER_TYPE_CMS:
 		return (&serverConfigSaveHandleCMSImpl{}).Save(r, serverInfo)
-
+	case common.SERVER_TYPE_MTS:
+		return (&serverConfigSaveHandleMTSImpl{}).Save(r, serverInfo)
 	}
 	return errors.New("无法处理的服务器类型")
 }

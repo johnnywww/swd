@@ -33,8 +33,8 @@ func (serverConfigSaveHandleSIPImpl *serverConfigSaveHandleSIPImpl) Save(r *http
 	if nil != err {
 		return err
 	}
-	sipSetupInfo.CMSServerInfo.Address = r.FormValue("cmsServerAddress")
 
+	sipSetupInfo.CMSServerInfo.Address = r.FormValue("cmsServerAddress")
 	sipSetupInfo.ActiveMQInfo.AddressInfo.IP = r.FormValue("activeMQServerAddress")
 	sipSetupInfo.ActiveMQInfo.AddressInfo.Port, err = strconv.Atoi(r.FormValue("activeMQServerPort"))
 	if nil != err {

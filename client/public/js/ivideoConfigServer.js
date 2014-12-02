@@ -10,6 +10,7 @@ $(function() {
 		saveSuccessFunc: null
 	}));
 	enableTabSwitch('apsServerConfigTab');
+
 	serverConfigDialogs.put(SERVER_TYPE_SIP, new ViewDialog("sipServerConfigDialog", "btnSIPSaveServer", showConfigSIPServerDlgInfo, {
 		url: "/server/saveconfig",
 		checkSaveFunc: checkSIPSaveServer,
@@ -27,6 +28,16 @@ $(function() {
 		saveSuccessFunc: null
 	}));
 	enableTabSwitch('cmsServerConfigTab');		
+
+	serverConfigDialogs.put(SERVER_TYPE_MTS, new ViewDialog("mtsServerConfigDialog", "btnMTSSaveServer", showConfigMTSServerDlgInfo, {
+		url: "/server/saveconfig",
+		checkSaveFunc: checkMTSSaveServer,
+		getData: getMTSServerPostData,
+		getNotifyInfo: getMTSServerNotifyInfo,
+		saveSuccessFunc: null
+	}));
+	enableTabSwitch('mtsServerConfigTab');
+
 });
 
 function showConfigServerDlg(data) {
@@ -213,4 +224,50 @@ function getCMSServerPostData() {
 
 function getCMSServerNotifyInfo() {
 	return $("#cmsServerName").html() + '配置信息';
+}
+
+function showConfigMTSServerDlgInfo(serverConfigInfo) {
+	$("#mtsServerName").html(serverConfigInfo.serverInfo.ServerName);
+	$("#mtsServerId").val(serverConfigInfo.configServerInfo.MTSInfo.Id);
+	$("#mtsPassword").val(serverConfigInfo.configServerInfo.MTSInfo.Password);
+	$("#mtsPassword1").val(serverConfigInfo.configServerInfo.MTSInfo.Password);
+	$("#mtsRegisterInterval").val(serverConfigInfo.configServerInfo.MTSInfo.RegisterInterval);
+	$("#mtsHeartInterval").val(serverConfigInfo.configServerInfo.MTSInfo.DefaultHeartInterval);
+	$("#mtsAddress").val(serverConfigInfo.configServerInfo.MTSInfo.AddressInfo.IP);
+	$("#mtsPort").val(serverConfigInfo.configServerInfo.MTSInfo.AddressInfo.Port);
+	$("#mtsSipServerId").val(serverConfigInfo.configServerInfo.SipServerInfo.Id);
+	$("#mtsSipServerDomain").val(serverConfigInfo.configServerInfo.SipServerInfo.Domain);
+	$("#mtsSipServerAddress").val(serverConfigInfo.configServerInfo.SipServerInfo.AddressInfo.IP);
+	$("#mtsSipServerPort").val(serverConfigInfo.configServerInfo.SipServerInfo.AddressInfo.Port);
+	$("#mtsCmsServerAddress").val(serverConfigInfo.configServerInfo.CMSServerInfo.Address);
+	switchFirstTabSwitch('mtsServerConfigTab');
+	return true;
+}
+
+
+
+function checkMTSSaveServer() {
+	return checkSaveServerConfig('mts');
+}
+
+function getMTSServerPostData() {
+	return {
+		servername: $('#mtsServerName').html(),
+		serverId: $("#mtsServerId").val(),
+		servertype: SERVER_TYPE_MTS,
+		password: $("#mtsPassword").val(),
+		registerInterval: $("#mtsRegisterInterval").val(),
+		defaultHeartInterval: $("#mtsHeartInterval").val(),
+		address: $("#mtsAddress").val(),
+		port: $("#mtsPort").val(),		
+		sipServerId: $("#mtsSipServerId").val(),
+		sipServerDomain: $("#mtsSipServerDomain").val(),		
+		sipServerAddress: $("#mtsSipServerAddress").val(),
+		sipServerPort: $("#mtsSipServerPort").val(),	
+		cmsServerAddress: $("#mtsCmsServerAddress").val(),		
+	};
+}
+
+function getMTSServerNotifyInfo() {
+	return $("#mtsServerName").html() + '配置信息';
 }

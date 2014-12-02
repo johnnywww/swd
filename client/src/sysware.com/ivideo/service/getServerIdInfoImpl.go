@@ -34,6 +34,14 @@ func (getServerIdInfoImpl *getServerIdInfoImpl) getInfo(serverName string) (stri
 				return result, errors.New(fmt.Sprintf("没有找到服务器程序%s对应的服务器编号", serverName))
 			}
 		}
+	case common.SERVER_TYPE_MTS:
+		{
+			mTSServerSetupInfo := vInfo.(*model.MTSServerSetupInfo)
+			result = mTSServerSetupInfo.MTSInfo.Id
+			if utils.IsEmptyStr(result) {
+				return result, errors.New(fmt.Sprintf("没有找到服务器程序%s对应的服务器编号", serverName))
+			}
+		}
 	}
 	return result, nil
 }
