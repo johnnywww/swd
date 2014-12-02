@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"c",
+				"checkEnv	 ƒ"
+			],
+			[
 				"S",
 				"Sprintf	string ƒ"
 			],
@@ -268,10 +272,6 @@
 				"tempFileName	string ν"
 			],
 			[
-				"c",
-				"createStubFiles	 ƒ"
-			],
-			[
 				"Base",
 				"BaseTypeCount	 Ɩ"
 			],
@@ -348,44 +348,74 @@
 	"buffers":
 	[
 		{
-			"file": "src/sysware.com/ivideo/server/http/http.go",
+			"file": "src/sysware.com/ivideo/common/common.go",
 			"settings":
 			{
-				"buffer_size": 2584,
+				"buffer_size": 1006,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/utils/fileTools_test.go",
+			"file": "src/sysware.com/ivideo/model/mtsServerSetupInfo.go",
 			"settings":
 			{
-				"buffer_size": 578,
+				"buffer_size": 534,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/server/http/route.go",
+			"file": "swdServer.go",
 			"settings":
 			{
-				"buffer_size": 812,
+				"buffer_size": 116,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Searching 294 files for \"CheckValidUser\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\http.go:\n   67  }\n   68  \n   69: func CheckValidUser(form url.Values) (userInfo *model.UserInfo, errorMsg string) {\n   70  	userInfo = nil\n   71  	username := form.Get(\"username\")\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\http_test.go:\n    6  )\n    7  \n    8: func Test_CheckValidUser(t *testing.T) {\n    9  	form := url.Values{}\n   10  	form.Set(\"username\", \"admin\")\n   11  	form.Set(\"password\", \"11\")\n   12: 	userInfo, errMsg := CheckValidUser(form)\n   13  	if nil == userInfo {\n   14  		t.Error(errMsg)\n   ..\n   20  	form.Set(\"username\", \"asd\")\n   21  	form.Set(\"password\", \"11\")\n   22: 	userInfo, errMsg := CheckValidUser(form)\n   23  	if nil != userInfo {\n   24  		t.Error(\"用户存在\")\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\route.go:\n   19  \n   20  func checkLoginUser(form url.Values, re render.Render, errorUrl string) *model.UserInfo {\n   21: 	result, errorMsg := CheckValidUser(form)\n   22  	retInfos := make(map[string]string)\n   23  	retInfos[\"userName\"] = form.Get(\"username\")\n\n5 matches across 3 files\n\n\nSearching 294 files for \"globalSessions\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\http.go:\n   14  )\n   15  \n   16: var globalSessions *session.Manager\n   17  \n   18  func init() {\n   19: 	globalSessions, _ = session.NewManager(\"memory\", `{\"cookieName\":\"gosessionid\",\"gclifetime\":3600}`)\n   20: 	go globalSessions.GC()\n   21  }\n   22  \n   ..\n   51  \n   52  func GetSessionUserInfo(w http.ResponseWriter, r *http.Request) *model.UserInfo {\n   53: 	sess := globalSessions.SessionStart(w, r)\n   54  	defer sess.SessionRelease(w)\n   55  	log.WriteLog(\"session %p\", sess)\n   ..\n   62  \n   63  func SetSessionUserInfo(w http.ResponseWriter, r *http.Request, userInfo *model.UserInfo) {\n   64: 	sess := globalSessions.SessionStart(w, r)\n   65  	defer sess.SessionRelease(w)\n   66  	sess.Set(\"userInfo\", userInfo)\n\n5 matches in 1 file\n\n\nSearching 294 files for \"CheckValidUser\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\http_test.go:\n   10  	form.Set(\"username\", \"admin\")\n   11  	form.Set(\"password\", \"11\")\n   12: 	userInfo, errMsg := CheckValidUser(form)\n   13  	if nil == userInfo {\n   14  		t.Error(errMsg)\n   ..\n   20  	form.Set(\"username\", \"asd\")\n   21  	form.Set(\"password\", \"11\")\n   22: 	userInfo, errMsg := CheckValidUser(form)\n   23  	if nil != userInfo {\n   24  		t.Error(\"用户存在\")\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\route.go:\n   19  \n   20  func checkLoginUser(form url.Values, re render.Render, errorUrl string) *model.UserInfo {\n   21: 	result, errorMsg := CheckValidUser(form)\n   22  	retInfos := make(map[string]string)\n   23  	retInfos[\"userName\"] = form.Get(\"username\")\n\n3 matches across 2 files\n\n\nSearching 294 files for \"CheckSessionUserLogin\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\http.go:\n   97  }\n   98  \n   99: func CheckSessionUserLogin(w http.ResponseWriter, r *http.Request) bool {\n  100  	userInfo := GetSessionUserInfo(w, r)\n  101  	if nil == userInfo {\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\routeRoot.go:\n   21  	m.Get(\"/\", func(w http.ResponseWriter, r *http.Request, re render.Render) {\n   22  		log.WriteLog(\"addr: /\")\n   23: 		if !CheckSessionUserLogin(w, r) {\n   24  			gotoLoginPage(w, r, re)\n   25  		} else {\n\n2 matches across 2 files\n\n\nSearching 294 files for \"CheckSessionUserLogin\" (case sensitive)\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\http.go:\n   97  }\n   98  \n   99: func CheckSessionUserLogin(w http.ResponseWriter, r *http.Request) bool {\n  100  	userInfo := GetSessionUserInfo(w, r)\n  101  	if nil == userInfo {\n\nE:\\Source\\c++\\iVideo\\Source\\swd\\server\\src\\sysware.com\\ivideo\\server\\http\\routeRoot.go:\n   21  	m.Get(\"/\", func(w http.ResponseWriter, r *http.Request, re render.Render) {\n   22  		log.WriteLog(\"addr: /\")\n   23: 		if !CheckSessionUserLogin(w, r) {\n   24  			gotoLoginPage(w, r, re)\n   25  		} else {\n\n2 matches across 2 files\n",
+			"file": "src/sysware.com/ivideo/model/mtsServerSetupInfo_test.go",
 			"settings":
 			{
-				"buffer_size": 4258,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
+				"buffer_size": 634,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/sysware.com/ivideo/server/http/http_test.go",
+			"file": "src/sysware.com/ivideo/model/cmsServerSetupInfo_test.go",
 			"settings":
 			{
-				"buffer_size": 517,
+				"buffer_size": 1825,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/ivideoServer.js",
+			"settings":
+			{
+				"buffer_size": 3621,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/model/sipServerSetupInfo.go",
+			"settings":
+			{
+				"buffer_size": 897,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/model/cmsServerInfo.go",
+			"settings":
+			{
+				"buffer_size": 143,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sysware.com/ivideo/model/apsServerSetupInfo.go",
+			"settings":
+			{
+				"buffer_size": 903,
 				"line_ending": "Windows"
 			}
 		}
@@ -508,23 +538,33 @@
 	[
 		"/E/Source/c++/iVideo/Source/swd/server",
 		"/E/Source/c++/iVideo/Source/swd/server/public",
+		"/E/Source/c++/iVideo/Source/swd/server/public/js",
 		"/E/Source/c++/iVideo/Source/swd/server/src",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/common",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils"
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils",
+		"/E/Source/c++/iVideo/Source/swd/server/templates"
 	],
 	"file_history":
 	[
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/template_func.go",
+		"/E/Source/c++/iVideo/Source/swd/swd.sublime-workspace",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/http.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/appTools.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/common/common.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/fileTools_test.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/route.go",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeRoot.go",
+		"/E/Source/c++/iVideo/Source/swd/server/templates/serverList.tmpl",
+		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/http_test.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/apsServerSetupInfo_test.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/sipServerSetupInfo_test.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/sipServerSetupInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/route.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/http_test.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/setupInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/config.xml",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/http.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverPageInfo.go",
 		"/D/Program Files/go/src/cmd/godoc/setup-godoc-app.bash",
 		"/E/Source/c++/iVideo/Source/swd/server/templates/setupLogin.tmpl",
@@ -546,7 +586,6 @@
 		"/E/Source/c++/iVideo/Source/swd/server/public/js/ivideoServer.js",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/systemTools.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/fileTools.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/common/common.go",
 		"/D/Program Files/go/src/cmd/fix/timefileinfo_test.go",
 		"/D/Program Files/go/src/cmd/fix/timefileinfo.go",
 		"/D/Program Files/go/src/pkg/testing/iotest/logger.go",
@@ -566,7 +605,6 @@
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/apsServerSetupInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/cmsServerInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/dataDto.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/appTools.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServerList.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/addressInfo.go",
 		"/D/Program Files/go/src/pkg/encoding/asn1/common.go",
@@ -585,7 +623,6 @@
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/serverResponseXMLHeadInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/ServerStatusInfo.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/processInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/utils/fileTools_test.go",
 		"/E/Source/c++/iVideo/Source/swd/server/public/css/bootstrap-responsive.css",
 		"/D/Program Files/go/src/pkg/os/proc.go",
 		"/D/Program Files/go/src/cmd/5g/prog.c",
@@ -621,9 +658,7 @@
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/log/logtool.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/routeHandle.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/model/pageInfo.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeRoot.go",
 		"/E/Source/c++/iVideo/Source/swd/server/templates/login.tmpl",
-		"/E/Source/c++/iVideo/Source/swd/server/templates/serverList.tmpl",
 		"/E/Source/Java/jetty-hightide-8.1.7.v20120910/webapps/charisma/css/chosen.css",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServer.go",
 		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeServerDelete.go",
@@ -642,9 +677,7 @@
 		"/E/Source/Java/jetty-hightide-8.1.7.v20120910/webapps/charisma/css/bootstrap-united.css",
 		"/E/Source/Java/jetty-hightide-8.1.7.v20120910/webapps/charisma/css/charisma-app.css",
 		"/E/Source/c++/iVideo/Source/swd/server/templates/index.tmpl",
-		"/E/Source/c++/iVideo/Source/swd/server/swdServer.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeLogout.go",
-		"/E/Source/c++/iVideo/Source/swd/server/src/sysware.com/ivideo/server/http/routeError.go"
+		"/E/Source/c++/iVideo/Source/swd/server/swdServer.go"
 	],
 	"find":
 	{
@@ -669,6 +702,33 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"DEFAULT_CONFIG_FILE_NAME",
+			"GetServerConfigFileName",
+			"MTSServerSetupInfo",
+			"SIP",
+			"SERVER_TYPE_SIP",
+			"道1",
+			", '2'",
+			"64020000001340000017",
+			"2",
+			"'6'",
+			"6",
+			"111",
+			"132",
+			"REGIONDEVICE",
+			"134",
+			"123456', to_date('2014-09-29 09:37:00', 'yyyy-mm-dd hh24:mi:ss'), 1, ",
+			"123456', to_date('2014-09-29 09:37:00', 'yyyy-mm-dd hh24:mi:ss'), 1, '一楼红外报警11', 'hk002', 1);",
+			"device",
+			"摄像机",
+			"hk001",
+			"132",
+			"insert",
+			"NewRouteHandle",
+			"getPageStartIndex",
+			"pageIndexHtml",
+			"pageStartIndex",
+			"getPageStartIndex",
 			"log",
 			"CheckSessionUserLogin",
 			"CheckValidUser",
@@ -769,34 +829,7 @@
 			"LstdFlags",
 			"6381",
 			"img/",
-			"img",
-			"js/",
-			"css/",
-			"../public/",
-			"js/",
-			"img/",
-			"css/",
-			"contain",
-			"Get",
-			"Renderer",
-			"Get",
-			"Classic",
-			"Get",
-			"ClassicM",
-			"addRoute",
-			"NewRouter",
-			"Classic",
-			"beforeFunc",
-			"beforeFuncs",
-			"Handle",
-			"Handle ",
-			"createContext",
-			"StaticDir",
-			"r.URL.Path",
-			"common",
-			"ID1",
-			"4",
-			"MySQLDriver"
+			"img"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -804,6 +837,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"MTS",
 			"/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700'); */",
 			"/* @import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700'); */",
 			"/* @import url(https://fonts.googleapis.com/css?family=Karla|Ubuntu); */",
@@ -843,224 +877,143 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/sysware.com/ivideo/server/http/http.go",
+					"file": "src/sysware.com/ivideo/common/common.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2584,
+						"buffer_size": 1006,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1056,
-								1059
+								798,
+								798
 							]
 						],
 						"settings":
 						{
-							"origin_encoding": "UTF-8",
+							"origin_encoding": "ASCII",
 							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 1828.0,
+						"translation.x": -0.0,
+						"translation.y": 568.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/sysware.com/ivideo/utils/fileTools_test.go",
+					"file": "src/sysware.com/ivideo/model/mtsServerSetupInfo.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 578,
+						"buffer_size": 534,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								456,
-								456
+								531,
+								531
 							]
 						],
 						"settings":
 						{
-							"origin_encoding": "UTF-8",
+							"is_xml": false,
 							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/sysware.com/ivideo/server/http/route.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 812,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								88,
-								88
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4258,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										171,
-										185
-									],
-									[
-										436,
-										450
-									],
-									[
-										597,
-										611
-									],
-									[
-										777,
-										791
-									],
-									[
-										1070,
-										1084
-									],
-									[
-										1385,
-										1399
-									],
-									[
-										1454,
-										1468
-									],
-									[
-										1564,
-										1578
-									],
-									[
-										1720,
-										1734
-									],
-									[
-										1961,
-										1975
-									],
-									[
-										2342,
-										2356
-									],
-									[
-										2522,
-										2536
-									],
-									[
-										2815,
-										2829
-									],
-									[
-										3138,
-										3159
-									],
-									[
-										3500,
-										3521
-									],
-									[
-										3788,
-										3809
-									],
-									[
-										4150,
-										4171
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								3798,
-								3798
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 5,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3108.0,
+						"translation.y": 40.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/sysware.com/ivideo/server/http/http_test.go",
+					"buffer": 2,
+					"file": "swdServer.go",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 517,
+						"buffer_size": 116,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								465,
-								465
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/sysware.com/ivideo/model/mtsServerSetupInfo_test.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								631,
+								631
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": -0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/sysware.com/ivideo/model/cmsServerSetupInfo_test.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1825
 							]
 						],
 						"settings":
@@ -1071,6 +1024,125 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/js/ivideoServer.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								517,
+								517
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1176.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/sysware.com/ivideo/model/sipServerSetupInfo.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								505,
+								525
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/sysware.com/ivideo/model/cmsServerInfo.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								115
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/sysware.com/ivideo/model/apsServerSetupInfo.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								531
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1129,7 +1201,7 @@
 	"project": "swdServer.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 82.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1296,7 +1368,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 311.0,
+	"side_bar_width": 422.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
