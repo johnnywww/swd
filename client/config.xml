@@ -23,5 +23,10 @@
           <address>/home/pc01/source/java/apache-tomcat-7.0.53/webapps/cms</address>
           <type>0</type>
       </server>
+      <server>
+          <serverName>转发服务器1</serverName>
+          <address>/mnt/hgfs/Source/c++/iVideo/Source/mts/build/mts2</address>
+          <type>2</type>
+      </server>
       <port>9600</port>
   </swd>

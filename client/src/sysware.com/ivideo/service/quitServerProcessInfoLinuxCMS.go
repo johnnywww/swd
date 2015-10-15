@@ -22,7 +22,7 @@ func (processTimerFuncHandleQuitCMSProc *processTimerFuncHandleQuitCMSProc) run(
 	return errors.New("没有中心管理服务器信息")
 }
 
-func (quitServerProcessInfoLinuxCMS *quitServerProcessInfoLinuxCMS) Quit(serverInfo *model.ServerInfo) error {
+func (quitServerProcessInfoLinuxCMS *quitServerProcessInfoLinuxCMS) Quit(serverInfo *model.ServerInfo, oServerId string) error {
 	if common.SERVER_TYPE_CMS != serverInfo.Type {
 		return errors.New("不支持的类型")
 	}

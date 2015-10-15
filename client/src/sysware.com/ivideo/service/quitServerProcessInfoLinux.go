@@ -17,7 +17,7 @@ type respQuitXmlInfo struct {
 	Result  string   `xml:"Result"`
 }
 
-func (quitServerProcessInfoLinux *quitServerProcessInfoLinux) Quit(serverInfo *model.ServerInfo) error {
+func (quitServerProcessInfoLinux *quitServerProcessInfoLinux) Quit(serverInfo *model.ServerInfo, oServerId string) error {
 	if nil == serverInfo {
 		return errors.New("没有服务器对象")
 	}
@@ -27,5 +27,5 @@ func (quitServerProcessInfoLinux *quitServerProcessInfoLinux) Quit(serverInfo *m
 	} else {
 		quitServerProcessInfo = &quitServerProcessInfoLinuxCommon{}
 	}
-	return quitServerProcessInfo.Quit(serverInfo)
+	return quitServerProcessInfo.Quit(serverInfo, oServerId)
 }

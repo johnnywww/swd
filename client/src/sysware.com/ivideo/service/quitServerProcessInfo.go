@@ -6,7 +6,7 @@ import (
 )
 
 type QuitServerProcessInfo interface {
-	Quit(*model.ServerInfo) error
+	Quit(*model.ServerInfo, string) error
 }
 
 var quitServerProcessInfo QuitServerProcessInfo

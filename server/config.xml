@@ -6,17 +6,17 @@
       </user>
       <user>
           <userName>5</userName>
-          <password>11</password>
+          <password>1</password>
       </user>
       <server>
-          <serverName>4</serverName>
-          <address>3</address>
-          <type>0</type>
+          <serverName>sip</serverName>
+          <address>http://192.168.5.154:9600</address>
+          <type>1</type>
       </server>
       <server>
-          <serverName>2</serverName>
-          <address>34234</address>
-          <type>3</type>
+          <serverName>mts</serverName>
+          <address>http://192.168.5.212:9600</address>
+          <type>2</type>
       </server>
       <port>9500</port>
   </swd>

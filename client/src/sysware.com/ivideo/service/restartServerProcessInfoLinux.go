@@ -31,12 +31,12 @@ func processHandleTimerFunc(param interface{}, intervalSec int, processTimerFunc
 	return common.RET_CODE_SUCCESS == result
 }
 
-func (restartServerProcessInfoLinux *restartServerProcessInfoLinux) Restart(serverName string) error {
+func (restartServerProcessInfoLinux *restartServerProcessInfoLinux) Restart(serverName string, oServerId string) error {
 	serverInfo, err := NewGetServerInfoByServerName().getInfo(serverName)
 	if nil != err {
 		return err
 	}
-	err = NewQuitServerProcessInfo().Quit(serverInfo)
+	err = NewQuitServerProcessInfo().Quit(serverInfo, oServerId)
 	if nil != err {
 		return err
 	}

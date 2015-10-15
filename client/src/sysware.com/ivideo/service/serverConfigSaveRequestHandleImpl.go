@@ -28,7 +28,7 @@ func (serverConfigSaveRequestHandleImpl *serverConfigSaveRequestHandleImpl) Save
 	}
 	processInfo, err := NewGetProcessInfoByServerInfo().GetInfo(serverInfo)
 	if nil != processInfo {
-		err = NewRestartServerProcessInfo().Restart(serverName)
+		err = NewRestartServerProcessInfo().Restart(serverName, r.FormValue("oServerId"))
 		if nil != err {
 			return err
 		}

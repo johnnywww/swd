@@ -71,7 +71,7 @@ function checkSaveServerConfig(serverName) {
 		var id = $(this).attr('id');
 		var info = getInputLabelInfo(dialogName, id);
 		var tabId = $(this).parent().parent().parent().attr('id');
-		if (!checkInputTextIntegerRangeAndTab(id, info, $(this).attr('input-int-min'), null, tabName, tabId)) {
+		if (!checkInputTextIntegerRangeAndTab(id, info, parseInt($(this).attr('input-int-min')), null, tabName, tabId)) {
 			result = false;
 			return false;
 		}
@@ -82,7 +82,7 @@ function checkSaveServerConfig(serverName) {
 		var id = $(this).attr('id');
 		var info = getInputLabelInfo(dialogName, id);
 		var tabId = $(this).parent().parent().parent().attr('id');
-		if (!checkInputTextIntegerRangeAndTab(id, info, null, $(this).attr('input-int-max'), tabName, tabId)) {
+		if (!checkInputTextIntegerRangeAndTab(id, info, null, parseInt($(this).attr('input-int-max')), tabName, tabId)) {
 			result = false;
 			return false;
 		}
@@ -105,6 +105,7 @@ function checkSaveServerConfig(serverName) {
 function showConfigAPSServerDlgInfo(serverConfigInfo) {
 	$("#apsServerName").html(serverConfigInfo.serverInfo.ServerName);
 	$("#apsServerId").val(serverConfigInfo.configServerInfo.APSInfo.Id);
+	$("#oApsServerId").val(serverConfigInfo.configServerInfo.APSInfo.Id);
 	$("#apsPassword").val(serverConfigInfo.configServerInfo.APSInfo.Password);
 	$("#apsPassword1").val(serverConfigInfo.configServerInfo.APSInfo.Password);
 	$("#apsRegisterInterval").val(serverConfigInfo.configServerInfo.APSInfo.RegisterInterval);
@@ -132,6 +133,7 @@ function getAPSServerPostData() {
 	return {
 		servername: $('#apsServerName').html(),
 		serverId: $("#apsServerId").val(),
+		oServerId: $("#oApsServerId").val(),
 		servertype: SERVER_TYPE_APS,
 		password: $("#apsPassword").val(),
 		registerInterval: $("#apsRegisterInterval").val(),
@@ -157,6 +159,7 @@ function getAPSServerNotifyInfo() {
 function showConfigSIPServerDlgInfo(serverConfigInfo) {
 	$("#sipServerName").html(serverConfigInfo.serverInfo.ServerName);
 	$("#sipServerId").val(serverConfigInfo.configServerInfo.SIPInfo.Id);
+	$("#oSipServerId").val(serverConfigInfo.configServerInfo.SIPInfo.Id);
 	$("#sipServerDomain").val(serverConfigInfo.configServerInfo.SIPInfo.Domain);	
 	$("#sipPassword").val(serverConfigInfo.configServerInfo.SIPInfo.Password);
 	$("#sipPassword1").val(serverConfigInfo.configServerInfo.SIPInfo.Password);
@@ -178,6 +181,7 @@ function getSIPServerPostData() {
 	return {
 		servername: $('#sipServerName').html(),
 		serverId: $("#sipServerId").val(),
+		oServerId: $("#oSipServerId").val(),
 		servertype: SERVER_TYPE_SIP,
 		domain: $("#sipServerDomain").val(),		
 		password: $("#sipPassword").val(),
@@ -229,6 +233,7 @@ function getCMSServerNotifyInfo() {
 function showConfigMTSServerDlgInfo(serverConfigInfo) {
 	$("#mtsServerName").html(serverConfigInfo.serverInfo.ServerName);
 	$("#mtsServerId").val(serverConfigInfo.configServerInfo.MTSInfo.Id);
+	$("#oMtsServerId").val(serverConfigInfo.configServerInfo.MTSInfo.Id);
 	$("#mtsPassword").val(serverConfigInfo.configServerInfo.MTSInfo.Password);
 	$("#mtsPassword1").val(serverConfigInfo.configServerInfo.MTSInfo.Password);
 	$("#mtsRegisterInterval").val(serverConfigInfo.configServerInfo.MTSInfo.RegisterInterval);
@@ -254,6 +259,7 @@ function getMTSServerPostData() {
 	return {
 		servername: $('#mtsServerName').html(),
 		serverId: $("#mtsServerId").val(),
+		oServerId: $("#oMtsServerId").val(),
 		servertype: SERVER_TYPE_MTS,
 		password: $("#mtsPassword").val(),
 		registerInterval: $("#mtsRegisterInterval").val(),

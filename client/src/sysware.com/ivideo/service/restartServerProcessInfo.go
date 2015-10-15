@@ -5,7 +5,7 @@ import (
 )
 
 type RestartServerProcessInfo interface {
-	Restart(serverName string) error
+	Restart(serverName string, oServerId string) error
 }
 
 var restartServerProcessInfo RestartServerProcessInfo

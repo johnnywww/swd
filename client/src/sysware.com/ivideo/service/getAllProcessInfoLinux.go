@@ -154,6 +154,9 @@ func (getAllProcessInfoLinux *GetAllProcessInfoLinux) getProcStatus(processInfo 
 
 		line := string(bs)
 		fields := strings.Fields(string(line))
+		if len(fields) < 1 {
+			continue
+		}
 		_, ok := want[fields[0]]
 		if !ok {
 			continue

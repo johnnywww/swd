@@ -266,6 +266,9 @@ function checkValueIntegerRange(value, info, min, max) {
 	if (!checkValueInteger(value, info)) {
 		return false;
 	}
+	if (typeof value === 'string') {
+		value = parseInt(value);
+	}	
 	if (null!= min) {
 		if (value < min) {
 			notifyErrorMsg('请输入大于等于' + min + '的整数');
